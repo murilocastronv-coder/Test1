@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "dark underground bedrock wall with massive rough stone blocks in flat solid charcoal tones, no gradients or shadows",
+      "to": "ancient cracked gray flagstone floor in a gothic crypt with heavy mortar lines in flat solid stone tones, no gradients or shadows",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "5a696d44-9c41-4ec3-b2ff-95678c0c0023",
+      "transitionSize": 0.25
+    }
+  ]
+}

@@ -437,6 +437,14 @@
   },
   "images": {},
   "maps": {
+    "60cb3c22-9f2d-4901-8a6b-885aed9c3cb8": {
+      "updated_at": "2026-11-05T18:57:35.471916+00:00",
+      "name": "Dungeon 1",
+      "export_version": 13,
+      "tilesets": {
+        "5a696d44-9c41-4ec3-b2ff-95678c0c0023": "2026-11-05T18:56:55.419808+00:00"
+      }
+    },
     "a780fd5b-16bd-4ac2-82c0-21ce07a50e7c": {
       "updated_at": "2026-11-05T18:57:33.944131+00:00",
       "name": "Devias",
