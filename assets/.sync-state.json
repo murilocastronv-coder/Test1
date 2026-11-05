@@ -189,13 +189,16 @@
       ],
       "sync_version": 16
     },
-    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
-      "updated_at": "2026-11-05T14:39:39.809606+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Gladiador Violeta",
+    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
+      "updated_at": "2026-11-05T14:39:24.966084+00:00",
+      "animation_ids": [
+        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
+        "53827715-1d46-4009-9205-a135964d1e57"
+      ],
+      "animation_fingerprint": "b4927e87a51e5c0b1d2e322921cd471b072ca829500c9dc37ddd80eb6eb76913",
+      "name": "Elfa Esmeralda",
       "member_ids": [
-        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
+        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
       ],
       "sync_version": 16
     },
@@ -209,16 +212,13 @@
       ],
       "sync_version": 16
     },
-    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
-      "updated_at": "2026-11-05T14:39:24.966084+00:00",
-      "animation_ids": [
-        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
-        "53827715-1d46-4009-9205-a135964d1e57"
-      ],
-      "animation_fingerprint": "b4927e87a51e5c0b1d2e322921cd471b072ca829500c9dc37ddd80eb6eb76913",
-      "name": "Elfa Esmeralda",
+    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
+      "updated_at": "2026-11-05T14:39:39.809606+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Gladiador Violeta",
       "member_ids": [
-        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
       ],
       "sync_version": 16
     }
