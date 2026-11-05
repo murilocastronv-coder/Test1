@@ -129,6 +129,7 @@ export class PlayerController {
     const manifest = characterManifest(this.sprite.scene, characterId);
     const selected = selectCharacterState(manifest, { preferredClips: ["walk"] });
     this.activeAction = null;
+    this.actionElapsedMs = 0;
     this.animationResolver = new CharacterAnimationResolver(manifest);
     this.poseState = selected;
     this.animator = new SpriteAnimator(this.sprite, characterAtlasKey(characterId), selected.animations, selected.stateFolder, this.stateDirections(selected));
