@@ -1,0 +1,29 @@
+{
+  "audio": {},
+  "characters": {
+    "blonde farmer with long hair and a dress": "assets/characters/076e6c4e-15ff-4c08-8172-cb49481ab5c8/",
+    "flat shaded light brown bear": "assets/characters/9580506c-a5b6-49af-983d-07b7dcc87b0b/",
+    "warrior woman with orange hair": "assets/characters/e60c571b-2e75-4810-bca9-eb8527b8b767/",
+    "old man bald": "assets/characters/fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e/"
+  },
+  "images": {},
+  "maps": {
+    "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
+  },
+  "objects": {
+    "base": "assets/objects/7eacbe8b-e4da-44e1-9e5e-f35cc4a2436a/",
+    "base#4fdf4013": "assets/objects/4fdf4013-40ef-4217-a757-2d0eb16031ed/",
+    "base#bf0fd2d4": "assets/objects/bf0fd2d4-13fe-41bf-bb52-572c34273c75/",
+    "base#c81c151f": "assets/objects/c81c151f-b0fb-441e-92a5-02679e148374/",
+    "base#330666db": "assets/objects/330666db-9a20-435d-bb09-bced64d2a074/",
+    "base#87fa3a56": "assets/objects/87fa3a56-4d9b-4bb4-885a-9d1fdc093178/",
+    "base#793e0270": "assets/objects/793e0270-d95a-44e4-8b68-ad8983d39050/",
+    "base#35093773": "assets/objects/35093773-ba4a-40e6-b981-c7e6ff8b1bbf/"
+  },
+  "tilesets": {
+    "water \u2197 wood": "assets/tilesets/fcc53800-595a-46dd-82cf-1364b9ea6fea/",
+    "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/"
+  },
+  "ui": {},
+  "rooms": {}
+}

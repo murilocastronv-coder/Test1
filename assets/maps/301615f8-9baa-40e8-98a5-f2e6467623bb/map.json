@@ -1,0 +1,103 @@
+{
+  "version": "1.0.0",
+  "name": "Island Map",
+  "exportDate": "2026-11-05T14:27:44.161155Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 198,
+      "height": 150,
+      "pixelWidth": 3168,
+      "pixelHeight": 2400
+    },
+    "boundingBox": {
+      "maxX": 149,
+      "maxY": 107,
+      "minX": -48,
+      "minY": -42
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "water",
+      "color": "#2563eb",
+      "baseTileId": "935adddd-b287-40cd-b08b-13d098f2a301",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "wood",
+      "color": "#9ca3af",
+      "baseTileId": "d2f36e61-aad2-45bf-9f88-8889aa601448",
+      "walkable": null
+    },
+    {
+      "id": 3,
+      "name": "grass",
+      "color": "#22c55e",
+      "baseTileId": "10e3f38c-9bfc-444c-abb3-8b80e6648d82",
+      "walkable": null
+    },
+    {
+      "id": 4,
+      "name": "water \u2194 grass",
+      "color": "#1f7e8c",
+      "baseTileId": "transition-ead821ba-c3a4-4480-86be-1d25cf344a4d",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "fcc53800-595a-46dd-82cf-1364b9ea6fea",
+      "filename": "water-wood.png",
+      "lowerTerrain": "water",
+      "upperTerrain": "wood",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.5,
+      "transitionDescription": "wood",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    },
+    {
+      "id": "ead821ba-c3a4-4480-86be-1d25cf344a4d",
+      "filename": "water-grass.png",
+      "lowerTerrain": "water",
+      "upperTerrain": "grass",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 3,
+      "transitionSize": 1,
+      "transitionDescription": "scattered rocks",
+      "tileSize": 16,
+      "gridLayout": "4x8",
+      "wangIndexMapping": "transition",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [
+    {
+      "id": 0,
+      "filename": "overlay-0.png",
+      "type": "inpainting",
+      "dimensions": {
+        "width": 160,
+        "height": 224
+      },
+      "worldCoordinates": {
+        "x": 832,
+        "y": 560
+      },
+      "layer": "custom"
+    }
+  ],
+  "background": null,
+  "mapId": "301615f8-9baa-40e8-98a5-f2e6467623bb",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

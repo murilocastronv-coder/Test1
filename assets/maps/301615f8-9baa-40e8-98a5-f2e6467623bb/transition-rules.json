@@ -1,0 +1,20 @@
+{
+  "transitions": [
+    {
+      "from": "water",
+      "to": "wood",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "fcc53800-595a-46dd-82cf-1364b9ea6fea",
+      "transitionSize": 0.5
+    },
+    {
+      "from": "water",
+      "to": "grass",
+      "fromId": 1,
+      "toId": 3,
+      "tilesetId": "ead821ba-c3a4-4480-86be-1d25cf344a4d",
+      "transitionSize": 1
+    }
+  ]
+}

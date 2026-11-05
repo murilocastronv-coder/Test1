@@ -1,0 +1,22 @@
+{
+  "group_id": "cc37a671-1d6e-4ef5-a50d-c262049fbb12",
+  "states": [
+    {
+      "id": "35093773-ba4a-40e6-b981-c7e6ff8b1bbf",
+      "name": "base",
+      "folder": "base",
+      "directions": [
+        "east",
+        "west",
+        "north",
+        "south",
+        "north-east",
+        "north-west",
+        "south-east",
+        "south-west"
+      ],
+      "animations": {}
+    }
+  ],
+  "export_version": "3.0"
+}
