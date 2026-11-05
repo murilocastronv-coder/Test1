@@ -315,16 +315,6 @@
       ],
       "sync_version": 16
     },
-    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
-      "updated_at": "2026-11-05T15:54:00.052382+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Dem\u00f4nio das Brasas",
-      "member_ids": [
-        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [],
@@ -332,6 +322,16 @@
       "name": "Guerreiro Esqueleto",
       "member_ids": [
         "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
+      ],
+      "sync_version": 16
+    },
+    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
+      "updated_at": "2026-11-05T15:54:00.052382+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Dem\u00f4nio das Brasas",
+      "member_ids": [
+        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
       ],
       "sync_version": 16
     }
