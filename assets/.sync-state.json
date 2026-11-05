@@ -151,6 +151,105 @@
       ],
       "sync_version": 16
     },
+    "a186e0b5-46cf-4259-b791-d06d5dece872": {
+      "updated_at": "2026-11-05T14:39:28.657218+00:00",
+      "animation_ids": [
+        "00ec3739-1654-42d6-980f-4080422c8685",
+        "0215e294-5d6a-4cae-bd08-61510eb96ec5",
+        "034c377c-c821-4443-a534-2a799a49de49",
+        "070af90d-8b7d-41ea-9f7d-d789378b0515",
+        "117e46cf-854c-4300-8767-fadc38852307",
+        "1c8e139d-cdc4-49b7-808f-d42893f67eaf",
+        "20c1d490-4ede-426a-8993-6fe415888e0c",
+        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
+        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
+        "4055564f-613b-470f-9e76-571f0ac0cdf9",
+        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
+        "691a42bf-241b-4757-a8c6-4e06864e5977",
+        "6f9ee63e-bd4f-4720-80e9-67e8779b8e80",
+        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
+        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
+        "85574696-09d5-465c-be53-8200cdca7b95",
+        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
+        "91f16421-5c18-47a5-8df8-82acb8a2ae6a",
+        "afb1b71e-a5a7-4f7e-83e5-8f9c49b146cc",
+        "b3df27ea-f26e-4a80-8085-44925e56d45e",
+        "b4eeca88-1cc2-40cf-94ca-4c7920619cdb",
+        "c602ff9e-e9cb-4e72-aac1-42156ce62291",
+        "fa18be54-5fe3-42e5-890c-a696a440344e",
+        "fa4e8ade-0116-4812-8402-a2262b6a8aba"
+      ],
+      "animation_fingerprint": "8d5631d50c0ac60973def448010f132de95589a071775de03a30b84c1528a186",
+      "name": "Cavaleiro Carmesim",
+      "member_ids": [
+        "a186e0b5-46cf-4259-b791-d06d5dece872"
+      ],
+      "sync_version": 16
+    },
+    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
+      "updated_at": "2026-11-05T14:39:24.966084+00:00",
+      "animation_ids": [
+        "04a743ca-6b69-48a9-889b-d9746e83d7b4",
+        "0b592aa6-2368-4a75-bb72-c28ef18f6f5f",
+        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
+        "124ca9f3-95de-4ed1-843e-a2eb01036d0d",
+        "39212fb2-c678-4d97-b7d7-f83fff1ed5a8",
+        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
+        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
+        "4cdd895b-f5d1-410d-a687-832bf67143b5",
+        "53827715-1d46-4009-9205-a135964d1e57",
+        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
+        "578cf394-77c6-4df8-bf09-c3e957096752",
+        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
+        "5a442636-4177-43b2-9b07-3257c30165f4",
+        "82cff36e-2912-40e8-b78e-4a3b2babd5f9",
+        "99bf1083-8140-4733-99e4-39da4f7aa479",
+        "9e007c49-767f-48d1-917f-ea4e962a0ed1",
+        "a41b7ca0-7ad0-4ee4-a830-080cfaad74b9",
+        "a4bc9471-11c3-47da-afeb-a3b1ec06bc71",
+        "b43fe02d-82d8-4650-8fd6-9f3662cc659e",
+        "cc01e150-9afa-4ff6-8a6d-1b4c6c6530fd",
+        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7",
+        "e8bd8c0f-939c-4f23-81a3-5c41754210b5",
+        "eede5e77-0c01-44e9-83f5-423f8503c243",
+        "f8625175-a9e1-41e3-8427-ca1a0bf8cac1"
+      ],
+      "animation_fingerprint": "b5c9ce2eab8988da8b6262e07a5ba3a657aafff9a68155d691a132292b22edee",
+      "name": "Elfa Esmeralda",
+      "member_ids": [
+        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+      ],
+      "sync_version": 16
+    },
+    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
+      "updated_at": "2026-11-05T14:39:39.809606+00:00",
+      "animation_ids": [
+        "04b11384-749c-4b68-85b2-613593b111da",
+        "054710ae-8925-49ba-abc2-4e321c21b53a",
+        "46a92066-7eb9-455e-84e2-9ee8352d89e7",
+        "47762ada-dcf7-4656-ad6c-34ff8bf09333",
+        "488b84b2-826c-41ee-a038-306c5a68b647",
+        "57b626dc-e837-42ed-8b35-fbd7fc824fe2",
+        "71d0da4d-fcb4-4c8e-bcff-036115f0a814",
+        "746494aa-c9be-450c-bddc-1667b94ac08d",
+        "748cec42-b27f-48a6-841b-99426336c0e2",
+        "a99c740a-eb5d-4b77-9c51-e8c8b4e049fb",
+        "b046cdab-9804-46e4-be7b-65026e9da586",
+        "be0c0927-7564-40f1-a04e-f1058b46e271",
+        "cf508ee2-a761-48ee-8a69-b5d0897a71d1",
+        "cff2e01a-150b-414d-8178-739df6f19638",
+        "de79969e-c757-4897-9f7a-d15ac2f315ae",
+        "e5b4cbe6-da27-4240-9f15-806cc9337565",
+        "f29f4dba-f44b-40da-94a8-b5ff2737dd76",
+        "fc65dd3e-86f0-4270-be62-1779343cd22b"
+      ],
+      "animation_fingerprint": "e717ecf8fff85d12b116c8521f745ac7ad67dac416d78b24962d8516adf27344",
+      "name": "Gladiador Violeta",
+      "member_ids": [
+        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
+      ],
+      "sync_version": 16
+    },
     "3a46a0b9-fba0-476d-9085-06ad60a89811": {
       "updated_at": "2026-11-05T14:40:11.130414+00:00",
       "animation_ids": [
@@ -286,41 +385,6 @@
       ],
       "sync_version": 16
     },
-    "a186e0b5-46cf-4259-b791-d06d5dece872": {
-      "updated_at": "2026-11-05T14:39:28.657218+00:00",
-      "animation_ids": [
-        "00ec3739-1654-42d6-980f-4080422c8685",
-        "0215e294-5d6a-4cae-bd08-61510eb96ec5",
-        "034c377c-c821-4443-a534-2a799a49de49",
-        "070af90d-8b7d-41ea-9f7d-d789378b0515",
-        "117e46cf-854c-4300-8767-fadc38852307",
-        "1c8e139d-cdc4-49b7-808f-d42893f67eaf",
-        "20c1d490-4ede-426a-8993-6fe415888e0c",
-        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
-        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
-        "4055564f-613b-470f-9e76-571f0ac0cdf9",
-        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
-        "691a42bf-241b-4757-a8c6-4e06864e5977",
-        "6f9ee63e-bd4f-4720-80e9-67e8779b8e80",
-        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
-        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
-        "85574696-09d5-465c-be53-8200cdca7b95",
-        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
-        "91f16421-5c18-47a5-8df8-82acb8a2ae6a",
-        "afb1b71e-a5a7-4f7e-83e5-8f9c49b146cc",
-        "b3df27ea-f26e-4a80-8085-44925e56d45e",
-        "b4eeca88-1cc2-40cf-94ca-4c7920619cdb",
-        "c602ff9e-e9cb-4e72-aac1-42156ce62291",
-        "fa18be54-5fe3-42e5-890c-a696a440344e",
-        "fa4e8ade-0116-4812-8402-a2262b6a8aba"
-      ],
-      "animation_fingerprint": "8d5631d50c0ac60973def448010f132de95589a071775de03a30b84c1528a186",
-      "name": "Cavaleiro Carmesim",
-      "member_ids": [
-        "a186e0b5-46cf-4259-b791-d06d5dece872"
-      ],
-      "sync_version": 16
-    },
     "e15cb620-66b4-457e-af22-7357de16bbef": {
       "updated_at": "2026-11-05T14:39:55.879015+00:00",
       "animation_ids": [
@@ -353,70 +417,6 @@
       "name": "Mago Arcano",
       "member_ids": [
         "e15cb620-66b4-457e-af22-7357de16bbef"
-      ],
-      "sync_version": 16
-    },
-    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
-      "updated_at": "2026-11-05T14:39:24.966084+00:00",
-      "animation_ids": [
-        "04a743ca-6b69-48a9-889b-d9746e83d7b4",
-        "0b592aa6-2368-4a75-bb72-c28ef18f6f5f",
-        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
-        "124ca9f3-95de-4ed1-843e-a2eb01036d0d",
-        "39212fb2-c678-4d97-b7d7-f83fff1ed5a8",
-        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
-        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
-        "4cdd895b-f5d1-410d-a687-832bf67143b5",
-        "53827715-1d46-4009-9205-a135964d1e57",
-        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
-        "578cf394-77c6-4df8-bf09-c3e957096752",
-        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
-        "5a442636-4177-43b2-9b07-3257c30165f4",
-        "82cff36e-2912-40e8-b78e-4a3b2babd5f9",
-        "99bf1083-8140-4733-99e4-39da4f7aa479",
-        "9e007c49-767f-48d1-917f-ea4e962a0ed1",
-        "a41b7ca0-7ad0-4ee4-a830-080cfaad74b9",
-        "a4bc9471-11c3-47da-afeb-a3b1ec06bc71",
-        "b43fe02d-82d8-4650-8fd6-9f3662cc659e",
-        "cc01e150-9afa-4ff6-8a6d-1b4c6c6530fd",
-        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7",
-        "e8bd8c0f-939c-4f23-81a3-5c41754210b5",
-        "eede5e77-0c01-44e9-83f5-423f8503c243",
-        "f8625175-a9e1-41e3-8427-ca1a0bf8cac1"
-      ],
-      "animation_fingerprint": "b5c9ce2eab8988da8b6262e07a5ba3a657aafff9a68155d691a132292b22edee",
-      "name": "Elfa Esmeralda",
-      "member_ids": [
-        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
-      ],
-      "sync_version": 16
-    },
-    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
-      "updated_at": "2026-11-05T14:39:39.809606+00:00",
-      "animation_ids": [
-        "04b11384-749c-4b68-85b2-613593b111da",
-        "054710ae-8925-49ba-abc2-4e321c21b53a",
-        "46a92066-7eb9-455e-84e2-9ee8352d89e7",
-        "47762ada-dcf7-4656-ad6c-34ff8bf09333",
-        "488b84b2-826c-41ee-a038-306c5a68b647",
-        "57b626dc-e837-42ed-8b35-fbd7fc824fe2",
-        "71d0da4d-fcb4-4c8e-bcff-036115f0a814",
-        "746494aa-c9be-450c-bddc-1667b94ac08d",
-        "748cec42-b27f-48a6-841b-99426336c0e2",
-        "a99c740a-eb5d-4b77-9c51-e8c8b4e049fb",
-        "b046cdab-9804-46e4-be7b-65026e9da586",
-        "be0c0927-7564-40f1-a04e-f1058b46e271",
-        "cf508ee2-a761-48ee-8a69-b5d0897a71d1",
-        "cff2e01a-150b-414d-8178-739df6f19638",
-        "de79969e-c757-4897-9f7a-d15ac2f315ae",
-        "e5b4cbe6-da27-4240-9f15-806cc9337565",
-        "f29f4dba-f44b-40da-94a8-b5ff2737dd76",
-        "fc65dd3e-86f0-4270-be62-1779343cd22b"
-      ],
-      "animation_fingerprint": "e717ecf8fff85d12b116c8521f745ac7ad67dac416d78b24962d8516adf27344",
-      "name": "Gladiador Violeta",
-      "member_ids": [
-        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
       ],
       "sync_version": 16
     }
