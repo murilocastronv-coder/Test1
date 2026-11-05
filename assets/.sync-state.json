@@ -221,6 +221,41 @@
       ],
       "sync_version": 16
     },
+    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
+      "updated_at": "2026-11-05T14:39:24.966084+00:00",
+      "animation_ids": [
+        "04a743ca-6b69-48a9-889b-d9746e83d7b4",
+        "0b592aa6-2368-4a75-bb72-c28ef18f6f5f",
+        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
+        "124ca9f3-95de-4ed1-843e-a2eb01036d0d",
+        "39212fb2-c678-4d97-b7d7-f83fff1ed5a8",
+        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
+        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
+        "4cdd895b-f5d1-410d-a687-832bf67143b5",
+        "53827715-1d46-4009-9205-a135964d1e57",
+        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
+        "578cf394-77c6-4df8-bf09-c3e957096752",
+        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
+        "5a442636-4177-43b2-9b07-3257c30165f4",
+        "82cff36e-2912-40e8-b78e-4a3b2babd5f9",
+        "99bf1083-8140-4733-99e4-39da4f7aa479",
+        "9e007c49-767f-48d1-917f-ea4e962a0ed1",
+        "a41b7ca0-7ad0-4ee4-a830-080cfaad74b9",
+        "a4bc9471-11c3-47da-afeb-a3b1ec06bc71",
+        "b43fe02d-82d8-4650-8fd6-9f3662cc659e",
+        "cc01e150-9afa-4ff6-8a6d-1b4c6c6530fd",
+        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7",
+        "e8bd8c0f-939c-4f23-81a3-5c41754210b5",
+        "eede5e77-0c01-44e9-83f5-423f8503c243",
+        "f8625175-a9e1-41e3-8427-ca1a0bf8cac1"
+      ],
+      "animation_fingerprint": "b5c9ce2eab8988da8b6262e07a5ba3a657aafff9a68155d691a132292b22edee",
+      "name": "Elfa Esmeralda",
+      "member_ids": [
+        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+      ],
+      "sync_version": 16
+    },
     "3a46a0b9-fba0-476d-9085-06ad60a89811": {
       "updated_at": "2026-11-05T14:40:11.130414+00:00",
       "animation_ids": [
@@ -353,41 +388,6 @@
       "name": "Dem\u00f4nio das Brasas",
       "member_ids": [
         "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
-    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
-      "updated_at": "2026-11-05T14:39:24.966084+00:00",
-      "animation_ids": [
-        "04a743ca-6b69-48a9-889b-d9746e83d7b4",
-        "0b592aa6-2368-4a75-bb72-c28ef18f6f5f",
-        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
-        "124ca9f3-95de-4ed1-843e-a2eb01036d0d",
-        "39212fb2-c678-4d97-b7d7-f83fff1ed5a8",
-        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
-        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
-        "4cdd895b-f5d1-410d-a687-832bf67143b5",
-        "53827715-1d46-4009-9205-a135964d1e57",
-        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
-        "578cf394-77c6-4df8-bf09-c3e957096752",
-        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
-        "5a442636-4177-43b2-9b07-3257c30165f4",
-        "82cff36e-2912-40e8-b78e-4a3b2babd5f9",
-        "99bf1083-8140-4733-99e4-39da4f7aa479",
-        "9e007c49-767f-48d1-917f-ea4e962a0ed1",
-        "a41b7ca0-7ad0-4ee4-a830-080cfaad74b9",
-        "a4bc9471-11c3-47da-afeb-a3b1ec06bc71",
-        "b43fe02d-82d8-4650-8fd6-9f3662cc659e",
-        "cc01e150-9afa-4ff6-8a6d-1b4c6c6530fd",
-        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7",
-        "e8bd8c0f-939c-4f23-81a3-5c41754210b5",
-        "eede5e77-0c01-44e9-83f5-423f8503c243",
-        "f8625175-a9e1-41e3-8427-ca1a0bf8cac1"
-      ],
-      "animation_fingerprint": "b5c9ce2eab8988da8b6262e07a5ba3a657aafff9a68155d691a132292b22edee",
-      "name": "Elfa Esmeralda",
-      "member_ids": [
-        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
       ],
       "sync_version": 16
     },
