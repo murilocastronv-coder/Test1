@@ -12,6 +12,7 @@ import { MultiplayerSystem } from "../net/MultiplayerSystem";
 import { JumpCounterExample } from "../net/JumpCounterExample";
 import { FireProjectileSystem } from "../gameplay/FireProjectileSystem";
 import { BearEncounter } from "../gameplay/BearEncounter";
+import { CharacterSelection } from "../gameplay/CharacterSelection";
 import { type Direction, vectorFromDirection } from "../shared/direction";
 
 export class GameScene extends Phaser.Scene {
@@ -23,6 +24,7 @@ export class GameScene extends Phaser.Scene {
   private fireProjectiles!: FireProjectileSystem;
   private encounter?: BearEncounter;
   private hudState = "";
+  private characterSelection!: CharacterSelection;
 
   constructor() {
     super("GameScene");
@@ -52,6 +54,7 @@ export class GameScene extends Phaser.Scene {
     });
 
     // === NEW SYSTEMS (add new module instances here) ===
+    this.characterSelection = new CharacterSelection(this, this.player);
 
     // Real-time multiplayer: stream this player's position to the project worker and
     // render other connected players. Room = the current map name (one room per map).
@@ -113,6 +116,7 @@ export class GameScene extends Phaser.Scene {
     this.encounter?.update(deltaMs);
     this.updateHud();
     // === NEW UPDATES (add new update calls here) ===
+    this.characterSelection.update();
     this.multiplayer.update(deltaMs);
   }
 

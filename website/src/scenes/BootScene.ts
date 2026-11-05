@@ -4,6 +4,7 @@ import { loadPixelLabMap } from "../pixellab/loadMap";
 import { preloadMapAssets } from "../pixellab/renderMap";
 import { PlayerController } from "../player/PlayerController";
 import { FireProjectileSystem } from "../gameplay/FireProjectileSystem";
+import { CharacterSelection } from "../gameplay/CharacterSelection";
 
 export const MAP_DATA_REGISTRY_KEY = "pixellab-map-data";
 
@@ -71,6 +72,7 @@ export class BootScene extends Phaser.Scene {
 
     preloadMapAssets(this, mapData);
     PlayerController.preload(this);
+    CharacterSelection.preload(this);
     FireProjectileSystem.preload(this);
     preloadNpcs(this);
 
