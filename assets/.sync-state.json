@@ -291,6 +291,41 @@
       ],
       "sync_version": 16
     },
+    "3a46a0b9-fba0-476d-9085-06ad60a89811": {
+      "updated_at": "2026-11-05T14:40:11.130414+00:00",
+      "animation_ids": [
+        "06c1f481-2c8e-435f-8bfd-acec30232199",
+        "1ebbdd56-67da-4fcb-a532-037b18cd8e8a",
+        "229b78bc-ac8d-48bc-b5c0-8525ecfb1f11",
+        "2875f3ae-846f-4ef1-93ec-84a361285c69",
+        "35f403f1-338c-436d-9df3-cd26e160efbf",
+        "57075e54-a474-40f6-af47-c8b3a4309f8e",
+        "5c535eef-1bec-4657-b7d0-34fcddc7c705",
+        "6bfadd18-c403-4611-b030-496b9009b47b",
+        "6c6e1e13-92d8-4312-82ae-3023c0e4ffea",
+        "750a86b0-8598-49b2-9ab9-b419001cd3e4",
+        "7a69828e-6f12-4e5c-96ee-b779bbc6dbed",
+        "8050ec4e-9876-424a-971b-fff2d1ffb299",
+        "8294f356-59f6-4f2f-9825-d570cc427b6a",
+        "843df9ba-1ee0-446f-8a11-c12b779917ea",
+        "89425471-5cb7-4ef6-a5e3-87b9f615ee17",
+        "8ae280d5-dbd1-482e-99a9-0f551c4aa0b3",
+        "8b151051-9cf3-482d-bca5-4e5e9afcc5dd",
+        "8b164dd2-7406-4425-937b-a3ccc32a142d",
+        "91d0588f-4332-407f-93ce-d262e4f3b501",
+        "ac637bb1-c5ae-495d-9243-746c0a7b97ef",
+        "b5a99949-d286-4b1a-b483-9e85a6745e7d",
+        "cc80f8f6-6972-4df3-aec7-3ab9da6323f7",
+        "e757949a-2d86-4bfb-ad8b-5bbaa2fea8a8",
+        "f1aa5be6-f34a-4772-8846-934a06bb07e6"
+      ],
+      "animation_fingerprint": "d26d45a1d18be5df8e1511ed62b4e48f9ddf2df693908b343cd7d449a1b4c1c0",
+      "name": "Lorde Sombrio",
+      "member_ids": [
+        "3a46a0b9-fba0-476d-9085-06ad60a89811"
+      ],
+      "sync_version": 16
+    },
     "886cef61-2e1b-4383-83c1-1336588c3261": {
       "updated_at": "2026-11-05T15:53:33.555344+00:00",
       "animation_ids": [
@@ -396,41 +431,6 @@
       "name": "Dem\u00f4nio das Brasas",
       "member_ids": [
         "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
-    "3a46a0b9-fba0-476d-9085-06ad60a89811": {
-      "updated_at": "2026-11-05T14:40:11.130414+00:00",
-      "animation_ids": [
-        "06c1f481-2c8e-435f-8bfd-acec30232199",
-        "1ebbdd56-67da-4fcb-a532-037b18cd8e8a",
-        "229b78bc-ac8d-48bc-b5c0-8525ecfb1f11",
-        "2875f3ae-846f-4ef1-93ec-84a361285c69",
-        "35f403f1-338c-436d-9df3-cd26e160efbf",
-        "57075e54-a474-40f6-af47-c8b3a4309f8e",
-        "5c535eef-1bec-4657-b7d0-34fcddc7c705",
-        "6bfadd18-c403-4611-b030-496b9009b47b",
-        "6c6e1e13-92d8-4312-82ae-3023c0e4ffea",
-        "750a86b0-8598-49b2-9ab9-b419001cd3e4",
-        "7a69828e-6f12-4e5c-96ee-b779bbc6dbed",
-        "8050ec4e-9876-424a-971b-fff2d1ffb299",
-        "8294f356-59f6-4f2f-9825-d570cc427b6a",
-        "843df9ba-1ee0-446f-8a11-c12b779917ea",
-        "89425471-5cb7-4ef6-a5e3-87b9f615ee17",
-        "8ae280d5-dbd1-482e-99a9-0f551c4aa0b3",
-        "8b151051-9cf3-482d-bca5-4e5e9afcc5dd",
-        "8b164dd2-7406-4425-937b-a3ccc32a142d",
-        "91d0588f-4332-407f-93ce-d262e4f3b501",
-        "ac637bb1-c5ae-495d-9243-746c0a7b97ef",
-        "b5a99949-d286-4b1a-b483-9e85a6745e7d",
-        "cc80f8f6-6972-4df3-aec7-3ab9da6323f7",
-        "e757949a-2d86-4bfb-ad8b-5bbaa2fea8a8",
-        "f1aa5be6-f34a-4772-8846-934a06bb07e6"
-      ],
-      "animation_fingerprint": "d26d45a1d18be5df8e1511ed62b4e48f9ddf2df693908b343cd7d449a1b4c1c0",
-      "name": "Lorde Sombrio",
-      "member_ids": [
-        "3a46a0b9-fba0-476d-9085-06ad60a89811"
       ],
       "sync_version": 16
     }
