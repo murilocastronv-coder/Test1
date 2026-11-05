@@ -68,6 +68,8 @@ export class PlayerController {
   private hopOffsetY = 0;
   /** While > 0, the jump clip plays so a ledge hop reads as a deliberate hop. */
   private hopAnimMs = 0;
+  private touchX: number = 0;
+  private touchY: number = 0;
   private direction: Direction = "south";
   private jumpElapsedMs = 0;
   private jumpSpeed = 0;
@@ -131,6 +133,8 @@ export class PlayerController {
     this.poseState = selected;
     this.animator = new SpriteAnimator(this.sprite, characterAtlasKey(characterId), selected.animations, selected.stateFolder, this.stateDirections(selected));
     this.sprite.clearTint();
+    // Keep the 80px source art intact, but draw heroes at the map's scale.
+    this.sprite.setScale(0.5);
     this.playRole(["idle"]);
   }
 
@@ -369,8 +373,13 @@ export class PlayerController {
     }
   }
 
+  setTouchMovement(x: number, y: number): void {
+    this.touchX = Number.isFinite(x) ? Phaser.Math.Clamp(x, -1, 1) : 0;
+    this.touchY = Number.isFinite(y) ? Phaser.Math.Clamp(y, -1, 1) : 0;
+  }
+
   private inputVector(): Phaser.Math.Vector2 {
-    const axis = new Phaser.Math.Vector2(0, 0);
+    const axis = new Phaser.Math.Vector2(this.touchX, this.touchY);
     if (this.keys.A.isDown || this.keys.LEFT.isDown) axis.x -= 1;
     if (this.keys.D.isDown || this.keys.RIGHT.isDown) axis.x += 1;
     if (this.keys.W.isDown || this.keys.UP.isDown) axis.y -= 1;

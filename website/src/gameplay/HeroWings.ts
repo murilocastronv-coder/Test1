@@ -14,8 +14,8 @@ export class HeroWings {
     const facing = this.player.facing;
     const side = facing === "east" || facing === "west";
     // One-facing equipment: keep the golden feather silhouette, narrow it in profile.
-    this.image.setVisible(equipped && started).setPosition(sprite.x, sprite.y - 9);
-    this.image.setScale(side ? .55 : 1, 1);
+    this.image.setVisible(equipped && started).setPosition(sprite.x, sprite.y - 9 * sprite.scaleY);
+    this.image.setScale((side ? .55 : 1) * sprite.scaleX, sprite.scaleY);
     this.image.setDepth(sprite.depth + (facing.startsWith("north") ? .1 : -.1));
   }
   get visible(): boolean { return this.image.visible; }

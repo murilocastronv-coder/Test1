@@ -5,3 +5,10 @@
 .hud-panel:has(> div:empty){display:none}
 
 .rpg-hero-preview{display:block;width:80px;height:80px;max-width:100%;image-rendering:pixelated;margin:0 auto 8px}.rpg-overlay .rpg-window{max-height:92vh;overflow:auto}.rpg-overlay .rpg-class{flex:1 1 120px;min-width:0;padding:12px!important;text-align:center}.rpg-overlay .rpg-class b{font-size:14px}.rpg-overlay .rpg-classes{gap:8px;margin:16px 0}
+
+.rpg-touch-movement{display:none;position:absolute;left:14px;bottom:150px;grid-template-columns:repeat(3,38px);gap:3px;pointer-events:auto;touch-action:none;user-select:none;z-index:10}
+.rpg-touch-movement[hidden]{display:none!important}
+.rpg-touch-movement button{width:38px;height:38px;padding:0;border-radius:9px;border:1px solid #cbb57f88;background:#101a23cc;color:#f1dfae;font-size:22px;touch-action:none;user-select:none}
+.rpg-touch-movement button:active{background:#75603dcc}
+.rpg-touch-movement button:disabled{opacity:.3}
+@media(pointer:coarse),(max-width:700px){.rpg-touch-movement{display:grid}}

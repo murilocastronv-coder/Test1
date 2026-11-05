@@ -12,6 +12,7 @@ import type { Direction } from "../shared/direction";
 import "./rpg.css";
 
 import { HeroWings } from "./HeroWings";
+import { TouchMovement } from "./TouchMovement";
 import { HEROES, heroPreview, type HeroClass } from "./HeroRoster";
 interface Save { wings: boolean; name: string; hero: HeroClass; level: number; xp: number; gold: number; kills: number; quest: number; weapon: number; armor: number; potions: number; points: number; strength: number; vitality: number; items: number; }
 interface Mob { agent: CharacterAgent; health: number; max: number; boss: boolean; home: Point; path: Point[]; repath: number; cooldown: number; dead: number; label: Phaser.GameObjects.Text; bar: Phaser.GameObjects.Graphics; hitRadius: number; sprite: Phaser.GameObjects.Sprite; hit: (x: number,y: number,strength: number) => boolean; }
@@ -37,10 +38,13 @@ export class RealmRpg {
   private stored: boolean = false;
   private keyboard: Phaser.Input.Keyboard.KeyboardPlugin | null;
   private keys: Record<string, Phaser.Input.Keyboard.Key> = {};
+  private touchMovement: TouchMovement;
   private wings: HeroWings;
   private heroLabel: Phaser.GameObjects.Text;
   constructor(private scene: Phaser.Scene, private player: PlayerController, private map: LoadedMap) {
     this.wings = new HeroWings(scene, player);
+    this.touchMovement = new TouchMovement(player);
+    this.touchMovement.setActive(false);
     this.home = { ...player.worldPosition };
     try { const data = JSON.parse(localStorage.getItem(SAVE_KEY) || "null") as Save | null; if (data && Number.isFinite(data.level) && data.level >= 1 && HEROES.some(hero => hero.name === data.hero)) { this.save = { ...this.save, ...data }; this.selected = data.hero; this.stored = true; } } catch { /* a new adventure remains available */ }
     this.root = document.createElement("div"); this.root.className = "rpg-ui";
@@ -50,7 +54,7 @@ export class RealmRpg {
     this.heroLabel = scene.add.text(player.sprite.x, player.sprite.y - 40, "", { fontFamily: "Arial", fontSize: "9px", color: "#ead398", stroke: "#11171c", strokeThickness: 3 }).setOrigin(.5).setDepth(200000);
     this.createMobs(); this.startScreen(); this.render();
     const hooks = window as unknown as Record<string, unknown>;
-    hooks.rpgState = () => ({ started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
+    hooks.rpgState = () => ({ started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
     hooks.rpgAction = (action: string) => this.action(action);
     hooks.rpgApproach = (id: number) => { const mob = this.mobs[id]; if (mob) { const p = nearestWalkable(this.map, {x:mob.sprite.x,y:mob.sprite.y+27}, {width:6,height:4,footOffsetY:10},8); if(p) this.player.teleportTo(p.x,p.y); } };
     this.root.addEventListener("click", (event) => { const target = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-action]"); if (target) { this.action(target.dataset.action!); target.blur(); this.scene.game.canvas.focus(); } });
@@ -101,8 +105,9 @@ export class RealmRpg {
       for(const key of ["I","C","B"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
       if(this.active) for(const key of ["Q","E","R"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
     }
+    this.touchMovement.setActive(this.active);
     this.wings.update(this.save.wings, this.running);
-    this.heroLabel.setPosition(this.player.sprite.x,this.player.sprite.y-40).setText(`${this.save.name} · Nv.${this.save.level}`);
+    this.heroLabel.setPosition(this.player.sprite.x,this.player.sprite.y-24).setText(`${this.save.name} · Nv.${this.save.level}`);
     if (!this.active) return;
     this.elapsed+=delta; this.mana=Math.min(80,this.mana+delta*.004); this.health=Math.min(this.maxHealth,this.health+delta*.0007);
     for(const m of this.mobs) {
@@ -156,5 +161,5 @@ export class RealmRpg {
   private banner(text:string):void {const el=document.createElement("div");el.className="rpg-toast";el.textContent=text;this.root.append(el);this.scene.time.delayedCall(2500,()=>el.remove());}
   private log(text:string):void {this.messages.unshift(text);this.messages=this.messages.slice(0,4);}
   private persist():void {try{localStorage.setItem(SAVE_KEY,JSON.stringify(this.save));}catch{/* Storage disabled by the browser. */}}
-  destroy():void {this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
+  destroy():void {this.touchMovement.destroy();this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
 }
