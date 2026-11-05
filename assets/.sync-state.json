@@ -953,11 +953,6 @@
     }
   },
   "tilesets": {
-    "7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d": {
-      "updated_at": "2026-11-05T18:58:05.836986+00:00",
-      "name": "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor",
-      "sync_version": 2
-    },
     "4ab0f820-c094-4555-9ca5-1cb877255ed7": {
       "updated_at": "2026-11-05T18:57:04.669684+00:00",
       "name": "Exile bleak charcoal cracked wasteland earth \u2197 Exile ashen gray ruined stone road with sickly",
@@ -1021,6 +1016,11 @@
     "ead821ba-c3a4-4480-86be-1d25cf344a4d": {
       "updated_at": "2026-11-05T14:26:29.129502+00:00",
       "name": "water \u2197 grass",
+      "sync_version": 2
+    },
+    "7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d": {
+      "updated_at": "2026-11-05T18:58:05.836986+00:00",
+      "name": "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor",
       "sync_version": 2
     }
   },

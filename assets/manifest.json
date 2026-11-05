@@ -80,7 +80,6 @@
     "base#e4dac244": "assets/objects/e4dac244-ce82-43d6-8cb5-65ef46d0b763/"
   },
   "tilesets": {
-    "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/",
     "Exile bleak charcoal cracked wasteland earth \u2197 Exile ashen gray ruined stone road with sickly": "assets/tilesets/4ab0f820-c094-4555-9ca5-1cb877255ed7/",
     "Tarkan orange wind blown desert sand \u2197 Tarkan ancient ochre sandstone ruined pavement": "assets/tilesets/fc95330f-1404-40c1-9fbf-5f80c574ac50/",
     "Dungeon dark rough underground bedrock wall top \u2197 Dungeon ancient cracked gray flagstone floor in a": "assets/tilesets/5a696d44-9c41-4ec3-b2ff-95678c0c0023/",
@@ -93,7 +92,8 @@
     "Noria deep emerald forest ground with roots and \u2197 Noria bright green grassy woodland clearing with": "assets/tilesets/38095e6d-a232-42c6-b983-21fc6bec352d/",
     "Lorencia dark fantasy mossy green meadow \u2197 Lorencia medieval town weathered warm gray": "assets/tilesets/c07a2485-7d0f-4d5b-a03a-c133085699af/",
     "water \u2197 wood": "assets/tilesets/fcc53800-595a-46dd-82cf-1364b9ea6fea/",
-    "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/"
+    "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/",
+    "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/"
   },
   "ui": {},
   "rooms": {}
