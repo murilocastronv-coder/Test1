@@ -17,6 +17,7 @@
   },
   "images": {},
   "maps": {
+    "Dungeon 3": "assets/maps/f23f98c5-f199-49e4-9a25-ad8eb6594501/",
     "Dungeon 2": "assets/maps/89ccec89-ade8-43a5-a820-3a4138377d28/",
     "Dungeon 1": "assets/maps/60cb3c22-9f2d-4901-8a6b-885aed9c3cb8/",
     "Devias": "assets/maps/a780fd5b-16bd-4ac2-82c0-21ce07a50e7c/",
@@ -35,7 +36,6 @@
     "Lost Tower 3": "assets/maps/f70049a7-7e83-4d37-bdd6-135c0a3fc489/",
     "Lost Tower 2": "assets/maps/d3368fd2-5b23-4159-8e41-8be45ed58a5a/",
     "Lost Tower 1": "assets/maps/730f9c96-dfd3-4179-8b22-2f7c0e662a58/",
-    "Dungeon 3": "assets/maps/f23f98c5-f199-49e4-9a25-ad8eb6594501/",
     "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
   },
   "objects": {
