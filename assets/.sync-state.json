@@ -286,26 +286,6 @@
       ],
       "sync_version": 16
     },
-    "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
-      "updated_at": "2026-11-05T15:54:10.141581+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Guerreiro Esqueleto",
-      "member_ids": [
-        "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
-      ],
-      "sync_version": 16
-    },
-    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
-      "updated_at": "2026-11-05T15:54:00.052382+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Dem\u00f4nio das Brasas",
-      "member_ids": [
-        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
     "886cef61-2e1b-4383-83c1-1336588c3261": {
       "updated_at": "2026-11-05T15:53:33.555344+00:00",
       "animation_ids": [
@@ -333,6 +313,16 @@
       ],
       "sync_version": 16
     },
+    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
+      "updated_at": "2026-11-05T15:54:00.052382+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Dem\u00f4nio das Brasas",
+      "member_ids": [
+        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
+      ],
+      "sync_version": 16
+    },
     "765a1ab1-0538-4101-9520-bae405d3cbd4": {
       "updated_at": "2026-11-05T15:53:51.275262+00:00",
       "animation_ids": [
@@ -357,6 +347,25 @@
       "name": "Goblin Saqueador",
       "member_ids": [
         "765a1ab1-0538-4101-9520-bae405d3cbd4"
+      ],
+      "sync_version": 16
+    },
+    "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
+      "updated_at": "2026-11-05T15:54:10.141581+00:00",
+      "animation_ids": [
+        "10696c1e-148d-469d-aef3-d2194cc6d1f1",
+        "19bd3150-0f1f-4557-828e-e7697f5457ec",
+        "5bb30092-0c49-4bc4-a908-66f65966bd11",
+        "7c748070-2e5a-42e4-a052-dbd9b4f77d21",
+        "910b97b7-8b7e-4f75-a44f-d10603d38dd4",
+        "960df0b8-35d5-4f12-89c3-6e0a11df2ef1",
+        "98363076-e43e-49f7-a95a-41b92e8a04bd",
+        "ae8cd043-9aa1-4c13-a0fb-f0ca977fb907"
+      ],
+      "animation_fingerprint": "9bb38d472d772a078b21011ce2e15a54665042e105e00dcef229c119a203faec",
+      "name": "Guerreiro Esqueleto",
+      "member_ids": [
+        "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
       ],
       "sync_version": 16
     }
