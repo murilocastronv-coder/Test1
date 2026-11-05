@@ -39,7 +39,158 @@
       ],
       "rotation_path_pattern": "idle/rotations/{direction}.png",
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
-      "animations": []
+      "animations": [
+        {
+          "name": "attack",
+          "id": "9169407d-dd1d-412b-b400-115b09623f91",
+          "source_name": "custom-heavy axe overhead strike. Cle",
+          "display_name": "attack",
+          "description": "heavy axe overhead strike. Clearly prepare, strike midway, and recover to starting stance. Preserve identity and weapon.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "attack"
+          ],
+          "path_pattern": "idle/animations/attack/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/attack/{direction}/frame_{frame}"
+        },
+        {
+          "name": "death",
+          "id": "61675114-72f8-452f-b758-8a8aacbfde62",
+          "source_name": "falling-back-death",
+          "display_name": "death",
+          "description": "falling backward",
+          "generation_model": "template",
+          "frame_count": 7,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "death"
+          ],
+          "path_pattern": "idle/animations/death/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/death/{direction}/frame_{frame}"
+        },
+        {
+          "name": "hurt",
+          "id": "0b60ac24-0888-4a22-b1ea-e924f3d16a0c",
+          "source_name": "taking-punch",
+          "display_name": "hurt",
+          "description": "taking a punch",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "hurt"
+          ],
+          "path_pattern": "idle/animations/hurt/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/hurt/{direction}/frame_{frame}"
+        },
+        {
+          "name": "idle",
+          "id": "a0851f0c-6a0a-4300-b096-dfec9f9c7df4",
+          "source_name": "breathing-idle",
+          "display_name": "idle",
+          "description": "breathing idle",
+          "generation_model": "template",
+          "frame_count": 4,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "path_pattern": "idle/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
+        },
+        {
+          "name": "run",
+          "id": "c9bdcb4a-a58c-42aa-b48d-9c1d9597ce3e",
+          "source_name": "running-6-frames",
+          "display_name": "run",
+          "description": "running",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "run"
+          ],
+          "path_pattern": "idle/animations/run/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/run/{direction}/frame_{frame}"
+        },
+        {
+          "name": "walk",
+          "id": "a0adc63f-e752-4474-9444-a66c760a0b86",
+          "source_name": "walking-6-frames",
+          "display_name": "walk",
+          "description": "walking",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "path_pattern": "idle/animations/walk/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/walk/{direction}/frame_{frame}"
+        }
+      ]
     }
   ]
 }
