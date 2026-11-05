@@ -41,6 +41,81 @@
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
       "animations": [
         {
+          "name": "idle",
+          "id": "d4189cb4-d320-4d66-b9a2-16ee6c7adc6c",
+          "source_name": "breathing-idle",
+          "display_name": "idle",
+          "description": "breathing idle",
+          "generation_model": "template",
+          "frame_count": 4,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "path_pattern": "idle/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
+        },
+        {
+          "name": "run",
+          "id": "99f94ccc-968d-4489-85e5-b11ea355a531",
+          "source_name": "running-6-frames",
+          "display_name": "run",
+          "description": "running",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "run"
+          ],
+          "path_pattern": "idle/animations/run/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/run/{direction}/frame_{frame}"
+        },
+        {
+          "name": "spell",
+          "id": "1dee97e5-9f64-44cd-831b-93677ee25b6f",
+          "source_name": "fireball",
+          "display_name": "spell",
+          "description": "casting a fireball",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "spell"
+          ],
+          "path_pattern": "idle/animations/spell/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/spell/{direction}/frame_{frame}"
+        },
+        {
           "name": "walk",
           "id": "7738841f-0518-46cc-b509-b4182d29a192",
           "source_name": "walking",
