@@ -1,0 +1,29 @@
+status: completed
+id: 5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9
+name: Forest Monster
+state_name: Idle
+directions: 8 (south, east, north, west, south-east, north-east, north-west, south-west)
+size: 80x80px
+view: low top-down
+style: -, selective outline, high detail
+group: 205dcd30-fb44-4f4b-aca1-5b518c85115d (1 state)
+
+rotations:
+  south: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/south.png?t=1793906024
+  east: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/east.png?t=1793906024
+  north: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/north.png?t=1793906024
+  west: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/west.png?t=1793906024
+  south-east: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/south-east.png?t=1793906024
+  north-east: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/north-east.png?t=1793906024
+  north-west: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/north-west.png?t=1793906024
+  south-west: https://backblaze.pixellab.ai/file/pixellab-characters/15e50eb9-9330-4c66-9f3e-96f273c7aaee/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/rotations/south-west.png?t=1793906024
+
+animations: none
+
+download: https://api.pixellab.ai/mcp/characters/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/download
+spritesheet: https://api.pixellab.ai/mcp/characters/5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9/spritesheet (this state only — one uniform-grid sheet PNG + layout JSON, zipped; cells pivot-centred)
+
+available_animations: backflip, breathing-idle, cross-punch, crouched-walking, crouching, drinking, falling-back-death, fight-stance-idle-8-frames, fireball, flying-kick, front-flip, getting-up, high-kick, hurricane-kick, jumping-1, jumping-2, lead-jab, leg-sweep, picking-up, pull-heavy-object, pushing, roundhouse-kick, running-4-frames, running-6-frames, running-8-frames, running-jump, running-slide, sad-walk, scary-walk, surprise-uppercut, taking-punch, throw-object, two-footed-jump, walk, walk-1, walk-2, walking, walking-10, walking-2, walking-3, walking-4, walking-4-frames, walking-5, walking-6, walking-6-frames, walking-7, walking-8, walking-8-frames, walking-9
+
+actions: animate_character(character_id="5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9", ...) | create_character_state(character_id="5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9", ...) | delete_character(character_id="5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9")
+hint: animate_character(character_id="5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9", template_animation_id="backflip")

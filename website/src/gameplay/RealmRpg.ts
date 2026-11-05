@@ -122,9 +122,9 @@ export class RealmRpg {
       const range=kind.ranged?110:28;
       if(chasing&&distance<=range&&m.cooldown<=0){
         m.facing=directionFromVector(this.player.sprite.x-m.sprite.x,this.player.sprite.y-m.sprite.y);
-        m.attackMs=m.agent.playControlled("attack",m.facing);m.strikeAt=m.attackMs*.5;m.struck=false;m.cooldown=m.attackMs+850;m.path=[];
+        m.attackMs=m.agent.playControlled("attack",m.facing,true);m.strikeAt=m.attackMs*.5;m.struck=false;m.cooldown=m.attackMs+850;m.path=[];
       }else{
-        const target=chasing&&distance>range?this.player.worldPosition:homeDistance>12?m.home:null;
+        const target=chasing?(distance>range?this.player.worldPosition:null):homeDistance>12?m.home:null;
         if(target){
           if(m.repath<=0){m.path=findPath(this.map,m.sprite,target,COLLIDER)??[];m.repath=600;}
           while(m.path.length&&Math.hypot(m.sprite.x-m.path[0].x,m.sprite.y-m.path[0].y)<5)m.path.shift();
@@ -181,12 +181,12 @@ export class RealmRpg {
     if (!this.active || this.inSafeZone(this.player.worldPosition) || this.inSafeZone(mob.sprite) || mob.dead || !mob.agent.hit(x,y,strength)) return false;
     const dmg = Math.max(1,Math.round((this.damage + (this.spellHit ? (this.save.hero === "Feiticeiro" ? 22 : 10) : 0))*this.powerMultiplier)-(mob.classic?.defense??0));
     mob.attackMs=0; mob.path=[];
-    if(mob.classic)mob.hurtMs=mob.agent.playControlled("hurt",mob.facing);
+    if(mob.classic)mob.hurtMs=mob.agent.playControlled("hurt",mob.facing,true);
     mob.health = Math.max(0,mob.health-dmg); this.float(mob.sprite.x,mob.sprite.y-18,`${dmg}`,"#f6d596");
     if (!mob.health) {
       mob.dead = mob.classic?.respawnMs ?? (mob.boss ? 22000 : 10000);
       mob.hurtMs=0;
-      if(mob.classic){mob.sprite.clearTint();mob.agent.playControlled("death",mob.facing);}else mob.sprite.setVisible(false); mob.label.setVisible(false); mob.bar.clear();
+      if(mob.classic){mob.sprite.clearTint();mob.agent.playControlled("death",mob.facing,true);}else mob.sprite.setVisible(false); mob.label.setVisible(false); mob.bar.clear();
       const xp = mob.classic?.exp ?? (mob.boss ? 120 : 35); const gold = mob.classic?.zen ?? (mob.boss ? 100 : 20);
       const drop=!mob.classic||Math.random()<mob.classic.dropChance;
       this.save.xp += xp; this.save.gold += gold; this.save.kills++; if(drop)this.save.items++;

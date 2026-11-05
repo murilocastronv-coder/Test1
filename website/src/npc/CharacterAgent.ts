@@ -164,6 +164,8 @@ export class CharacterAgent {
 
   update(deltaMs: number): void {
     if (this.hitStunMs > 0) {
+      // Controlled hurt/death clips must keep advancing during knockback stun.
+      if (this.controlled) this.animator.update(deltaMs);
       this.hitStunMs -= deltaMs;
       if (Math.abs(this.knockbackVx) > 1 || Math.abs(this.knockbackVy) > 1) {
         const moved = moveWithCollision(
@@ -292,12 +294,13 @@ export class CharacterAgent {
   }
 
   /** Let a gameplay controller own movement and select an exact manifest clip. */
-  playControlled(clip: string, direction: Direction): number {
+  playControlled(clip: string, direction: Direction, restart = false): number {
     this.controlled = true;
     this.direction = direction;
     const resolved = this.resolveAnimation([clip]);
     if (!resolved) throw new Error(`Missing controlled animation: ${clip}`);
     this.animator.setAnimationMap(resolved.animations, resolved.stateFolder, this.pose.directions);
+    if (restart) this.animator.setPose(direction, resolved.stateFolder, this.pose.directions);
     this.animator.setClip(resolved.clipName, direction, resolved.stateFolder);
     return resolved.animation.frame_count * 1000 / (resolved.animation.fps ?? GAME_CONFIG.animation.fps);
   }
