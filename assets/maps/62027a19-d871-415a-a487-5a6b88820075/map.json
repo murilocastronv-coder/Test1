@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Exile",
+  "exportDate": "2026-11-05T18:57:56.630121Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "bleak charcoal wasteland earth with stark fissures and fractured dry soil plates in flat uniform color, no gradients or shadows",
+      "color": "#4a9eff",
+      "baseTileId": "57660cce-85ac-4069-bf30-9871b12acafb",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "ashen gray ruined stone road surface with fragmented flagstones and sickly green toxic fissures in flat uniform color, no gradients or shadows",
+      "color": "#7dd87d",
+      "baseTileId": "8b7c8664-ab21-4cbc-9935-438d4b998e23",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "4ab0f820-c094-4555-9ca5-1cb877255ed7",
+      "filename": "bleak charcoal wasteland earth with stark fissures and fractured dry soil plates in flat un-7f981661.png",
+      "lowerTerrain": "bleak charcoal wasteland earth with stark fissures and fractured dry soil plates in flat uniform color, no gradients or shadows",
+      "upperTerrain": "ashen gray ruined stone road surface with fragmented flagstones and sickly green toxic fissures in flat uniform color, no gradients or shadows",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "low weathered rocky bank acting as a thin low ledge with crumbling stone edges and sparse debris in flat uniform color, no gradients or shadows",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "62027a19-d871-415a-a487-5a6b88820075",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

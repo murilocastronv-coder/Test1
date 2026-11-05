@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "bleak charcoal wasteland earth with stark fissures and fractured dry soil plates in flat uniform color, no gradients or shadows",
+      "to": "ashen gray ruined stone road surface with fragmented flagstones and sickly green toxic fissures in flat uniform color, no gradients or shadows",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "4ab0f820-c094-4555-9ca5-1cb877255ed7",
+      "transitionSize": 0.25
+    }
+  ]
+}
