@@ -1,20 +1,20 @@
 {
   "version": "1.0.0",
   "name": "Lorencia",
-  "exportDate": "2026-11-05T13:00:29.351456Z",
+  "exportDate": "2026-11-05T13:00:53.495799Z",
   "engine": "pixellab-map-editor",
   "mapConfig": {
     "tileSize": 16,
     "dimensions": {
-      "width": 164,
+      "width": 160,
       "height": 160,
-      "pixelWidth": 2624,
+      "pixelWidth": 2560,
       "pixelHeight": 2560
     },
     "boundingBox": {
-      "maxX": 161,
+      "maxX": 159,
       "maxY": 159,
-      "minX": -2,
+      "minX": 0,
       "minY": 0
     }
   },
