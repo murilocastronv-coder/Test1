@@ -39,6 +39,7 @@
     "base#88ed7c17": "assets/objects/88ed7c17-f63f-4d9f-a409-533b782cec76/",
     "base#8b398fbe": "assets/objects/8b398fbe-7a2f-45fd-b3f0-77b790905f9d/",
     "base#9eb644ec": "assets/objects/9eb644ec-d086-48a2-befe-962d7282c3dc/",
+    "base#aa6d7ac6": "assets/objects/aa6d7ac6-7445-472d-983f-457e56c5b3dc/",
     "base#b125fc05": "assets/objects/b125fc05-548f-4006-8a80-3d22fe964fa8/",
     "base#c09812c4": "assets/objects/c09812c4-60e1-4b5b-b303-499e7d2c6b7c/",
     "base#c2ea9ec8": "assets/objects/c2ea9ec8-1718-4e7a-9c00-e096e32d34b1/",
@@ -51,14 +52,13 @@
     "base#9dc7aab1": "assets/objects/9dc7aab1-341b-49b5-94c5-8b8de1ba0da2/",
     "base#a072fddd": "assets/objects/a072fddd-5576-4f8f-83a7-ff32da5bd624/",
     "base#a1437254": "assets/objects/a1437254-3c5e-4037-9e30-1cd36c453bdf/",
-    "base#aee40f41": "assets/objects/aee40f41-3fce-45bc-9ee5-c1f023773f66/",
     "base#c217f23d": "assets/objects/c217f23d-a2b5-4b18-894c-40782e1dfca5/",
     "base#cc87e56f": "assets/objects/cc87e56f-caa1-42e1-8360-9e0e52f877d9/",
     "base#db31cf54": "assets/objects/db31cf54-3006-4ed2-a4ea-7b477711c200/",
     "base#e0a60502": "assets/objects/e0a60502-7609-4e04-823d-51670fadb69f/",
     "base#e3b0c3dc": "assets/objects/e3b0c3dc-5cf9-47e5-896b-10de59556e53/",
     "base#e4dac244": "assets/objects/e4dac244-ce82-43d6-8cb5-65ef46d0b763/",
-    "base#aa6d7ac6": "assets/objects/aa6d7ac6-7445-472d-983f-457e56c5b3dc/"
+    "base#aee40f41": "assets/objects/aee40f41-3fce-45bc-9ee5-c1f023773f66/"
   },
   "tilesets": {
     "water \u2197 wood": "assets/tilesets/fcc53800-595a-46dd-82cf-1364b9ea6fea/",
