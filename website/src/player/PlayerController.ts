@@ -412,7 +412,12 @@ export class PlayerController {
   private resolveAnimation(
     candidates: string[],
   ): CharacterAnimationResolution | undefined {
-    return this.animationResolver.resolve(candidates, this.direction);
+    // Prefer the generated breathing clip when standing still; walking and
+    // combat retain their existing resolution and the current sprite scale.
+    const clips = candidates.flatMap((candidate) =>
+      candidate === "idle" ? ["breathing-idle", "Parado", "idle"] : [candidate],
+    );
+    return this.animationResolver.resolve(clips, this.direction);
   }
 
   private stateDirections(selection: CharacterStateSelection): Direction[] {
