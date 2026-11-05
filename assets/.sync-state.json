@@ -151,25 +151,6 @@
       ],
       "sync_version": 16
     },
-    "a186e0b5-46cf-4259-b791-d06d5dece872": {
-      "updated_at": "2026-11-05T14:39:28.657218+00:00",
-      "animation_ids": [
-        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
-        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
-        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
-        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
-        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
-        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
-        "b3df27ea-f26e-4a80-8085-44925e56d45e",
-        "c602ff9e-e9cb-4e72-aac1-42156ce62291"
-      ],
-      "animation_fingerprint": "6cc132d2ec92be958df1ab1e3051de9dcf240116fe32cedb844126eea9a035b2",
-      "name": "Cavaleiro Carmesim",
-      "member_ids": [
-        "a186e0b5-46cf-4259-b791-d06d5dece872"
-      ],
-      "sync_version": 16
-    },
     "e15cb620-66b4-457e-af22-7357de16bbef": {
       "updated_at": "2026-11-05T14:39:55.879015+00:00",
       "animation_ids": [
@@ -219,6 +200,25 @@
       "name": "Lorde Sombrio",
       "member_ids": [
         "3a46a0b9-fba0-476d-9085-06ad60a89811"
+      ],
+      "sync_version": 16
+    },
+    "a186e0b5-46cf-4259-b791-d06d5dece872": {
+      "updated_at": "2026-11-05T14:39:28.657218+00:00",
+      "animation_ids": [
+        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
+        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
+        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
+        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
+        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
+        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
+        "b3df27ea-f26e-4a80-8085-44925e56d45e",
+        "c602ff9e-e9cb-4e72-aac1-42156ce62291"
+      ],
+      "animation_fingerprint": "6cc132d2ec92be958df1ab1e3051de9dcf240116fe32cedb844126eea9a035b2",
+      "name": "Cavaleiro Carmesim",
+      "member_ids": [
+        "a186e0b5-46cf-4259-b791-d06d5dece872"
       ],
       "sync_version": 16
     }
