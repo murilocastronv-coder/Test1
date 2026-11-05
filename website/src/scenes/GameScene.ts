@@ -122,7 +122,7 @@ export class GameScene extends Phaser.Scene {
     if (state === this.hudState) return;
     this.hudState = state;
     this.hud.setText([
-      "THE FOREST CLEARING",
+      "LORENCIA",
       encounter?.message ?? this.mapData.map.name,
       ...(encounter ? [`You ${encounter.status.playerHealth}/${encounter.status.playerMaxHealth} ${"♥".repeat(encounter.status.playerHealth)}  ·  Bear ${encounter.status.bearHealth}/${encounter.status.bearMaxHealth}`] : []),
       "WASD / arrows move · Shift runs · Space jumps",

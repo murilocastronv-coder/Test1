@@ -45,10 +45,10 @@ export const GAME_CONFIG = {
 } as const;
 
 export const TEMPLATE_SPAWNS = {
-  player: { x: 808, y: 168 },
-  npc: { x: 712, y: 40 },
-  farmer: { x: 496, y: 264 },
-  bear: { x: 1112, y: 328 },
+  player: { x: 1280, y: 1280 },
+  npc: { x: 1200, y: 1200 },
+  farmer: { x: 1360, y: 1200 },
+  bear: { x: 1280, y: 560 },
 } as const;
 
 /**
