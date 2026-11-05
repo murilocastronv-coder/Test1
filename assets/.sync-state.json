@@ -437,6 +437,14 @@
   },
   "images": {},
   "maps": {
+    "e4fddb2b-5119-4e39-add5-9ca0e37a7ba1": {
+      "updated_at": "2026-11-05T18:57:54.729668+00:00",
+      "name": "Arena / Stadium",
+      "export_version": 13,
+      "tilesets": {
+        "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe": "2026-11-05T18:56:48.153041+00:00"
+      }
+    },
     "84136bbf-af47-4fa4-bbca-c03e77b8b412": {
       "updated_at": "2026-11-05T18:57:53.206757+00:00",
       "name": "Icarus",

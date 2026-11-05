@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "arena stadium rough gray outer flagstones with weathered surfaces and simple joint lines in flat uniform color",
+      "to": "arena stadium red brown packed training sand with fine grain texture and subtle stone seams in flat uniform color",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe",
+      "transitionSize": 0.25
+    }
+  ]
+}

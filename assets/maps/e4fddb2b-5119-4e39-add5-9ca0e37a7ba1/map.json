@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Arena / Stadium",
+  "exportDate": "2026-11-05T18:57:55.081128Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "arena stadium rough gray outer flagstones with weathered surfaces and simple joint lines in flat uniform color",
+      "color": "#4a9eff",
+      "baseTileId": "553e351b-5d5c-42d1-9ade-351e2fe66742",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "arena stadium red brown packed training sand with fine grain texture and subtle stone seams in flat uniform color",
+      "color": "#7dd87d",
+      "baseTileId": "e0e63ee7-2443-40c5-a3c5-16cd0d1c53f2",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe",
+      "filename": "arena stadium rough gray outer flagstones with weathered surfaces and simple joint lines in-154a63a9.png",
+      "lowerTerrain": "arena stadium rough gray outer flagstones with weathered surfaces and simple joint lines in flat uniform color",
+      "upperTerrain": "arena stadium red brown packed training sand with fine grain texture and subtle stone seams in flat uniform color",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "arena square stone curb forming a thin low vertical edge with clean masonry blocks in flat uniform color",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "e4fddb2b-5119-4e39-add5-9ca0e37a7ba1",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
