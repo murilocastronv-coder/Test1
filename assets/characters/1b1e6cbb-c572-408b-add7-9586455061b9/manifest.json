@@ -1,0 +1,194 @@
+{
+  "id": "1b1e6cbb-c572-408b-add7-9586455061b9",
+  "name": "Cria a summor do muonline",
+  "group_id": "cda281d6-cc55-4b20-9a18-ce9ee5a21d19",
+  "atlas_key": "char-1b1e6cbb-c572-408b-add7-9586455061b9",
+  "runtime_helper": "website/src/shared/animation.ts",
+  "usage": [
+    "Read this file before choosing character states or animation clip names.",
+    "Animation name is the exact physical clip key. display_name and source_name describe it; aliases are semantic role hints only.",
+    "Resolve the exact stateFolder and clipName with the resolver this file exports \u2014 resolveCharacterAnimation(manifest, candidates, { state?, direction? }), or selectCharacterState(...) where that is what it exports.",
+    "Prefer an exact user-requested display name or clip name before generic roles such as idle, walk, run, jump, or attack.",
+    "CharacterAgent resolves idle, movement, and attack clips across the full manifest and switches state folders automatically.",
+    "Rotations are static poses only. Use animator.setPose(...) or characterRotationFrameName(...) for a deliberate static pose; setClip('idle', ...) always means a real animated idle clip.",
+    "resolveCharacterAnimation(...) and chooseClip(...) return undefined when no clip matches. Handle that explicitly; never silently replace a missing animation with rotations.",
+    "For simple roaming/walking NPCs, use CharacterAgent instead of custom straight-line movement. Its built-in roaming picks walkable targets and follows A* paths around blockers.",
+    "For autonomous movement, update movement/pathing before choosing the animation direction. Direction should come from actual movement after collision/sliding, not only the intended path target. Do not cache a facing direction before followPath/collision movement and reuse it for setClip.",
+    "If using setDirection as a temporary facing lock, do not call it again after releasing movement/facing control in the same update branch.",
+    "CharacterAgent owns the visible sprite as agent.sprite. Do not create a separate scene.add.sprite for the same character.",
+    "Keep each character controller or agent in the scene update loop for any movement or animation changes.",
+    "When adding behavior to a specific NPC, use explicit references or agent.role/agent.id. Do not infer identity from array position or agent.atlasKey.includes(name); atlas keys are UUID-based.",
+    "For dialogue portraits, use states[].portrait.path when present. Build the URL with characterAssetUrl(characterId, path) from the runtime helper.",
+    "For portrait lip-sync/vocal animation, use states[].vocal_animation.path when present. It is a grid with moods as rows and visemes as columns.",
+    "Use SpriteAnimator(sprite, atlasKey, animations, stateFolder) and animator.setClip(clipName, direction, stateFolder) for resolved clips."
+  ],
+  "states": [
+    {
+      "id": "1b1e6cbb-c572-408b-add7-9586455061b9",
+      "name": "Idle",
+      "folder": "idle",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "north-east",
+        "north-west",
+        "south-west"
+      ],
+      "rotation_path_pattern": "idle/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "idle/rotations/{direction}",
+      "animations": [
+        {
+          "name": "attack",
+          "id": "27c03e6e-554c-4733-a0c4-842da1eafb2e",
+          "source_name": "v3:two punch combo",
+          "display_name": "Two Punch Combo",
+          "description": "two punch combo",
+          "generation_model": "pixminimax_template",
+          "frame_count": 16,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "attack"
+          ],
+          "path_pattern": "idle/animations/attack/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/attack/{direction}/frame_{frame}"
+        },
+        {
+          "name": "attack-b3318bc9",
+          "id": "b3318bc9-d37d-4cd4-9e84-214090c07001",
+          "source_name": "v3:left punch",
+          "display_name": "Left Punch",
+          "description": "left punch",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "attack"
+          ],
+          "path_pattern": "idle/animations/attack-b3318bc9/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/attack-b3318bc9/{direction}/frame_{frame}"
+        },
+        {
+          "name": "attack-fcba8ce2",
+          "id": "fcba8ce2-a904-42fa-b21e-253e36751241",
+          "source_name": "v3:punch",
+          "display_name": "Right Punch",
+          "description": "punch",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "attack"
+          ],
+          "path_pattern": "idle/animations/attack-fcba8ce2/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/attack-fcba8ce2/{direction}/frame_{frame}"
+        },
+        {
+          "name": "run",
+          "id": "eec71da5-c554-4dbb-8bdd-c6ca1c19986f",
+          "source_name": "v3:running",
+          "display_name": "Running",
+          "description": "running",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "run"
+          ],
+          "path_pattern": "idle/animations/run/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/run/{direction}/frame_{frame}"
+        },
+        {
+          "name": "v3-uppercut",
+          "id": "3c9ee78a-8de5-4e99-ac0e-a00d06d33896",
+          "source_name": "v3:uppercut",
+          "display_name": "Uppercut",
+          "description": "uppercut",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [],
+          "path_pattern": "idle/animations/v3-uppercut/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/v3-uppercut/{direction}/frame_{frame}"
+        },
+        {
+          "name": "walk",
+          "id": "f00aa8bb-38b6-414e-854f-5445531fd227",
+          "source_name": "v3:walking",
+          "display_name": "Walking",
+          "description": "walking",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "path_pattern": "idle/animations/walk/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/walk/{direction}/frame_{frame}"
+        }
+      ]
+    }
+  ]
+}
