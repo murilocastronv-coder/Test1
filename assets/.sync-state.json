@@ -150,6 +150,36 @@
         "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e"
       ],
       "sync_version": 16
+    },
+    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
+      "updated_at": "2026-11-05T14:39:23.302651+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Gladiador Violeta",
+      "member_ids": [
+        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
+      ],
+      "sync_version": 16
+    },
+    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
+      "updated_at": "2026-11-05T14:39:24.966084+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Elfa Esmeralda",
+      "member_ids": [
+        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+      ],
+      "sync_version": 16
+    },
+    "a186e0b5-46cf-4259-b791-d06d5dece872": {
+      "updated_at": "2026-11-05T14:39:14.321442+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Cavaleiro Carmesim",
+      "member_ids": [
+        "a186e0b5-46cf-4259-b791-d06d5dece872"
+      ],
+      "sync_version": 16
     }
   },
   "images": {},
