@@ -293,8 +293,19 @@ export class PlayerController {
     }
   }
 
+  get attackState(): { active: boolean; elapsedMs: number; durationMs: number; effectTriggered: boolean } {
+    return { active: !!this.activeAction, elapsedMs: this.actionElapsedMs, durationMs: this.activeAction?.durationMs ?? 0, effectTriggered: this.activeAction?.effectTriggered ?? false };
+  }
+
+  performAttack(direction: Direction = this.direction): boolean {
+    if (this.jumping || this.activeAction || this.actionElapsedMs > 0) return false;
+    this.direction = direction;
+    return this.startAction("slash");
+  }
+
   private startAction(actionName: PlayerActionName): boolean {
-    const action = this.resolveAnimation([actionName]);
+    if (this.activeAction || this.actionElapsedMs > 0) return false;
+    const action = this.resolveAnimation(["Ataque de Espada", "Ataque de Cajado", "Ataque de Arco", actionName]);
     if (!action) {
       // These heroes have walking clips only: retain combat without inventing attack art.
       if (this.actionElapsedMs > 0) return false;
@@ -305,7 +316,7 @@ export class PlayerController {
     }
     const clip = action.animations[action.clipName];
     const fps = clip.fps ?? GAME_CONFIG.animation.fps;
-    const effectFrame = actionName === "spell" ? SPELL_CAST_FRAME_DELAY : SLASH_SWING_FRAME_DELAY;
+    const effectFrame = action.animation.display_name?.startsWith("Ataque") ? 4 : actionName === "spell" ? SPELL_CAST_FRAME_DELAY : SLASH_SWING_FRAME_DELAY;
     this.activeAction = {
       ...action,
       name: actionName,

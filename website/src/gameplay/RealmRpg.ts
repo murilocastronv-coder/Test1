@@ -15,6 +15,7 @@ import "./rpg.css";
 import { HeroWings } from "./HeroWings";
 import { HeroPowers, HERO_POWERS } from "./HeroPowers";
 import { TouchMovement } from "./TouchMovement";
+import { WeaponProjectiles } from "./WeaponProjectiles";
 import { HEROES, heroPreview, type HeroClass } from "./HeroRoster";
 interface Save { wingId?: string; wings: boolean; name: string; hero: HeroClass; level: number; xp: number; gold: number; kills: number; quest: number; weapon: number; armor: number; potions: number; points: number; strength: number; vitality: number; items: number; }
 interface Mob { agent: CharacterAgent; health: number; max: number; boss: boolean; home: Point; path: Point[]; repath: number; cooldown: number; dead: number; label: Phaser.GameObjects.Text; bar: Phaser.GameObjects.Graphics; hitRadius: number; sprite: Phaser.GameObjects.Sprite; hit: (x: number,y: number,strength: number) => boolean; }
@@ -36,7 +37,7 @@ export class RealmRpg {
   private renderMs: number = 0;
   private powers: HeroPowers;
   private powerMultiplier: number = 1;
-  private attackAt: number = -10000;
+  private weaponShots: WeaponProjectiles;
   private spellHit: boolean = false;
   private stored: boolean = false;
   private keyboard: Phaser.Input.Keyboard.KeyboardPlugin | null;
@@ -48,6 +49,7 @@ export class RealmRpg {
   private masterLabel!: Phaser.GameObjects.Text;
   private masterButton!: HTMLButtonElement;
   constructor(private scene: Phaser.Scene, private player: PlayerController, private map: LoadedMap) {
+    this.weaponShots = new WeaponProjectiles(scene,map);
     this.powers = new HeroPowers(scene);
     this.wings = new HeroWings(scene, player);
     this.touchMovement = new TouchMovement(player);
@@ -61,7 +63,7 @@ export class RealmRpg {
     this.heroLabel = scene.add.text(player.sprite.x, player.sprite.y - 40, "", { fontFamily: "Arial", fontSize: "9px", color: "#ead398", stroke: "#11171c", strokeThickness: 3 }).setOrigin(.5).setDepth(200000);
     this.createMobs(); this.createWingMaster(); this.startScreen(); this.render();
     const hooks = window as unknown as Record<string, unknown>;
-    hooks.rpgState = () => ({ powers: this.powers.state(this.save.hero,this.elapsed), started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, wingCount: WING_CATALOG.length, wingTexture: this.wings.texture, master: {x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y,near:this.nearMaster,frame:this.wingMaster.sprite.frame.name}, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, name:m.label.text, frame:m.sprite.frame.name, boss:m.boss, dead:m.dead > 0 })) });
+    hooks.rpgState = () => ({ attack: this.player.attackState, weaponProjectiles: {active:this.weaponShots.count,released:this.weaponShots.released,hits:this.weaponShots.hits}, powers: this.powers.state(this.save.hero,this.elapsed), started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, wingCount: WING_CATALOG.length, wingTexture: this.wings.texture, master: {x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y,near:this.nearMaster,frame:this.wingMaster.sprite.frame.name}, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, name:m.label.text, frame:m.sprite.frame.name, boss:m.boss, dead:m.dead > 0 })) });
     hooks.rpgVisitMaster = () => { const p=nearestWalkable(this.map,{x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y+22},{width:6,height:4,footOffsetY:10},8);if(p)this.player.teleportTo(p.x,p.y); };
     hooks.rpgAction = (action: string) => this.action(action);
     hooks.rpgApproach = (id: number) => { const mob = this.mobs[id]; if (mob) { const p = nearestWalkable(this.map, {x:mob.sprite.x,y:mob.sprite.y+27}, {width:6,height:4,footOffsetY:10},8); if(p) this.player.teleportTo(p.x,p.y); } };
@@ -109,9 +111,15 @@ export class RealmRpg {
   }
   slash(origin: Point,direction: Direction): void {
     if (!this.active) return;
+    if (this.weaponRanged(origin,direction)) return;
     const vec = vectorFromDirection(direction);
     this.spellHit=false;
     this.targets.forEach(m => { const dx=m.sprite.x-origin.x,dy=m.sprite.y-origin.y; const forward=dx*vec.x+dy*vec.y; if(forward>=-8&&forward<52&&Math.abs(dx*vec.y-dy*vec.x)<29) m.hit(origin.x,origin.y,100); });
+  }
+  weaponRanged(origin: Point,direction: Direction): boolean {
+    if(this.save.hero!=="Arqueiro"&&this.save.hero!=="Feiticeiro")return false;
+    if(this.active)this.weaponShots.cast(origin,direction,this.save.hero==="Arqueiro"?"arrow":"magic");
+    return true;
   }
   allowSpell(): boolean {
     if (!this.active || this.mana<9) { if(this.active) this.log("Mana insuficiente. Ela se regenera com o tempo."); return false; }
@@ -123,6 +131,7 @@ export class RealmRpg {
       if(this.active) for(const key of ["Q","E","R"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
     }
     if(this.active) ["ONE","TWO","THREE","FOUR"].forEach((key,i)=>{if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key]))this.action(`power:${i}`);});
+    if(this.active)this.weaponShots.update(delta,this.targets);
     this.touchMovement.setActive(this.active);
     this.wings.update(this.save.wings, this.running, this.save.wingId);
     this.masterButton.hidden = !this.running || !!this.modal.innerHTML || !this.nearMaster;
@@ -162,7 +171,7 @@ export class RealmRpg {
     if(!this.active && !["weapon","armor","buy","sell","strength","vitality"].includes(action))return;
     if(action==="Q"){if(this.save.potions&&this.health<this.maxHealth){this.save.potions--;this.health=Math.min(this.maxHealth,this.health+85);this.log("Poção utilizada · +85 vida");}}
     if(action==="R"){if(this.targets.some(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<100)){this.log("Afaste-se dos monstros para retornar ao refúgio.");return;}this.player.teleportTo(this.home.x,this.home.y);this.health=this.maxHealth;this.mana=80;this.log("Refúgio: vida e mana recuperadas.");}
-    if(action==="attack" && this.active && this.elapsed-this.attackAt>500){this.attackAt=this.elapsed;const near=this.targets.filter(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<52).sort((a,b)=>Phaser.Math.Distance.Between(a.sprite.x,a.sprite.y,this.player.sprite.x,this.player.sprite.y)-Phaser.Math.Distance.Between(b.sprite.x,b.sprite.y,this.player.sprite.x,this.player.sprite.y))[0];this.slash(this.player.worldPosition,near?directionFromVector(near.sprite.x-this.player.sprite.x,near.sprite.y-this.player.sprite.y):this.player.facing);}
+    if(action==="attack" && this.active){const range=this.save.hero==="Arqueiro"||this.save.hero==="Feiticeiro"?260:52;const near=this.targets.filter(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<range).sort((a,b)=>Phaser.Math.Distance.Between(a.sprite.x,a.sprite.y,this.player.sprite.x,this.player.sprite.y)-Phaser.Math.Distance.Between(b.sprite.x,b.sprite.y,this.player.sprite.x,this.player.sprite.y))[0];this.player.performAttack(near?directionFromVector(near.sprite.x-this.player.sprite.x,near.sprite.y-this.player.sprite.y):this.player.facing);}
     if(action==="E") {if(this.nearMaster)this.action("master");else this.castPower(1);return;}
     if(action.startsWith("power:")){const slot=Number(action.slice(6));if(Number.isInteger(slot)&&slot>=0&&slot<4)this.castPower(slot);return;}
     if(action==="claim"){const required=(this.save.quest+1)*5;if(this.save.kills>=required){this.save.gold+=100;this.save.quest++;this.log("Contrato concluído · +100 ouro");this.banner("Contrato concluído");}}
@@ -203,5 +212,5 @@ export class RealmRpg {
   private banner(text:string):void {const el=document.createElement("div");el.className="rpg-toast";el.textContent=text;this.root.append(el);this.scene.time.delayedCall(2500,()=>el.remove());}
   private log(text:string):void {this.messages.unshift(text);this.messages=this.messages.slice(0,4);}
   private persist():void {try{localStorage.setItem(SAVE_KEY,JSON.stringify(this.save));}catch{/* Storage disabled by the browser. */}}
-  destroy():void {this.powers.destroy();this.touchMovement.destroy();this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();this.wingMaster.destroy();this.masterLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;delete hooks.rpgVisitMaster;}
+  destroy():void {this.weaponShots.destroy();this.powers.destroy();this.touchMovement.destroy();this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();this.wingMaster.destroy();this.masterLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;delete hooks.rpgVisitMaster;}
 }

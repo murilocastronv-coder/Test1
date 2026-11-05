@@ -32,7 +32,7 @@ export class GameScene extends Phaser.Scene {
     const spawn = resolvePlayerSpawnPoint(this.mapData);
     this.fireProjectiles = new FireProjectileSystem(this);
     this.player = new PlayerController(this, this.mapData, spawn.x, spawn.y, {
-      onSpellCast: (origin, direction) => { if (this.rpg?.allowSpell()) this.fireProjectiles.cast(origin, direction); },
+      onSpellCast: (origin, direction) => { if (this.rpg?.allowSpell() && !this.rpg.weaponRanged(origin, direction)) this.fireProjectiles.cast(origin, direction); },
       onSlashSwing: (origin, direction) => this.checkSlashHits(origin, direction),
     });
     this.agents = spawnNpcs(this, this.mapData);
