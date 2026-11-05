@@ -71,25 +71,6 @@
       ],
       "sync_version": 16
     },
-    "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e": {
-      "updated_at": "2026-11-05T14:26:29.129502+00:00",
-      "animation_ids": [
-        "16eda519-5135-4798-a6ee-cbcd04deea96",
-        "1e43076b-c082-4dd2-996d-a42764f207bc",
-        "1e736ff8-6b5c-4435-a61b-ae4db70ceee3",
-        "368e71ac-3e8c-4844-a777-cfe1298bd92f",
-        "4047dc11-2dad-428b-862c-a601e8e5b048",
-        "50662e77-9d7a-4f7c-918e-5ddbe6310089",
-        "d7dfd798-7752-4010-8067-704a6f7c5fd3",
-        "f096fb86-84d9-44d9-9e06-623e1308a4d5"
-      ],
-      "animation_fingerprint": "81db131f8107f79b7d223801809a2eb8b3ed30d3358221516f9bec2ef6756877",
-      "name": "old man bald",
-      "member_ids": [
-        "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e"
-      ],
-      "sync_version": 16
-    },
     "e60c571b-2e75-4810-bca9-eb8527b8b767": {
       "updated_at": "2026-11-05T14:26:29.129502+00:00|2026-11-05T14:26:29.129502+00:00|2026-11-05T14:26:29.129502+00:00",
       "animation_ids": [
@@ -148,6 +129,25 @@
         "e60c571b-2e75-4810-bca9-eb8527b8b767",
         "b4dcd340-91af-4f84-b52a-63c223994eef",
         "056ad959-9f8e-4f05-ab2d-eda2c7445e0e"
+      ],
+      "sync_version": 16
+    },
+    "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e": {
+      "updated_at": "2026-11-05T14:26:29.129502+00:00",
+      "animation_ids": [
+        "16eda519-5135-4798-a6ee-cbcd04deea96",
+        "1e43076b-c082-4dd2-996d-a42764f207bc",
+        "1e736ff8-6b5c-4435-a61b-ae4db70ceee3",
+        "368e71ac-3e8c-4844-a777-cfe1298bd92f",
+        "4047dc11-2dad-428b-862c-a601e8e5b048",
+        "50662e77-9d7a-4f7c-918e-5ddbe6310089",
+        "d7dfd798-7752-4010-8067-704a6f7c5fd3",
+        "f096fb86-84d9-44d9-9e06-623e1308a4d5"
+      ],
+      "animation_fingerprint": "81db131f8107f79b7d223801809a2eb8b3ed30d3358221516f9bec2ef6756877",
+      "name": "old man bald",
+      "member_ids": [
+        "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e"
       ],
       "sync_version": 16
     }
