@@ -80,7 +80,7 @@ export class CharacterSelection {
     const character = CLASSES.find((entry) => entry.key === name);
     if (!character) return;
     this.selected = name;
-    this.status.textContent = `Selecionado: ${character.name}`;
+    this.status.textContent = `Selecionado: ${character.name}${name === "elf" ? " · Respira parada · Shift: correr · L: magia" : ""}`;
     try { localStorage.setItem("lorencia-character", name); } catch { /* storage may be unavailable */ }
     if (close) this.menu.hidden = true;
     this.player.setCharacter(character.id);
