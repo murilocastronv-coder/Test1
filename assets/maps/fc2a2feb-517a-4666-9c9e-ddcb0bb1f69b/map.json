@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Noria",
+  "exportDate": "2026-11-05T18:57:32.806757Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "deep emerald forest floor featuring tangled dark roots and sprawling soft moss patches in medium detail with basic shading",
+      "color": "#4a9eff",
+      "baseTileId": "97613161-fadb-4b80-816c-cc3a1e4b2c7d",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "bright green grassy woodland clearing dotted with tiny wildflowers across gentle turf in medium detail with basic shading",
+      "color": "#7dd87d",
+      "baseTileId": "7b8246cc-3b0a-480e-bfc0-70af0e3ee81b",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "38095e6d-a232-42c6-b983-21fc6bec352d",
+      "filename": "deep emerald forest floor featuring tangled dark roots and sprawling soft moss patches in m-70444da2.png",
+      "lowerTerrain": "deep emerald forest floor featuring tangled dark roots and sprawling soft moss patches in medium detail with basic shading",
+      "upperTerrain": "bright green grassy woodland clearing dotted with tiny wildflowers across gentle turf in medium detail with basic shading",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin low soft moss banks and exposed interlaced roots forming a modest natural ledge in medium detail with basic shading",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

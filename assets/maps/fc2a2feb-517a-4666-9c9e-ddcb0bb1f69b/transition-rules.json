@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "deep emerald forest floor featuring tangled dark roots and sprawling soft moss patches in medium detail with basic shading",
+      "to": "bright green grassy woodland clearing dotted with tiny wildflowers across gentle turf in medium detail with basic shading",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "38095e6d-a232-42c6-b983-21fc6bec352d",
+      "transitionSize": 0.25
+    }
+  ]
+}
