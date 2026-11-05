@@ -1,0 +1,255 @@
+{
+  "audio": {},
+  "characters": {
+    "3945e38c-3ead-4935-87ef-d72925f05ea0": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00|2026-11-05T12:52:08.447105+00:00|2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [
+        "0b88830e-a3c1-400c-852a-8fe4cf516c82",
+        "1e3ae76e-461e-42d6-9476-1dadade4cf1a",
+        "23a27ece-b67e-4b0d-a359-86a44cae5afa",
+        "26f1a948-8ab8-4554-a77a-1cbf055b30dd",
+        "29f19a39-3e64-46fb-a7de-687a55bbfe3b",
+        "311b4f17-edca-4a29-8421-102941b14c66",
+        "327d4f4c-086c-484e-b505-2c846dbccf74",
+        "337f63db-316a-48c4-b862-6796a983bfe3",
+        "3cb65bc0-5839-442b-955b-e49784b2d5b9",
+        "3f95f4bb-3712-46e4-a4a7-6c41fd0925f0",
+        "4285c7c7-5e04-421e-8a0a-11356551a655",
+        "4b32099e-728a-46a1-9287-eb054e42d919",
+        "4b8e8574-d713-47bd-aa61-97bda7f2dda5",
+        "4ec723ac-7d7b-4bb0-b9b0-7c7e2aa6b0a9",
+        "4f90fab1-988a-494e-ab40-3df21f07d48a",
+        "537f5f14-f807-42e3-8e5e-baf362460b6e",
+        "63ceabc9-6f82-40a3-989c-3fab7c2f639d",
+        "63dae28b-1a90-4085-996a-ad3c56531857",
+        "664c85c4-b619-466d-80db-eff4e2df4a4e",
+        "763964f9-bf65-4da5-a55e-c76b9d34bad9",
+        "76a7b178-1fa6-464a-a677-f4bd2216c8bb",
+        "7791f95c-e7ad-4e89-a87a-2980f6e34f12",
+        "78f0c93e-96f0-4056-a9c1-ad3390707048",
+        "7961675e-3a5d-488a-ba21-43ad603424f4",
+        "7bbccb18-bca2-4d79-8501-0eabfec77a75",
+        "7d3b8e33-3add-41a9-99e0-9f9f3a8f51cd",
+        "84ec7039-6c15-41b7-9d89-b9b8c63e453d",
+        "869c39c4-4052-4aae-b0f8-f3bfdcb8abab",
+        "9098b9c0-c516-4fa3-b637-d90f3ac1458f",
+        "9947d441-2b2d-4caa-8b02-11847973a7b6",
+        "99a6bf85-b60c-4bf1-ac1b-8280bfa31526",
+        "9d9a9cb6-1491-4605-96e4-edece51caece",
+        "a9caefab-5cc3-4bd2-8b73-d98e25013677",
+        "acad810f-eab3-4ef3-b3f6-7546a78b5267",
+        "b33a77a5-d3f7-4852-b261-8fbea2b27495",
+        "b3e06646-620e-41e6-b3ea-dba2a5f84f1f",
+        "cfc0f639-00aa-4437-bd34-dd41c76ebe06",
+        "e59798be-3c9b-4fa8-b74c-664430207b30",
+        "ee4c06bc-70ae-4694-a2e0-143c2579d191",
+        "f05c69e6-ebc5-485d-9a7a-6bc5de01339b",
+        "f37cc1e5-ae6b-4de5-af77-7de6f1dd2a5d",
+        "f5c7ac1a-a1bd-422a-a20f-0402f4c90a2e",
+        "f7060d48-7d7c-456b-babe-9370f4bf1fff",
+        "f7b8162a-f4c4-44ba-8e49-b8d9d0fcd18a",
+        "f984b64b-b6c9-44cb-ae1b-b004c4b928f5",
+        "f9caefad-2384-41ac-8a14-5f3ce53eb29e",
+        "fa472641-0c63-4a8b-9dcf-7ce9de22a6ae",
+        "fb6df10f-4908-48db-a5d1-680068e16611"
+      ],
+      "animation_fingerprint": "e649bd9bf8f3bab1f9d745149efe3b3991ef2426249bbdf38d2f6d920ecbbdda",
+      "name": "warrior woman with orange hair",
+      "member_ids": [
+        "3945e38c-3ead-4935-87ef-d72925f05ea0",
+        "e505a455-8826-4a40-9863-b0d4b098afc3",
+        "1bc5187b-3a8b-4232-a5f8-486729f98193"
+      ],
+      "sync_version": 16
+    },
+    "43eb7bb3-486f-46a5-a6db-c401e315505a": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [
+        "01b557d0-c1b3-4180-b6af-d65ee7b9c64d",
+        "050b6096-85a3-442e-9c3d-2d0a6564639f",
+        "08e0d5da-b5ac-47d0-a626-ad8452d03c77",
+        "0be3d300-61c5-450b-8c4b-1f2d3508f875",
+        "17066a45-7a33-441a-b356-b110a4a1b5a1",
+        "17122c95-5bf4-49eb-b145-890621760f2a",
+        "19bfa22a-e951-49af-8361-2e3c73273c69",
+        "297c289b-8b27-4f08-a94e-ff0a63e9dc91",
+        "2a432454-ee91-4558-8657-bf749217ae3c",
+        "2b87a5d3-066f-4858-a536-78dfae5f2110",
+        "2e769063-e329-4754-81de-117461247cd5",
+        "2f6ca965-b25d-4251-8213-a8a9c7c60ab3",
+        "3bbc3c4e-8f18-4519-a905-9a1127325a17",
+        "495e86de-7209-4a7d-90ff-f645f6a5a4f3",
+        "4b2a4d61-8dba-4810-8d84-08466576edfa",
+        "7240d4fb-f41e-4c18-9ffc-48216a73d3b3",
+        "72b7bc9f-3d94-412c-8bfa-e9bfdea37595",
+        "7556f49a-c957-4d80-8182-4933655d31ef",
+        "7c0d090d-183e-4fe3-a923-02358337410a",
+        "9a3f5b24-41f0-45f0-9672-ce88634211a6",
+        "b1dbf9e6-d51b-43bb-8b2f-f4af1735e27a",
+        "bdd39b40-fb67-4970-881d-fb0263068911",
+        "ced4f245-25c2-4974-bd69-100f197a1e78",
+        "d7271f0f-4724-4cd8-8249-8185e3481524",
+        "da987eab-d756-4e2f-83aa-cd7e3cc9dce3",
+        "dd469fa0-ab7f-4a6d-b5d5-009b0217116d",
+        "df1c68dc-06a4-4ce7-b35b-752692848752",
+        "e9a49d9a-03fe-4e4c-bbbe-8aa4c1f3de84",
+        "ea5f2bce-4472-4969-a88a-1872cc367f20",
+        "eaa8e6ee-6622-4f80-bdf7-a39781688c51",
+        "f1194a9f-3855-4462-8058-39aadcf7956a",
+        "fe0c7a23-f146-4375-9dff-b4aac2aafbdf"
+      ],
+      "animation_fingerprint": "c347ec72e38ce9b95d14e17b574d502fa49702e666015ea6b21230abe86052f1",
+      "name": "flat shaded light brown bear",
+      "member_ids": [
+        "43eb7bb3-486f-46a5-a6db-c401e315505a"
+      ],
+      "sync_version": 16
+    },
+    "6c13e221-8d92-41d1-aa00-3bd5ab5c05d8": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [
+        "3c0f1937-1226-42ff-8d69-bb24dc149c29",
+        "72e25b8c-d013-4f7f-abee-33071d48d13f",
+        "89d3c449-a115-463a-9e25-95fe93f8adbb",
+        "8e05e05a-9046-4103-9b1d-3f45def7642d",
+        "9107da8b-5232-442b-b0be-f287bd755f3c",
+        "a653afd5-a9b4-43f4-be28-cba64489f772",
+        "b41cc6bf-8a1d-4c86-8a77-3c98d622ce14",
+        "d8d8641d-f5c8-417c-983f-abb3fdf9f607"
+      ],
+      "animation_fingerprint": "1d4be0702d7faddf07d0c99785690f275c0dd3dc777b5d1ab826a2090aeaaac0",
+      "name": "old man bald",
+      "member_ids": [
+        "6c13e221-8d92-41d1-aa00-3bd5ab5c05d8"
+      ],
+      "sync_version": 16
+    },
+    "deb24a9a-bcab-49e3-89b4-79187903b27a": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [
+        "1326c726-33bd-48a8-93fa-17b4a3116010",
+        "23bc6232-c089-4ee8-9d25-425e7e02b203",
+        "2b04e185-49b5-4045-a896-3ae3a7f55bce",
+        "3ec03061-a140-47e5-b886-b4a39dedbad2",
+        "3f88cb53-a608-4f73-977c-33e82adf444e",
+        "7378ef37-629d-48ff-9982-4142402107c5",
+        "82f24e4e-212b-48ed-8583-20016871e5c1",
+        "9c96709f-eace-49db-8928-40c2a7970c56",
+        "b8a13302-b98a-493d-b328-99d5b1d253fc",
+        "be91293b-c816-4f08-97cd-d2aca0c02add",
+        "c9047a2a-4b99-475a-9fc9-58db17345ae0",
+        "d35ea0e1-a450-4e29-bc65-052eec462700",
+        "da8fe1ed-b4fb-4db2-a7b7-f5719f1c424d",
+        "dfa689f5-e7b1-4a1e-a21b-dc3deecbdadb",
+        "e63fd8cc-6ecc-4d24-bb29-4a2f56a15c13",
+        "f3a5402b-44e4-42db-a7e3-557de1ea45fe"
+      ],
+      "animation_fingerprint": "405081e4d297f0bb925c1dc5e87fcc8b974b364ce194caeb66ac7b0093c565c9",
+      "name": "blonde farmer with long hair and a dress",
+      "member_ids": [
+        "deb24a9a-bcab-49e3-89b4-79187903b27a"
+      ],
+      "sync_version": 16
+    }
+  },
+  "images": {},
+  "maps": {
+    "71de5eb2-f1a4-48fc-bc95-8514625f71e6": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "name": "Island Map",
+      "export_version": 13,
+      "tilesets": {
+        "6825d9c8-8563-484d-bdb4-75ddaef0c71d": "2026-11-05T12:52:08.447105+00:00",
+        "feaccb7f-d5b6-4c8a-8564-873ad3ad6436": "2026-11-05T12:52:08.447105+00:00"
+      }
+    }
+  },
+  "objects": {
+    "385f3b1f-be80-4a8c-bc19-73f7e6730118": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "385f3b1f-be80-4a8c-bc19-73f7e6730118"
+      ],
+      "sync_version": 3
+    },
+    "8ea0c855-e3e9-406b-924d-803b20e943a9": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "8ea0c855-e3e9-406b-924d-803b20e943a9"
+      ],
+      "sync_version": 3
+    },
+    "f0e36a91-b7bf-4d68-b36b-c29e17e4f4d7": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "f0e36a91-b7bf-4d68-b36b-c29e17e4f4d7"
+      ],
+      "sync_version": 3
+    },
+    "fa397043-9933-452f-853a-4e17f175b8b2": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "fa397043-9933-452f-853a-4e17f175b8b2"
+      ],
+      "sync_version": 3
+    },
+    "a65f8984-aa9d-46af-8ac8-18332a9e9d40": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "a65f8984-aa9d-46af-8ac8-18332a9e9d40"
+      ],
+      "sync_version": 3
+    },
+    "abd974c6-abfa-4bf6-b092-1cc1e1ea9f01": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "abd974c6-abfa-4bf6-b092-1cc1e1ea9f01"
+      ],
+      "sync_version": 3
+    },
+    "37a6c673-2d41-4e1f-8b0a-6da718531686": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "37a6c673-2d41-4e1f-8b0a-6da718531686"
+      ],
+      "sync_version": 3
+    },
+    "a920937b-3551-44fa-92fe-84633b5c71c1": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "a920937b-3551-44fa-92fe-84633b5c71c1"
+      ],
+      "sync_version": 3
+    }
+  },
+  "tilesets": {
+    "feaccb7f-d5b6-4c8a-8564-873ad3ad6436": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "name": "water \u2197 wood",
+      "sync_version": 2
+    },
+    "6825d9c8-8563-484d-bdb4-75ddaef0c71d": {
+      "updated_at": "2026-11-05T12:52:08.447105+00:00",
+      "name": "water \u2197 grass",
+      "sync_version": 2
+    }
+  },
+  "ui_assets": {},
+  "rooms": {}
+}
