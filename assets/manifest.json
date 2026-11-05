@@ -17,6 +17,7 @@
   },
   "images": {},
   "maps": {
+    "Exile": "assets/maps/62027a19-d871-415a-a487-5a6b88820075/",
     "Arena / Stadium": "assets/maps/e4fddb2b-5119-4e39-add5-9ca0e37a7ba1/",
     "Icarus": "assets/maps/84136bbf-af47-4fa4-bbca-c03e77b8b412/",
     "Tarkan": "assets/maps/ce58480f-29c4-4adc-9cd7-7534a08412a0/",
@@ -35,7 +36,6 @@
     "Noria": "assets/maps/fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b/",
     "Lorencia": "assets/maps/bc1bd264-859d-4d51-9acc-18eac3e24bb1/",
     "Blood Castle": "assets/maps/6d22bddf-a846-4af2-84e6-67cc44cb7ee9/",
-    "Exile": "assets/maps/62027a19-d871-415a-a487-5a6b88820075/",
     "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
   },
   "objects": {
