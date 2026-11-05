@@ -966,11 +966,6 @@
       "name": "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor",
       "sync_version": 2
     },
-    "4ab0f820-c094-4555-9ca5-1cb877255ed7": {
-      "updated_at": "2026-11-05T18:57:04.669684+00:00",
-      "name": "Exile bleak charcoal cracked wasteland earth \u2197 Exile ashen gray ruined stone road with sickly",
-      "sync_version": 2
-    },
     "fc95330f-1404-40c1-9fbf-5f80c574ac50": {
       "updated_at": "2026-11-05T18:56:57.964983+00:00",
       "name": "Tarkan orange wind blown desert sand \u2197 Tarkan ancient ochre sandstone ruined pavement",
@@ -994,6 +989,11 @@
     "13bfec11-6c2e-46ea-93d3-aabbfd397120": {
       "updated_at": "2026-11-05T18:56:48.820737+00:00",
       "name": "Atlans deep turquoise ocean seabed \u2197 Atlans pale aquamarine submerged stone paths with",
+      "sync_version": 2
+    },
+    "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe": {
+      "updated_at": "2026-11-05T18:56:48.153041+00:00",
+      "name": "Arena stadium rough gray outer flagstones \u2197 Arena stadium red brown packed training sand with",
       "sync_version": 2
     },
     "a250c233-2c4c-45de-b660-ab35e0b042a1": {
@@ -1026,9 +1026,9 @@
       "name": "water \u2197 grass",
       "sync_version": 2
     },
-    "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe": {
-      "updated_at": "2026-11-05T18:56:48.153041+00:00",
-      "name": "Arena stadium rough gray outer flagstones \u2197 Arena stadium red brown packed training sand with",
+    "4ab0f820-c094-4555-9ca5-1cb877255ed7": {
+      "updated_at": "2026-11-05T18:57:04.669684+00:00",
+      "name": "Exile bleak charcoal cracked wasteland earth \u2197 Exile ashen gray ruined stone road with sickly",
       "sync_version": 2
     }
   },
