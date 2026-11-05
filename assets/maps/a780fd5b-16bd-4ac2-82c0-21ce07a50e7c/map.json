@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Devias",
+  "exportDate": "2026-11-05T18:57:34.341274Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "frozen blue ice ground with vast smooth sheets, subtle frost fractures, and pale cyan undertones in flat solid hues",
+      "color": "#4a9eff",
+      "baseTileId": "fa8718fb-92ba-4855-81e3-c6e445c6b7e8",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "snowy medieval road surface composed of pale cobblestones heavily blanketed in drifted winter snow in flat solid tones",
+      "color": "#7dd87d",
+      "baseTileId": "1ccbb182-478b-41f9-aa71-f8da93c734e0",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "a0c4ddcc-6b68-452e-8649-2b9623127495",
+      "filename": "frozen blue ice ground with vast smooth sheets, subtle frost fractures, and pale cyan under-15d802aa.png",
+      "lowerTerrain": "frozen blue ice ground with vast smooth sheets, subtle frost fractures, and pale cyan undertones in flat solid hues",
+      "upperTerrain": "snowy medieval road surface composed of pale cobblestones heavily blanketed in drifted winter snow in flat solid tones",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "modest wind-sculpted snow drift banks forming a low pillowy ridge over the frozen edge in flat solid whites",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "a780fd5b-16bd-4ac2-82c0-21ce07a50e7c",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

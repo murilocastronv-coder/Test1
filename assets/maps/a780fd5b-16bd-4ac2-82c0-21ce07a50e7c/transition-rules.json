@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "frozen blue ice ground with vast smooth sheets, subtle frost fractures, and pale cyan undertones in flat solid hues",
+      "to": "snowy medieval road surface composed of pale cobblestones heavily blanketed in drifted winter snow in flat solid tones",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "a0c4ddcc-6b68-452e-8649-2b9623127495",
+      "transitionSize": 0.25
+    }
+  ]
+}
