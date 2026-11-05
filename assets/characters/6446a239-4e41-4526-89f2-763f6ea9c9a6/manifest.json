@@ -39,7 +39,58 @@
       ],
       "rotation_path_pattern": "idle/rotations/{direction}.png",
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
-      "animations": []
+      "animations": [
+        {
+          "name": "idle",
+          "id": "ee6a1911-f20d-4e16-8bdd-cdfc6f4df117",
+          "source_name": "breathing-idle",
+          "display_name": "idle",
+          "description": "breathing idle",
+          "generation_model": "template",
+          "frame_count": 4,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "path_pattern": "idle/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
+        },
+        {
+          "name": "walk",
+          "id": "db153b2b-af53-4434-9583-857df049b8b0",
+          "source_name": "walking-6-frames",
+          "display_name": "walk",
+          "description": "walking",
+          "generation_model": "template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "path_pattern": "idle/animations/walk/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/walk/{direction}/frame_{frame}"
+        }
+      ]
     }
   ]
 }

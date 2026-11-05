@@ -340,16 +340,6 @@
       ],
       "sync_version": 16
     },
-    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
-      "updated_at": "2026-11-05T15:54:00.052382+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Dem\u00f4nio das Brasas",
-      "member_ids": [
-        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [
@@ -374,6 +364,33 @@
       "name": "Guerreiro Esqueleto",
       "member_ids": [
         "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
+      ],
+      "sync_version": 16
+    },
+    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
+      "updated_at": "2026-11-05T15:54:00.052382+00:00",
+      "animation_ids": [
+        "03567476-1c0f-4408-adc3-a192f0adc547",
+        "0e8a2ca0-77a9-4ad5-a76d-17f9d0f4845a",
+        "2008be72-dff9-40b5-85b8-50a0c4cd5c46",
+        "23a8f859-2179-4553-b948-de9808dd1ebe",
+        "2d7e1c76-f5a0-4d7c-8cf9-82743d68dbaf",
+        "6f9846c8-a817-4103-b503-229856b70a55",
+        "707e3514-655a-4501-9b5c-43d97049cde7",
+        "858bf858-39f6-47ff-be09-48a98ae7dd97",
+        "8cd905ba-4a69-4084-94b3-c63969c74a28",
+        "accfe8f9-158c-4f27-99fc-8c01261b722e",
+        "b07a6865-7e5f-4240-87e7-5cdbf413d4ea",
+        "b6ca259e-6161-4bf0-bb53-f081a8727e0b",
+        "bc60b0de-a34e-4471-a126-aac7ca2dbaaf",
+        "d454dba3-f791-42d6-9347-c0c9075f36d0",
+        "d5d41a33-584f-451c-91c6-93b91742882b",
+        "fd6fe114-7c53-4167-869b-4cc87ed102b7"
+      ],
+      "animation_fingerprint": "4d42c0627fe7d05be176e95403d3fe7bca409aa92679784c6e5cdfbd29555691",
+      "name": "Dem\u00f4nio das Brasas",
+      "member_ids": [
+        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
       ],
       "sync_version": 16
     }
