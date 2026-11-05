@@ -106,7 +106,7 @@ export class RealmRpg {
       m.agent.update(delta); m.cooldown-=delta; m.repath-=delta;
       const distance=Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y);
       if(distance<180&&distance>24&&!m.agent.stunned) {
-        if(m.repath<=0) {m.path=findPath(this.map,{x:m.sprite.x,y:m.sprite.y},this.player.worldPosition,COLLIDER);m.repath=700;}
+        if(m.repath<=0) {m.path=findPath(this.map,{x:m.sprite.x,y:m.sprite.y},this.player.worldPosition,COLLIDER) ?? [];m.repath=700;}
         while(m.path.length&&Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,m.path[0].x,m.path[0].y)<6) m.path.shift();
         const target=m.path[0]; if(target) {const dx=target.x-m.sprite.x,dy=target.y-m.sprite.y,len=Math.hypot(dx,dy); const moved=moveWithCollision(this.map,m.sprite.x,m.sprite.y,dx/len*delta*.038,dy/len*delta*.038,COLLIDER);const actualX=moved.x-m.sprite.x,actualY=moved.y-m.sprite.y;m.sprite.setPosition(moved.x,moved.y); if(actualX||actualY) m.agent.setDirection(directionFromVector(actualX,actualY));}
       }

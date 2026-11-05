@@ -45,7 +45,7 @@ export class MultiplayerSystem {
     let marker = this.remotes.get(id);
     if (!marker) {
       const state = selectCharacterState(characterManifest(this.scene, PLAYER_CHARACTER_ID));
-      marker = this.scene.add.sprite(pos.x, pos.y, characterAtlasKey(PLAYER_CHARACTER_ID), characterRotationFrameName(state.folder, "south")).setTint(0xa9ccff);
+      marker = this.scene.add.sprite(pos.x, pos.y, characterAtlasKey(PLAYER_CHARACTER_ID), characterRotationFrameName(state.stateFolder, "south")).setTint(0xa9ccff);
       this.remotes.set(id, marker);
     }
     marker.setPosition(pos.x, pos.y);
