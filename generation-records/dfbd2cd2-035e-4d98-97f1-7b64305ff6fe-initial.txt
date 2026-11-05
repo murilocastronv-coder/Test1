@@ -1,0 +1,5 @@
+status: creating (49% ~103s)
+id: dfbd2cd2-035e-4d98-97f1-7b64305ff6fe
+name: Elite Yeti
+
+hint: template-mode animate_character can be queued now (runs after creation completes); v3/pro animations must wait until status=completed
