@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Tarkan",
+  "exportDate": "2026-11-05T18:57:52.067122Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "dense wind-blown desert sand with rippling dune patterns in flat solid orange, no gradients or shadows",
+      "color": "#4a9eff",
+      "baseTileId": "46071d51-54d9-4360-9f10-ce8cce7f52ea",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "weathered ancient sandstone pavement with cracked ochre blocks and subtle surface erosion in flat solid yellow-brown, no gradients or shadows",
+      "color": "#7dd87d",
+      "baseTileId": "8d99a7bf-e60c-420d-98c5-bdc18d80b3f1",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "fc95330f-1404-40c1-9fbf-5f80c574ac50",
+      "filename": "dense wind-blown desert sand with rippling dune patterns in flat solid orange, no gradients-4d200901.png",
+      "lowerTerrain": "dense wind-blown desert sand with rippling dune patterns in flat solid orange, no gradients or shadows",
+      "upperTerrain": "weathered ancient sandstone pavement with cracked ochre blocks and subtle surface erosion in flat solid yellow-brown, no gradients or shadows",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin eroded sandy stone rim with gentle granular weathering in flat solid golden brown, no gradients or shadows",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "ce58480f-29c4-4adc-9cd7-7534a08412a0",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

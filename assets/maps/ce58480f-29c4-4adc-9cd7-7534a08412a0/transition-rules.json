@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "dense wind-blown desert sand with rippling dune patterns in flat solid orange, no gradients or shadows",
+      "to": "weathered ancient sandstone pavement with cracked ochre blocks and subtle surface erosion in flat solid yellow-brown, no gradients or shadows",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "fc95330f-1404-40c1-9fbf-5f80c574ac50",
+      "transitionSize": 0.25
+    }
+  ]
+}
