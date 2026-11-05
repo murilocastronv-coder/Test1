@@ -52,7 +52,11 @@
             "south",
             "east",
             "north",
-            "west"
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
           ],
           "loop": true,
           "aliases": [

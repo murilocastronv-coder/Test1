@@ -189,31 +189,6 @@
       ],
       "sync_version": 16
     },
-    "3a46a0b9-fba0-476d-9085-06ad60a89811": {
-      "updated_at": "2026-11-05T14:40:11.130414+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Lorde Sombrio",
-      "member_ids": [
-        "3a46a0b9-fba0-476d-9085-06ad60a89811"
-      ],
-      "sync_version": 16
-    },
-    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
-      "updated_at": "2026-11-05T14:39:39.809606+00:00",
-      "animation_ids": [
-        "04b11384-749c-4b68-85b2-613593b111da",
-        "054710ae-8925-49ba-abc2-4e321c21b53a",
-        "71d0da4d-fcb4-4c8e-bcff-036115f0a814",
-        "b046cdab-9804-46e4-be7b-65026e9da586"
-      ],
-      "animation_fingerprint": "2c97a808c8462eb7b892f4d637c59aab6466cc2139a468b9318367645aaae498",
-      "name": "Gladiador Violeta",
-      "member_ids": [
-        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
-      ],
-      "sync_version": 16
-    },
     "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
       "updated_at": "2026-11-05T14:39:24.966084+00:00",
       "animation_ids": [
@@ -230,6 +205,44 @@
       "name": "Elfa Esmeralda",
       "member_ids": [
         "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+      ],
+      "sync_version": 16
+    },
+    "9af51a54-5b5a-4c0f-af85-e60403f64df9": {
+      "updated_at": "2026-11-05T14:39:39.809606+00:00",
+      "animation_ids": [
+        "04b11384-749c-4b68-85b2-613593b111da",
+        "054710ae-8925-49ba-abc2-4e321c21b53a",
+        "47762ada-dcf7-4656-ad6c-34ff8bf09333",
+        "71d0da4d-fcb4-4c8e-bcff-036115f0a814",
+        "748cec42-b27f-48a6-841b-99426336c0e2",
+        "b046cdab-9804-46e4-be7b-65026e9da586",
+        "be0c0927-7564-40f1-a04e-f1058b46e271",
+        "de79969e-c757-4897-9f7a-d15ac2f315ae"
+      ],
+      "animation_fingerprint": "44700dd817bdac2af905e6bd42c80f5a2bcdc13d665ba26c70a6ba87eb83b06f",
+      "name": "Gladiador Violeta",
+      "member_ids": [
+        "9af51a54-5b5a-4c0f-af85-e60403f64df9"
+      ],
+      "sync_version": 16
+    },
+    "3a46a0b9-fba0-476d-9085-06ad60a89811": {
+      "updated_at": "2026-11-05T14:40:11.130414+00:00",
+      "animation_ids": [
+        "229b78bc-ac8d-48bc-b5c0-8525ecfb1f11",
+        "35f403f1-338c-436d-9df3-cd26e160efbf",
+        "57075e54-a474-40f6-af47-c8b3a4309f8e",
+        "5c535eef-1bec-4657-b7d0-34fcddc7c705",
+        "7a69828e-6f12-4e5c-96ee-b779bbc6dbed",
+        "8294f356-59f6-4f2f-9825-d570cc427b6a",
+        "89425471-5cb7-4ef6-a5e3-87b9f615ee17",
+        "8b164dd2-7406-4425-937b-a3ccc32a142d"
+      ],
+      "animation_fingerprint": "afd45a23a773cd2d978c597dfde00aa9c7a9a16a4fb5fb0f4a58e769786faa17",
+      "name": "Lorde Sombrio",
+      "member_ids": [
+        "3a46a0b9-fba0-476d-9085-06ad60a89811"
       ],
       "sync_version": 16
     }
