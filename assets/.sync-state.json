@@ -353,33 +353,6 @@
       ],
       "sync_version": 16
     },
-    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
-      "updated_at": "2026-11-05T15:53:51.275262+00:00",
-      "animation_ids": [
-        "1404b862-906e-43b6-9d77-7561da16236d",
-        "1634f34b-6d56-4192-ba3a-4950e3e135e1",
-        "16812a1a-f9c6-46e1-a740-e8b3616dc407",
-        "18ebb255-d1d3-46f7-ba8f-301a9ebbef4c",
-        "40f960a1-3e0a-4cbb-bd43-53f9ae88ef77",
-        "485dbf35-1270-42ea-98e2-546fbae61004",
-        "750e77ba-af11-4eed-853b-5a6b702fb53c",
-        "802544ee-d226-4aee-abc0-83de0ea39d3a",
-        "8d7088c6-a082-4ce7-ab8b-c15fb05ca1a3",
-        "98e5c257-0a3b-4745-a0e6-640f2ae9220e",
-        "b864447a-9ff2-4c7d-8fcf-daaf7e14be68",
-        "c2c94b47-c133-4fc9-9f4a-1cf3086bfd25",
-        "c498fee2-5d26-48ff-ac94-805117834f1e",
-        "c85c3802-ba6d-438d-8fec-3620cfc879e3",
-        "cb7847d7-682c-4202-843f-f9f3c946949b",
-        "faad6784-8fe9-4b21-88d6-d5054adbee99"
-      ],
-      "animation_fingerprint": "cbaff51cd05818f145a358b4ced2c15ae8859017b9c71f329846d620922e0b15",
-      "name": "Goblin Saqueador",
-      "member_ids": [
-        "765a1ab1-0538-4101-9520-bae405d3cbd4"
-      ],
-      "sync_version": 16
-    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [
@@ -431,6 +404,33 @@
       "name": "Dem\u00f4nio das Brasas",
       "member_ids": [
         "6446a239-4e41-4526-89f2-763f6ea9c9a6"
+      ],
+      "sync_version": 16
+    },
+    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
+      "updated_at": "2026-11-05T15:53:51.275262+00:00",
+      "animation_ids": [
+        "1404b862-906e-43b6-9d77-7561da16236d",
+        "1634f34b-6d56-4192-ba3a-4950e3e135e1",
+        "16812a1a-f9c6-46e1-a740-e8b3616dc407",
+        "18ebb255-d1d3-46f7-ba8f-301a9ebbef4c",
+        "40f960a1-3e0a-4cbb-bd43-53f9ae88ef77",
+        "485dbf35-1270-42ea-98e2-546fbae61004",
+        "750e77ba-af11-4eed-853b-5a6b702fb53c",
+        "802544ee-d226-4aee-abc0-83de0ea39d3a",
+        "8d7088c6-a082-4ce7-ab8b-c15fb05ca1a3",
+        "98e5c257-0a3b-4745-a0e6-640f2ae9220e",
+        "b864447a-9ff2-4c7d-8fcf-daaf7e14be68",
+        "c2c94b47-c133-4fc9-9f4a-1cf3086bfd25",
+        "c498fee2-5d26-48ff-ac94-805117834f1e",
+        "c85c3802-ba6d-438d-8fec-3620cfc879e3",
+        "cb7847d7-682c-4202-843f-f9f3c946949b",
+        "faad6784-8fe9-4b21-88d6-d5054adbee99"
+      ],
+      "animation_fingerprint": "cbaff51cd05818f145a358b4ced2c15ae8859017b9c71f329846d620922e0b15",
+      "name": "Goblin Saqueador",
+      "member_ids": [
+        "765a1ab1-0538-4101-9520-bae405d3cbd4"
       ],
       "sync_version": 16
     }
