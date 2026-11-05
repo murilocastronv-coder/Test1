@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "deep crimson abyss with a flat uniform dark red void and sparse subtle black fissures, rendered in flat solid color with no gradients or shadows",
+      "to": "gothic silver gray flagstones interlocking with a dark red carpet center, featuring moderate surface texture and simple two-tone light and shadow",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "a562e76a-1154-4995-86f9-e575809cf09f",
+      "transitionSize": 0.25
+    }
+  ]
+}

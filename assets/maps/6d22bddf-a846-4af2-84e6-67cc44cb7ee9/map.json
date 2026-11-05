@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Blood Castle",
+  "exportDate": "2026-11-05T18:57:58.140786Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "deep crimson abyss with a flat uniform dark red void and sparse subtle black fissures, rendered in flat solid color with no gradients or shadows",
+      "color": "#4a9eff",
+      "baseTileId": "dd3e98c9-903e-4a6e-acf4-083ba49a417e",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "gothic silver gray flagstones interlocking with a dark red carpet center, featuring moderate surface texture and simple two-tone light and shadow",
+      "color": "#7dd87d",
+      "baseTileId": "0e24116e-f2a9-4da5-9071-be35d64c6630",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "a562e76a-1154-4995-86f9-e575809cf09f",
+      "filename": "deep crimson abyss with a flat uniform dark red void and sparse subtle black fissures, rend-02240b45.png",
+      "lowerTerrain": "deep crimson abyss with a flat uniform dark red void and sparse subtle black fissures, rendered in flat solid color with no gradients or shadows",
+      "upperTerrain": "gothic silver gray flagstones interlocking with a dark red carpet center, featuring moderate surface texture and simple two-tone light and shadow",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin low castle battlement ledge of weathered stone with a modest lip, showing gentle color variation and simple two-tone light and shadow",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "6d22bddf-a846-4af2-84e6-67cc44cb7ee9",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
