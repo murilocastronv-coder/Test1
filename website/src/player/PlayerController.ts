@@ -49,9 +49,9 @@ interface PlayerControllerCallbacks {
 
 export class PlayerController {
   private readonly keys: Record<string, Phaser.Input.Keyboard.Key>;
-  private readonly animator: SpriteAnimator;
-  private readonly animationResolver: CharacterAnimationResolver;
-  private readonly poseState: CharacterStateSelection;
+  private animator: SpriteAnimator;
+  private animationResolver: CharacterAnimationResolver;
+  private poseState: CharacterStateSelection;
   private readonly collider: Collider = {
     width: GAME_CONFIG.player.colliderWidth,
     height: GAME_CONFIG.player.colliderHeight,
@@ -120,6 +120,20 @@ export class PlayerController {
       string,
       Phaser.Input.Keyboard.Key
     >;
+    this.playRole(["idle"]);
+  }
+
+  /** Swap the existing player sprite, retaining movement, collision and camera follow. */
+  setCharacter(characterId: string): void {
+    const manifest = characterManifest(this.sprite.scene, characterId);
+    const selected = selectCharacterState(manifest, { preferredClips: ["walking", "walk", "idle"] });
+    const atlasKey = characterAtlasKey(characterId);
+    this.activeAction = null;
+    this.actionElapsedMs = 0;
+    this.animationResolver = new CharacterAnimationResolver(manifest);
+    this.poseState = selected;
+    this.sprite.setTexture(atlasKey, characterRotationFrameName(selected.stateFolder, this.direction));
+    this.animator = new SpriteAnimator(this.sprite, atlasKey, selected.animations, selected.stateFolder, this.stateDirections(selected));
     this.playRole(["idle"]);
   }
 
