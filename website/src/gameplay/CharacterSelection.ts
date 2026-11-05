@@ -1,7 +1,7 @@
 import Phaser from "phaser";
 import type { PlayerController } from "../player/PlayerController";
 
-const base = `${import.meta.env.BASE_URL}characters/summoner/`;
+const base = "characters/summoner/";
 const texture = "uploaded-summoner";
 
 /** Uses the uploaded frames unchanged; movement and combat remain owned by the player. */
