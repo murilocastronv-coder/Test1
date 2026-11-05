@@ -11,14 +11,14 @@
     "Island Map": "assets/maps/71de5eb2-f1a4-48fc-bc95-8514625f71e6/"
   },
   "objects": {
-    "base": "assets/objects/385f3b1f-be80-4a8c-bc19-73f7e6730118/",
+    "base": "assets/objects/37a6c673-2d41-4e1f-8b0a-6da718531686/",
+    "base#385f3b1f": "assets/objects/385f3b1f-be80-4a8c-bc19-73f7e6730118/",
     "base#8ea0c855": "assets/objects/8ea0c855-e3e9-406b-924d-803b20e943a9/",
-    "base#f0e36a91": "assets/objects/f0e36a91-b7bf-4d68-b36b-c29e17e4f4d7/",
-    "base#fa397043": "assets/objects/fa397043-9933-452f-853a-4e17f175b8b2/",
     "base#a65f8984": "assets/objects/a65f8984-aa9d-46af-8ac8-18332a9e9d40/",
+    "base#a920937b": "assets/objects/a920937b-3551-44fa-92fe-84633b5c71c1/",
     "base#abd974c6": "assets/objects/abd974c6-abfa-4bf6-b092-1cc1e1ea9f01/",
-    "base#37a6c673": "assets/objects/37a6c673-2d41-4e1f-8b0a-6da718531686/",
-    "base#a920937b": "assets/objects/a920937b-3551-44fa-92fe-84633b5c71c1/"
+    "base#f0e36a91": "assets/objects/f0e36a91-b7bf-4d68-b36b-c29e17e4f4d7/",
+    "base#fa397043": "assets/objects/fa397043-9933-452f-853a-4e17f175b8b2/"
   },
   "tilesets": {
     "water \u2197 wood": "assets/tilesets/feaccb7f-d5b6-4c8a-8564-873ad3ad6436/",
