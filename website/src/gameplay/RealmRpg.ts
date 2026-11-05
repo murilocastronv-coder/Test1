@@ -12,6 +12,7 @@ import type { Direction } from "../shared/direction";
 import "./rpg.css";
 
 import { HeroWings } from "./HeroWings";
+import { HeroPowers, HERO_POWERS } from "./HeroPowers";
 import { TouchMovement } from "./TouchMovement";
 import { HEROES, heroPreview, type HeroClass } from "./HeroRoster";
 interface Save { wings: boolean; name: string; hero: HeroClass; level: number; xp: number; gold: number; kills: number; quest: number; weapon: number; armor: number; potions: number; points: number; strength: number; vitality: number; items: number; }
@@ -32,7 +33,8 @@ export class RealmRpg {
   private mana: number = 80;
   private elapsed: number = 0;
   private renderMs: number = 0;
-  private skillAt: number = -10000;
+  private powers: HeroPowers;
+  private powerMultiplier: number = 1;
   private attackAt: number = -10000;
   private spellHit: boolean = false;
   private stored: boolean = false;
@@ -42,6 +44,7 @@ export class RealmRpg {
   private wings: HeroWings;
   private heroLabel: Phaser.GameObjects.Text;
   constructor(private scene: Phaser.Scene, private player: PlayerController, private map: LoadedMap) {
+    this.powers = new HeroPowers(scene);
     this.wings = new HeroWings(scene, player);
     this.touchMovement = new TouchMovement(player);
     this.touchMovement.setActive(false);
@@ -50,11 +53,11 @@ export class RealmRpg {
     this.root = document.createElement("div"); this.root.className = "rpg-ui";
     this.panel = document.createElement("div"); this.modal = document.createElement("div"); this.root.append(this.panel, this.modal); document.getElementById("hud-root")!.append(this.root);
     this.keyboard = scene.input.keyboard;
-    for (const key of ["Q", "E", "I", "C", "B", "R"]) if (this.keyboard) this.keys[key] = this.keyboard.addKey(key);
+    for (const key of ["Q", "E", "I", "C", "B", "R", "ONE", "TWO", "THREE", "FOUR"]) if (this.keyboard) this.keys[key] = this.keyboard.addKey(key);
     this.heroLabel = scene.add.text(player.sprite.x, player.sprite.y - 40, "", { fontFamily: "Arial", fontSize: "9px", color: "#ead398", stroke: "#11171c", strokeThickness: 3 }).setOrigin(.5).setDepth(200000);
     this.createMobs(); this.startScreen(); this.render();
     const hooks = window as unknown as Record<string, unknown>;
-    hooks.rpgState = () => ({ started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
+    hooks.rpgState = () => ({ powers: this.powers.state(this.save.hero,this.elapsed), started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
     hooks.rpgAction = (action: string) => this.action(action);
     hooks.rpgApproach = (id: number) => { const mob = this.mobs[id]; if (mob) { const p = nearestWalkable(this.map, {x:mob.sprite.x,y:mob.sprite.y+27}, {width:6,height:4,footOffsetY:10},8); if(p) this.player.teleportTo(p.x,p.y); } };
     this.root.addEventListener("click", (event) => { const target = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-action]"); if (target) { this.action(target.dataset.action!); target.blur(); this.scene.game.canvas.focus(); } });
@@ -78,7 +81,7 @@ export class RealmRpg {
   }
   private hitMob(mob: Mob,x: number,y: number,strength: number): boolean {
     if (!this.active || mob.dead || !mob.agent.hit(x,y,strength)) return false;
-    const dmg = this.damage + (this.spellHit ? (this.save.hero === "Feiticeiro" ? 22 : 10) : 0);
+    const dmg = Math.round((this.damage + (this.spellHit ? (this.save.hero === "Feiticeiro" ? 22 : 10) : 0))*this.powerMultiplier);
     mob.health = Math.max(0,mob.health-dmg); this.float(mob.sprite.x,mob.sprite.y-18,`${dmg}`,"#f6d596");
     if (!mob.health) {
       mob.dead = mob.boss ? 22000 : 10000; mob.sprite.setVisible(false); mob.label.setVisible(false); mob.bar.clear();
@@ -105,6 +108,7 @@ export class RealmRpg {
       for(const key of ["I","C","B"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
       if(this.active) for(const key of ["Q","E","R"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
     }
+    if(this.active) ["ONE","TWO","THREE","FOUR"].forEach((key,i)=>{if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key]))this.action(`power:${i}`);});
     this.touchMovement.setActive(this.active);
     this.wings.update(this.save.wings, this.running);
     this.heroLabel.setPosition(this.player.sprite.x,this.player.sprite.y-24).setText(`${this.save.name} · Nv.${this.save.level}`);
@@ -138,7 +142,8 @@ export class RealmRpg {
     if(action==="Q"){if(this.save.potions&&this.health<this.maxHealth){this.save.potions--;this.health=Math.min(this.maxHealth,this.health+85);this.log("Poção utilizada · +85 vida");}}
     if(action==="R"){if(this.targets.some(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<100)){this.log("Afaste-se dos monstros para retornar ao refúgio.");return;}this.player.teleportTo(this.home.x,this.home.y);this.health=this.maxHealth;this.mana=80;this.log("Refúgio: vida e mana recuperadas.");}
     if(action==="attack" && this.active && this.elapsed-this.attackAt>500){this.attackAt=this.elapsed;const near=this.targets.filter(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<52).sort((a,b)=>Phaser.Math.Distance.Between(a.sprite.x,a.sprite.y,this.player.sprite.x,this.player.sprite.y)-Phaser.Math.Distance.Between(b.sprite.x,b.sprite.y,this.player.sprite.x,this.player.sprite.y))[0];this.slash(this.player.worldPosition,near?directionFromVector(near.sprite.x-this.player.sprite.x,near.sprite.y-this.player.sprite.y):this.player.facing);}
-    if(action==="E"){if(this.mana<24||this.elapsed-this.skillAt<5000){this.log("Nova devastação: 24 mana e 5s de recarga.");return;}this.mana-=24;this.skillAt=this.elapsed;this.spellHit=true;const pos=this.player.worldPosition;const ring=this.scene.add.circle(pos.x,pos.y,10,0xbba0f8,.1).setStrokeStyle(2,0xd8c1ff).setDepth(200000);this.scene.tweens.add({targets:ring,radius:100,alpha:0,duration:450,onComplete:()=>ring.destroy()});this.targets.filter(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,pos.x,pos.y)<100).forEach(m=>m.hit(pos.x,pos.y,120));this.spellHit=false;}
+    if(action==="E") {this.castPower(1);return;}
+    if(action.startsWith("power:")){const slot=Number(action.slice(6));if(Number.isInteger(slot)&&slot>=0&&slot<4)this.castPower(slot);return;}
     if(action==="claim"){const required=(this.save.quest+1)*5;if(this.save.kills>=required){this.save.gold+=100;this.save.quest++;this.log("Contrato concluído · +100 ouro");this.banner("Contrato concluído");}}
     if(action==="weapon"||action==="armor"){const cost=80+(action==="weapon"?this.save.weapon:this.save.armor)*60;if(this.save.gold>=cost){this.save.gold-=cost;this.save[action]++;this.log(`${action==="weapon"?"Arma":"Armadura"} aprimorada para +${this.save[action]}`);}else this.log(`Você precisa de ${cost} ouro.`);this.showWindow("B");}
     if(action==="buy"){if(this.save.gold>=20){this.save.gold-=20;this.save.potions+=3;this.log("Compradas 3 poções.");}else this.log("Você precisa de 20 ouro.");this.showWindow("B");}
@@ -146,20 +151,35 @@ export class RealmRpg {
     if(action==="strength"||action==="vitality"){if(this.save.points){this.save.points--;this.save[action]++;}this.showWindow("C");}
     this.persist();this.render();
   }
+  private castPower(slot: number): void {
+    if(!this.active)return;
+    const power=HERO_POWERS[this.save.hero][slot];
+    if(!this.powers.ready(slot,this.elapsed)){this.log(`${power.name}: aguarde a recarga.`);return;}
+    if(this.mana<power.cost){this.log(`${power.name}: precisa de ${power.cost} mana.`);return;}
+    this.mana-=power.cost;
+    const hitTimes=new Map<Mob,number>();
+    this.powers.cast(this.save.hero,slot,{...this.player.worldPosition},vectorFromDirection(this.player.facing),this.targets,this.elapsed,(point,radius,multiplier)=>{
+      if(!this.active)return;
+      this.powerMultiplier=multiplier;
+      for(const mob of this.targets){if(Phaser.Math.Distance.Between(point.x,point.y,mob.sprite.x,mob.sprite.y)<=radius+mob.hitRadius && this.elapsed-(hitTimes.get(mob)??-10000)>=180){if(mob.hit(point.x,point.y,100))hitTimes.set(mob,this.elapsed);}}
+      this.powerMultiplier=1;
+    });
+    this.log(power.name);this.render();
+  }
   private defeat():void {this.health=0;this.modal.dataset.view="defeat";this.save.gold=Math.floor(this.save.gold*.95);this.persist();this.modal.innerHTML=`<div class="rpg-overlay"><div class="rpg-window"><div class="rpg-caption">A FENDA COBROU SEU PREÇO</div><h2>Você caiu em batalha</h2><p>Você perdeu 5% do ouro. Seu nível e seus equipamentos foram preservados.</p><button data-action="revive" class="rpg-primary">Renascer no refúgio</button></div></div>`;this.render();}
   private startScreen():void {
     this.modal.dataset.view="start";
-    this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><div class="rpg-caption">CINCO HERÓIS • FANTASIA SOMBRIA</div><h2>AETHER REBORN</h2><p>Escolha seu personagem. ${this.stored?`Seu progresso de nível ${this.save.level} será preservado.`:"Forje seu herói e enfrente o Guardião da Fenda."}</p><div class="rpg-classes">${HEROES.map(hero=>`<button class="rpg-class ${this.selected===hero.name?"selected":""}" data-action="class:${hero.name}"><img class="rpg-hero-preview" src="${heroPreview(this.scene,hero)}" alt="${hero.name}"><b>${hero.name}</b><span>${hero.description}</span></button>`).join("")}</div>${this.stored?"":'<input aria-label="Nome do herói" maxlength="18" placeholder="Nome do herói" value="Viajante">'}<button data-action="start" class="rpg-primary">${this.stored?"Continuar jornada":"Entrar no mundo"} →</button><p style="font-size:10px;margin-bottom:0">WASD mover · J atacar · L magia · E devastação · Q poção<br>Asas douradas disponíveis na mochila [I]. Progresso salvo neste navegador.</p></section></div>`;
+    this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><div class="rpg-caption">CINCO HERÓIS • FANTASIA SOMBRIA</div><h2>AETHER REBORN</h2><p>Escolha seu personagem. ${this.stored?`Seu progresso de nível ${this.save.level} será preservado.`:"Forje seu herói e enfrente o Guardião da Fenda."}</p><div class="rpg-classes">${HEROES.map(hero=>`<button class="rpg-class ${this.selected===hero.name?"selected":""}" data-action="class:${hero.name}"><img class="rpg-hero-preview" src="${heroPreview(this.scene,hero)}" alt="${hero.name}"><b>${hero.name}</b><span>${hero.description}</span></button>`).join("")}</div>${this.stored?"":'<input aria-label="Nome do herói" maxlength="18" placeholder="Nome do herói" value="Viajante">'}<button data-action="start" class="rpg-primary">${this.stored?"Continuar jornada":"Entrar no mundo"} →</button><p style="font-size:10px;margin-bottom:0">WASD mover · J atacar · L magia · 1–4 poderes · E poder 2 · Q poção<br>Asas douradas disponíveis na mochila [I]. Progresso salvo neste navegador.</p></section></div>`;
   }
   private showWindow(view:string):void {this.modal.dataset.view=view;const s=this.save;const item=(name:string,desc:string,action:string,label:string)=>`<div class="rpg-item"><strong>${name}</strong><span>${desc}</span><br><button data-action="${action}">${label}</button></div>`;let body="";
     if(view==="I")body=`<p>${s.gold} ouro · Equipamentos ativos abaixo</p><div class="rpg-items">${item(`Arma +${s.weapon}`,`${this.damage} dano efetivo`,"B","Aprimorar")}${item(`Armadura +${s.armor}`,`Reduz ${s.armor*3} dano`,"B","Aprimorar")}${item(`Poções ×${s.potions}`,"Recuperam 85 vida", "close","Voltar · Q para usar")}${item(`Fragmentos ×${s.items}`,"12 ouro por fragmento","sell","Vender todos")}${item("Asas Angelicais Douradas",s.wings?"Equipadas · aparência cosmética":"Disponíveis · aparência cosmética","wings",s.wings?"Retirar asas":"Equipar asas")}</div>`;
     if(view==="C")body=`<p>${s.hero} · Nível ${s.level} · ${s.xp}/${s.level*100} EXP<br>Vida máxima ${this.maxHealth} · Dano ${this.damage}<br><b>${s.points} pontos disponíveis</b></p><div class="rpg-items">${item(`Força ${s.strength}`,"+3 dano por ponto","strength","Adicionar +1")}${item(`Vitalidade ${s.vitality}`,"+12 vida por ponto","vitality","Adicionar +1")}${item("Cinco heróis","Troque a aparência sem perder seu progresso","heroes","Escolher herói")}</div>`;
     if(view==="B")body=`<p>Ferreiro do refúgio · ${s.gold} ouro<br>A loja pode ser acessada de qualquer lugar nesta versão.</p><div class="rpg-items">${item(`Arma +${s.weapon} → +${s.weapon+1}`,"+9 dano. Sucesso garantido.","weapon",`${80+s.weapon*60} ouro`)}${item(`Armadura +${s.armor} → +${s.armor+1}`,"−3 dano recebido.","armor",`${80+s.armor*60} ouro`)}${item("3 poções","Recupere a vida durante a caçada.","buy","20 ouro")}</div>`;
     this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><button class="rpg-close" data-action="close">Fechar ×</button><div class="rpg-caption">AETHER REBORN</div><h2>${view==="I"?"Inventário":view==="C"?"Personagem":"Ferreiro"}</h2>${body}<p style="font-size:10px">O combate fica pausado enquanto este painel estiver aberto.</p></section></div>`;}
-  private render():void {const s=this.save;this.panel.innerHTML=`<header class="rpg-brand"><h1>AETHER</h1><small>R E B O R N</small></header><div class="rpg-region"><strong>VALE DAS CINZAS</strong><div>Canal 01 · mundo compartilhado</div></div><nav class="rpg-menu"><button data-action="I">Mochila [I]</button><button data-action="C">Herói [C]</button><button data-action="B">Loja [B]</button></nav><div class="rpg-help">WASD · mover / Shift · correr<br>J · golpe / L · magia<br>R · retornar ao refúgio</div><aside class="rpg-quest"><div class="rpg-caption">CONTRATO ${s.quest+1}</div><strong>O despertar das feras</strong><p>Derrote criaturas corrompidas.<br>${Math.min(s.kills,(s.quest+1)*5)} / ${(s.quest+1)*5} eliminadas<br><span style="color:#d6b975">Recompensa: 100 ouro</span></p><button data-action="claim" ${s.kills<(s.quest+1)*5?"disabled":""}>Receber recompensa</button><p class="rpg-boss">Elite: Guardião da Fenda<br>Avance com equipamentos melhores.</p></aside><div class="rpg-feed">${this.messages.map(m=>`<div>${m}</div>`).join("")}</div><footer class="rpg-bottom"><div class="rpg-orb"><b>${Math.max(0,Math.ceil(this.health))}</b><span>VIDA / ${this.maxHealth}</span></div><div class="rpg-bars"><div class="rpg-character-line"><span>Nv.${s.level} · ${s.hero}</span><span>${s.gold} OURO</span></div><div class="rpg-xp"><i style="width:${s.xp/(s.level*100)*100}%"></i></div><div class="rpg-actions"><button data-action="attack"><em>J</em> Golpe</button><button data-action="E"><em>E</em> Devastação</button><button data-action="Q"><em>Q</em> Poção ×${s.potions}</button></div></div><div class="rpg-orb mana"><b>${Math.floor(this.mana)}</b><span>MANA / 80</span></div></footer>`;if(s.hero==="Arqueiro"&&this.active)this.mana=Math.min(80,this.mana+.5);}
+  private render():void {const s=this.save;this.panel.innerHTML=`<header class="rpg-brand"><h1>AETHER</h1><small>R E B O R N</small></header><div class="rpg-region"><strong>VALE DAS CINZAS</strong><div>Canal 01 · mundo compartilhado</div></div><nav class="rpg-menu"><button data-action="I">Mochila [I]</button><button data-action="C">Herói [C]</button><button data-action="B">Loja [B]</button></nav><div class="rpg-help">WASD · mover / Shift · correr<br>J · golpe / L · magia<br>1–4 · poderes exclusivos / E · poder 2<br>R · retornar ao refúgio</div><aside class="rpg-quest"><div class="rpg-caption">CONTRATO ${s.quest+1}</div><strong>O despertar das feras</strong><p>Derrote criaturas corrompidas.<br>${Math.min(s.kills,(s.quest+1)*5)} / ${(s.quest+1)*5} eliminadas<br><span style="color:#d6b975">Recompensa: 100 ouro</span></p><button data-action="claim" ${s.kills<(s.quest+1)*5?"disabled":""}>Receber recompensa</button><p class="rpg-boss">Elite: Guardião da Fenda<br>Avance com equipamentos melhores.</p></aside><div class="rpg-feed">${this.messages.map(m=>`<div>${m}</div>`).join("")}</div><footer class="rpg-bottom"><div class="rpg-orb"><b>${Math.max(0,Math.ceil(this.health))}</b><span>VIDA / ${this.maxHealth}</span></div><div class="rpg-bars"><div class="rpg-character-line"><span>Nv.${s.level} · ${s.hero}</span><span>${s.gold} OURO</span></div><div class="rpg-xp"><i style="width:${s.xp/(s.level*100)*100}%"></i></div><div class="rpg-powers">${this.powers.state(s.hero,this.elapsed).skills.map((p,i)=>`<button data-action="power:${i}" style="--power:#${HERO_POWERS[s.hero][i].color.toString(16).padStart(6,"0")}" title="${p.name} · ${p.cost} mana" ${p.remaining||this.mana<p.cost?"disabled":""}><em>${i+1}</em><span>${p.name}</span><small>${p.remaining?`${p.remaining}s`:`${p.cost} MP`}</small></button>`).join("")}</div><div class="rpg-actions"><button data-action="attack"><em>J</em> Golpe</button><button data-action="Q"><em>Q</em> Poção ×${s.potions}</button></div></div><div class="rpg-orb mana"><b>${Math.floor(this.mana)}</b><span>MANA / 80</span></div></footer>`;if(s.hero==="Arqueiro"&&this.active)this.mana=Math.min(80,this.mana+.5);}
   private float(x:number,y:number,text:string,color:string):void {const label=this.scene.add.text(x,y,text,{fontFamily:"Arial",fontSize:"14px",fontStyle:"bold",color,stroke:"#121318",strokeThickness:3}).setOrigin(.5).setDepth(200000);this.scene.tweens.add({targets:label,y:y-26,alpha:0,duration:800,onComplete:()=>label.destroy()});}
   private banner(text:string):void {const el=document.createElement("div");el.className="rpg-toast";el.textContent=text;this.root.append(el);this.scene.time.delayedCall(2500,()=>el.remove());}
   private log(text:string):void {this.messages.unshift(text);this.messages=this.messages.slice(0,4);}
   private persist():void {try{localStorage.setItem(SAVE_KEY,JSON.stringify(this.save));}catch{/* Storage disabled by the browser. */}}
-  destroy():void {this.touchMovement.destroy();this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
+  destroy():void {this.powers.destroy();this.touchMovement.destroy();this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
 }
