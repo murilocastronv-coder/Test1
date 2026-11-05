@@ -1,19 +1,19 @@
 {
   "version": "1.0.0",
   "name": "Dungeon 1",
-  "exportDate": "2026-11-05T18:57:35.857519Z",
+  "exportDate": "2026-11-05T18:58:51.839345Z",
   "engine": "pixellab-map-editor",
   "mapConfig": {
     "tileSize": 16,
     "dimensions": {
-      "width": 1,
-      "height": 1,
-      "pixelWidth": 16,
-      "pixelHeight": 16
+      "width": 56,
+      "height": 48,
+      "pixelWidth": 896,
+      "pixelHeight": 768
     },
     "boundingBox": {
-      "maxX": 0,
-      "maxY": 0,
+      "maxX": 55,
+      "maxY": 47,
       "minX": 0,
       "minY": 0
     }

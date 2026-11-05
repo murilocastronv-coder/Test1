@@ -17,6 +17,7 @@
   },
   "images": {},
   "maps": {
+    "Dungeon 1": "assets/maps/60cb3c22-9f2d-4901-8a6b-885aed9c3cb8/",
     "Devias": "assets/maps/a780fd5b-16bd-4ac2-82c0-21ce07a50e7c/",
     "Noria": "assets/maps/fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b/",
     "Lorencia": "assets/maps/bc1bd264-859d-4d51-9acc-18eac3e24bb1/",
@@ -35,7 +36,6 @@
     "Lost Tower 1": "assets/maps/730f9c96-dfd3-4179-8b22-2f7c0e662a58/",
     "Dungeon 3": "assets/maps/f23f98c5-f199-49e4-9a25-ad8eb6594501/",
     "Dungeon 2": "assets/maps/89ccec89-ade8-43a5-a820-3a4138377d28/",
-    "Dungeon 1": "assets/maps/60cb3c22-9f2d-4901-8a6b-885aed9c3cb8/",
     "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
   },
   "objects": {
