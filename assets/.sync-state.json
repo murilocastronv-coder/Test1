@@ -353,6 +353,33 @@
       ],
       "sync_version": 16
     },
+    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
+      "updated_at": "2026-11-05T15:53:51.275262+00:00",
+      "animation_ids": [
+        "1404b862-906e-43b6-9d77-7561da16236d",
+        "1634f34b-6d56-4192-ba3a-4950e3e135e1",
+        "16812a1a-f9c6-46e1-a740-e8b3616dc407",
+        "18ebb255-d1d3-46f7-ba8f-301a9ebbef4c",
+        "40f960a1-3e0a-4cbb-bd43-53f9ae88ef77",
+        "485dbf35-1270-42ea-98e2-546fbae61004",
+        "750e77ba-af11-4eed-853b-5a6b702fb53c",
+        "802544ee-d226-4aee-abc0-83de0ea39d3a",
+        "8d7088c6-a082-4ce7-ab8b-c15fb05ca1a3",
+        "98e5c257-0a3b-4745-a0e6-640f2ae9220e",
+        "b864447a-9ff2-4c7d-8fcf-daaf7e14be68",
+        "c2c94b47-c133-4fc9-9f4a-1cf3086bfd25",
+        "c498fee2-5d26-48ff-ac94-805117834f1e",
+        "c85c3802-ba6d-438d-8fec-3620cfc879e3",
+        "cb7847d7-682c-4202-843f-f9f3c946949b",
+        "faad6784-8fe9-4b21-88d6-d5054adbee99"
+      ],
+      "animation_fingerprint": "cbaff51cd05818f145a358b4ced2c15ae8859017b9c71f329846d620922e0b15",
+      "name": "Goblin Saqueador",
+      "member_ids": [
+        "765a1ab1-0538-4101-9520-bae405d3cbd4"
+      ],
+      "sync_version": 16
+    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [
@@ -407,30 +434,83 @@
       ],
       "sync_version": 16
     },
-    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
-      "updated_at": "2026-11-05T15:53:51.275262+00:00",
-      "animation_ids": [
-        "1404b862-906e-43b6-9d77-7561da16236d",
-        "1634f34b-6d56-4192-ba3a-4950e3e135e1",
-        "16812a1a-f9c6-46e1-a740-e8b3616dc407",
-        "18ebb255-d1d3-46f7-ba8f-301a9ebbef4c",
-        "40f960a1-3e0a-4cbb-bd43-53f9ae88ef77",
-        "485dbf35-1270-42ea-98e2-546fbae61004",
-        "750e77ba-af11-4eed-853b-5a6b702fb53c",
-        "802544ee-d226-4aee-abc0-83de0ea39d3a",
-        "8d7088c6-a082-4ce7-ab8b-c15fb05ca1a3",
-        "98e5c257-0a3b-4745-a0e6-640f2ae9220e",
-        "b864447a-9ff2-4c7d-8fcf-daaf7e14be68",
-        "c2c94b47-c133-4fc9-9f4a-1cf3086bfd25",
-        "c498fee2-5d26-48ff-ac94-805117834f1e",
-        "c85c3802-ba6d-438d-8fec-3620cfc879e3",
-        "cb7847d7-682c-4202-843f-f9f3c946949b",
-        "faad6784-8fe9-4b21-88d6-d5054adbee99"
-      ],
-      "animation_fingerprint": "cbaff51cd05818f145a358b4ced2c15ae8859017b9c71f329846d620922e0b15",
-      "name": "Goblin Saqueador",
+    "399d4689-9706-4f1f-9a48-bedddb261866": {
+      "updated_at": "2026-11-05T19:13:09.904079+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Assassin",
       "member_ids": [
-        "765a1ab1-0538-4101-9520-bae405d3cbd4"
+        "399d4689-9706-4f1f-9a48-bedddb261866"
+      ],
+      "sync_version": 16
+    },
+    "4b0feb8e-8958-4902-b1eb-749c3b15c4a3": {
+      "updated_at": "2026-11-05T19:12:47.102269+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Giant",
+      "member_ids": [
+        "4b0feb8e-8958-4902-b1eb-749c3b15c4a3"
+      ],
+      "sync_version": 16
+    },
+    "b636b0c1-bf91-40ab-9ad8-f89feef13a08": {
+      "updated_at": "2026-11-05T19:12:54.934925+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Yeti",
+      "member_ids": [
+        "b636b0c1-bf91-40ab-9ad8-f89feef13a08"
+      ],
+      "sync_version": 16
+    },
+    "b45625d2-31b9-473e-bff4-95f39090aa44": {
+      "updated_at": "2026-11-05T19:12:07.520247+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Hound",
+      "member_ids": [
+        "b45625d2-31b9-473e-bff4-95f39090aa44"
+      ],
+      "sync_version": 16
+    },
+    "e517606d-a1ba-4e77-9da6-2ba5af387ad1": {
+      "updated_at": "2026-11-05T19:12:42.255421+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Agon",
+      "member_ids": [
+        "e517606d-a1ba-4e77-9da6-2ba5af387ad1"
+      ],
+      "sync_version": 16
+    },
+    "5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9": {
+      "updated_at": "2026-11-05T19:13:25.436969+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Forest Monster",
+      "member_ids": [
+        "5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9"
+      ],
+      "sync_version": 16
+    },
+    "05f6621d-3a21-4b64-891f-ea07544ab4df": {
+      "updated_at": "2026-11-05T19:12:12.632336+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Lich",
+      "member_ids": [
+        "05f6621d-3a21-4b64-891f-ea07544ab4df"
+      ],
+      "sync_version": 16
+    },
+    "88f0a8e6-a227-4ff3-af68-6d70d10fe862": {
+      "updated_at": "2026-11-05T19:11:55.864305+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Bull Fighter",
+      "member_ids": [
+        "88f0a8e6-a227-4ff3-af68-6d70d10fe862"
       ],
       "sync_version": 16
     }

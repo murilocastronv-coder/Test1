@@ -1,0 +1,45 @@
+{
+  "id": "5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9",
+  "name": "Forest Monster",
+  "group_id": "205dcd30-fb44-4f4b-aca1-5b518c85115d",
+  "atlas_key": "char-5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9",
+  "runtime_helper": "website/src/shared/animation.ts",
+  "usage": [
+    "Read this file before choosing character states or animation clip names.",
+    "Animation name is the exact physical clip key. display_name and source_name describe it; aliases are semantic role hints only.",
+    "Resolve the exact stateFolder and clipName with the resolver this file exports \u2014 resolveCharacterAnimation(manifest, candidates, { state?, direction? }), or selectCharacterState(...) where that is what it exports.",
+    "Prefer an exact user-requested display name or clip name before generic roles such as idle, walk, run, jump, or attack.",
+    "CharacterAgent resolves idle, movement, and attack clips across the full manifest and switches state folders automatically.",
+    "Rotations are static poses only. Use animator.setPose(...) or characterRotationFrameName(...) for a deliberate static pose; setClip('idle', ...) always means a real animated idle clip.",
+    "resolveCharacterAnimation(...) and chooseClip(...) return undefined when no clip matches. Handle that explicitly; never silently replace a missing animation with rotations.",
+    "For simple roaming/walking NPCs, use CharacterAgent instead of custom straight-line movement. Its built-in roaming picks walkable targets and follows A* paths around blockers.",
+    "For autonomous movement, update movement/pathing before choosing the animation direction. Direction should come from actual movement after collision/sliding, not only the intended path target. Do not cache a facing direction before followPath/collision movement and reuse it for setClip.",
+    "If using setDirection as a temporary facing lock, do not call it again after releasing movement/facing control in the same update branch.",
+    "CharacterAgent owns the visible sprite as agent.sprite. Do not create a separate scene.add.sprite for the same character.",
+    "Keep each character controller or agent in the scene update loop for any movement or animation changes.",
+    "When adding behavior to a specific NPC, use explicit references or agent.role/agent.id. Do not infer identity from array position or agent.atlasKey.includes(name); atlas keys are UUID-based.",
+    "For dialogue portraits, use states[].portrait.path when present. Build the URL with characterAssetUrl(characterId, path) from the runtime helper.",
+    "For portrait lip-sync/vocal animation, use states[].vocal_animation.path when present. It is a grid with moods as rows and visemes as columns.",
+    "Use SpriteAnimator(sprite, atlasKey, animations, stateFolder) and animator.setClip(clipName, direction, stateFolder) for resolved clips."
+  ],
+  "states": [
+    {
+      "id": "5d23b8c8-d1bd-4e0e-94a9-facecd8f23c9",
+      "name": "Idle",
+      "folder": "idle",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "north-east",
+        "north-west",
+        "south-west"
+      ],
+      "rotation_path_pattern": "idle/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "idle/rotations/{direction}",
+      "animations": []
+    }
+  ]
+}
