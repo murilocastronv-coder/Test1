@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Lorencia",
+  "exportDate": "2026-11-05T18:57:31.237695Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "dark fantasy mossy green meadow featuring rich damp turf with sparse blade marks rendered in flat solid tones",
+      "color": "#4a9eff",
+      "baseTileId": "b0096b77-e93b-4780-beb8-e03e6cce3c38",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "medieval town weathered warm gray cobblestone plaza showing uneven stone blocks with subtle mortar lines in flat solid hues",
+      "color": "#7dd87d",
+      "baseTileId": "86f75df1-3103-46a3-be91-d419c437fa9f",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "c07a2485-7d0f-4d5b-a03a-c133085699af",
+      "filename": "dark fantasy mossy green meadow featuring rich damp turf with sparse blade marks rendered i-940eabf7.png",
+      "lowerTerrain": "dark fantasy mossy green meadow featuring rich damp turf with sparse blade marks rendered in flat solid tones",
+      "upperTerrain": "medieval town weathered warm gray cobblestone plaza showing uneven stone blocks with subtle mortar lines in flat solid hues",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "low mossy stone edging forming a thin shallow rim with soft green patches in flat solid colors",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "bc1bd264-859d-4d51-9acc-18eac3e24bb1",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

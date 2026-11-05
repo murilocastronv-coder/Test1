@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "dark fantasy mossy green meadow featuring rich damp turf with sparse blade marks rendered in flat solid tones",
+      "to": "medieval town weathered warm gray cobblestone plaza showing uneven stone blocks with subtle mortar lines in flat solid hues",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "c07a2485-7d0f-4d5b-a03a-c133085699af",
+      "transitionSize": 0.25
+    }
+  ]
+}
