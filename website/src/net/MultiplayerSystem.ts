@@ -1,4 +1,7 @@
 import Phaser from "phaser";
+import { PLAYER_CHARACTER_ID } from "../pixellab/templateAssetPaths";
+import { characterAtlasKey, characterManifest, characterRotationFrameName, selectCharacterState } from "../shared/animation";
+import { setYDepth } from "../shared/depth";
 import { connectMultiplayer, type MultiplayerHandle, type RemoteEvent } from "./multiplayer";
 
 /**
@@ -13,7 +16,7 @@ import { connectMultiplayer, type MultiplayerHandle, type RemoteEvent } from "./
  */
 export class MultiplayerSystem {
   private handle: MultiplayerHandle;
-  private remotes = new Map<string, Phaser.GameObjects.Rectangle>();
+  private remotes = new Map<string, Phaser.GameObjects.Sprite>();
   private myId: string | null = null;
   private sinceSend = 0;
 
@@ -41,13 +44,12 @@ export class MultiplayerSystem {
     if (id === this.myId) return;
     let marker = this.remotes.get(id);
     if (!marker) {
-      marker = this.scene.add
-        .rectangle(pos.x, pos.y, 16, 22, 0xff5566)
-        .setStrokeStyle(2, 0xffffff)
-        .setDepth(10000);
+      const state = selectCharacterState(characterManifest(this.scene, PLAYER_CHARACTER_ID));
+      marker = this.scene.add.sprite(pos.x, pos.y, characterAtlasKey(PLAYER_CHARACTER_ID), characterRotationFrameName(state.folder, "south")).setTint(0xa9ccff);
       this.remotes.set(id, marker);
     }
     marker.setPosition(pos.x, pos.y);
+    setYDepth(marker, pos.y + 10);
   }
 
   update(deltaMs: number): void {

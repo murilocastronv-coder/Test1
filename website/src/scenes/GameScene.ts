@@ -9,10 +9,9 @@ import { spawnNpcs } from "../npc/spawnNpcs";
 import type { CharacterAgent } from "../npc/CharacterAgent";
 import { MAP_DATA_REGISTRY_KEY } from "./BootScene";
 import { MultiplayerSystem } from "../net/MultiplayerSystem";
-import { JumpCounterExample } from "../net/JumpCounterExample";
+import { RealmRpg } from "../gameplay/RealmRpg";
 import { FireProjectileSystem } from "../gameplay/FireProjectileSystem";
-import { BearEncounter } from "../gameplay/BearEncounter";
-import { type Direction, vectorFromDirection } from "../shared/direction";
+import { type Direction } from "../shared/direction";
 
 export class GameScene extends Phaser.Scene {
   private mapData!: LoadedMap;
@@ -21,8 +20,7 @@ export class GameScene extends Phaser.Scene {
   private hud!: HudOverlay;
   private multiplayer!: MultiplayerSystem;
   private fireProjectiles!: FireProjectileSystem;
-  private encounter?: BearEncounter;
-  private hudState = "";
+  private rpg!: RealmRpg;
 
   constructor() {
     super("GameScene");
@@ -34,24 +32,24 @@ export class GameScene extends Phaser.Scene {
     const spawn = resolvePlayerSpawnPoint(this.mapData);
     this.fireProjectiles = new FireProjectileSystem(this);
     this.player = new PlayerController(this, this.mapData, spawn.x, spawn.y, {
-      onSpellCast: (origin, direction) => this.fireProjectiles.cast(origin, direction),
+      onSpellCast: (origin, direction) => { if (this.rpg?.allowSpell()) this.fireProjectiles.cast(origin, direction); },
       onSlashSwing: (origin, direction) => this.checkSlashHits(origin, direction),
     });
     this.agents = spawnNpcs(this, this.mapData);
-    const bear = this.agents.find((agent) => agent.role === "bear");
-    this.encounter = bear ? new BearEncounter(bear, this.player, this.mapData) : undefined;
-    this.hudState = "";
+    this.agents = this.agents.filter(agent => { if (agent.role === "bear") { agent.destroy(); return false; } return true; });
 
     this.startGameplayCamera();
 
     this.hud = new HudOverlay();
-    this.updateHud();
+    this.hud.setText([]);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+      this.rpg.destroy();
       this.hud.destroy();
       this.multiplayer.destroy();
     });
 
     // === NEW SYSTEMS (add new module instances here) ===
+    this.rpg = new RealmRpg(this, this.player, this.mapData);
 
     // Real-time multiplayer: stream this player's position to the project worker and
     // render other connected players. Room = the current map name (one room per map).
@@ -63,7 +61,7 @@ export class GameScene extends Phaser.Scene {
 
     // EXAMPLE of persistent SERVER state (delete to remove): a global jump counter
     // shared by all players, stored in a Durable Object via /api/jumps.
-    new JumpCounterExample(this);
+
 
     // Focus canvas to ensure keyboard input and full frame rate from start.
     // tabIndex is required for canvas to be focusable (especially in iframes).
@@ -82,20 +80,7 @@ export class GameScene extends Phaser.Scene {
   }
 
   private checkSlashHits(origin: { x: number; y: number }, direction: Direction): void {
-    const vec = vectorFromDirection(direction);
-    const range = GAME_CONFIG.combat.slashRange;
-    const halfWidth = GAME_CONFIG.combat.slashWidth / 2;
-    for (const agent of this.encounter ? [this.encounter] : []) {
-      const dx = agent.sprite.x - origin.x;
-      const dy = agent.sprite.y - origin.y;
-      // Forward distance (dot product with facing direction)
-      const forward = dx * vec.x + dy * vec.y;
-      if (forward < 0 || forward > range) continue;
-      // Perpendicular distance
-      const side = Math.abs(dx * vec.y - dy * vec.x);
-      if (side > halfWidth) continue;
-      agent.hit(origin.x, origin.y, GAME_CONFIG.combat.knockbackStrength);
-    }
+    this.rpg?.slash(origin, direction);
   }
 
   update(_time: number, deltaMs: number): void {
@@ -104,33 +89,14 @@ export class GameScene extends Phaser.Scene {
     if (deltaMs > 200) {
       return;
     }
-    if (!this.encounter?.finished) this.player.update(deltaMs);
-    this.fireProjectiles.update(deltaMs, this.encounter ? [this.encounter] : [], this.mapData);
+    if (this.rpg.active) this.player.update(deltaMs);
+    if (this.rpg.active) this.fireProjectiles.update(deltaMs, this.rpg.targets, this.mapData);
     for (const agent of this.agents) {
-      if (agent.role === "bear" && this.encounter?.finished) continue;
       agent.update(deltaMs);
     }
-    this.encounter?.update(deltaMs);
-    this.updateHud();
+    this.rpg.update(deltaMs);
     // === NEW UPDATES (add new update calls here) ===
     this.multiplayer.update(deltaMs);
   }
 
-  private updateHud(): void {
-    const encounter = this.encounter;
-    const state = encounter ? JSON.stringify(encounter.status) : "explore";
-    if (state === this.hudState) return;
-    this.hudState = state;
-    this.hud.setText([
-      "THE FOREST CLEARING",
-      encounter?.message ?? this.mapData.map.name,
-      ...(encounter ? [`You ${encounter.status.playerHealth}/${encounter.status.playerMaxHealth} ${"♥".repeat(encounter.status.playerHealth)}  ·  Bear ${encounter.status.bearHealth}/${encounter.status.bearMaxHealth}`] : []),
-      "WASD / arrows move · Shift runs · Space jumps",
-      "J slash · L fireball",
-    ]);
-    // setText no longer wipes buttons (they are separate containers), so rebuild
-    // them explicitly — this runs again on every status change, not just once.
-    this.hud.clearButtons();
-    if (encounter?.finished) this.hud.addButton("Play again", () => this.scene.restart());
-  }
 }
