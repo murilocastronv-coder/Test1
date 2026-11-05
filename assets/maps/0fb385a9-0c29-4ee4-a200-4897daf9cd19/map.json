@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Devil Square",
+  "exportDate": "2026-11-05T18:59:40.042222Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "jagged black volcanic crust with deep crimson ember fissures glowing in flat solid colors, no gradients or shadows",
+      "color": "#4a9eff",
+      "baseTileId": "9bb6d7d9-9e54-4b92-b110-a7ca7f970ca7",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "dark blood red demonic plaza floor carved from ritual stone slabs featuring flat solid hues and no gradients",
+      "color": "#7dd87d",
+      "baseTileId": "b182b16f-0d57-44f3-bd0b-bee7259821ce",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d",
+      "filename": "jagged black volcanic crust with deep crimson ember fissures glowing in flat solid colors,-88285f9a.png",
+      "lowerTerrain": "jagged black volcanic crust with deep crimson ember fissures glowing in flat solid colors, no gradients or shadows",
+      "upperTerrain": "dark blood red demonic plaza floor carved from ritual stone slabs featuring flat solid hues and no gradients",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin black stone ritual platform edge with flat solid coloration and no gradients or shadows",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "0fb385a9-0c29-4ee4-a200-4897daf9cd19",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}

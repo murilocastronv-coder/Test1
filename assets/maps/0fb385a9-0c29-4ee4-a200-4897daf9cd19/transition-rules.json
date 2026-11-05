@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "jagged black volcanic crust with deep crimson ember fissures glowing in flat solid colors, no gradients or shadows",
+      "to": "dark blood red demonic plaza floor carved from ritual stone slabs featuring flat solid hues and no gradients",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d",
+      "transitionSize": 0.25
+    }
+  ]
+}
