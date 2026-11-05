@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Lost Tower 4",
+  "exportDate": "2026-11-05T18:57:44.808107Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "deep dark violet abyss with flat solid void tone and sparse subtle rift marks",
+      "color": "#4a9eff",
+      "baseTileId": "d79b54eb-5b90-4612-a8e2-562b5ef59df8",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "dark obsidian violet stone floor with flat solid stone tones and sparse faint arcane runes",
+      "color": "#7dd87d",
+      "baseTileId": "461a3d35-c601-4943-b092-b812c17bc79d",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "a250c233-2c4c-45de-b660-ab35e0b042a1",
+      "filename": "deep dark violet abyss with flat solid void tone and sparse subtle rift marks-dark obsidian-f81602cc.png",
+      "lowerTerrain": "deep dark violet abyss with flat solid void tone and sparse subtle rift marks",
+      "upperTerrain": "dark obsidian violet stone floor with flat solid stone tones and sparse faint arcane runes",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin gothic black stone parapet ledge in flat solid dark tones with sparse clean cut edges",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "9de06e84-f455-4ff2-b6ea-26b2f03799a1",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
