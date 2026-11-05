@@ -1,0 +1,88 @@
+{
+  "version": "1.0.0",
+  "name": "Lorencia",
+  "exportDate": "2026-11-05T13:00:12.714162Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "water",
+      "color": "#4a9eff",
+      "baseTileId": "935adddd-b287-40cd-b08b-13d098f2a301",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "grass",
+      "color": "#7dd87d",
+      "baseTileId": "10e3f38c-9bfc-444c-abb3-8b80e6648d82",
+      "walkable": null
+    },
+    {
+      "id": 3,
+      "name": "water \u2194 grass",
+      "color": "#559fa2",
+      "baseTileId": "transition-6825d9c8-8563-484d-bdb4-75ddaef0c71d",
+      "walkable": null
+    },
+    {
+      "id": 4,
+      "name": "wood",
+      "color": "#ffd93d",
+      "baseTileId": "d2f36e61-aad2-45bf-9f88-8889aa601448",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "6825d9c8-8563-484d-bdb4-75ddaef0c71d",
+      "filename": "water-grass.png",
+      "lowerTerrain": "water",
+      "upperTerrain": "grass",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 1,
+      "transitionDescription": "scattered rocks",
+      "tileSize": 16,
+      "gridLayout": "4x8",
+      "wangIndexMapping": "transition",
+      "view": "high top-down"
+    },
+    {
+      "id": "feaccb7f-d5b6-4c8a-8564-873ad3ad6436",
+      "filename": "water-wood.png",
+      "lowerTerrain": "water",
+      "upperTerrain": "wood",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 4,
+      "transitionSize": 0.5,
+      "transitionDescription": "wood",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "9e8b0141-7e5d-4f34-b786-101c31f900f0",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
