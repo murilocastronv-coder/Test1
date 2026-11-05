@@ -17,6 +17,7 @@
   },
   "images": {},
   "maps": {
+    "Lorencia": "assets/maps/bc1bd264-859d-4d51-9acc-18eac3e24bb1/",
     "Blood Castle": "assets/maps/6d22bddf-a846-4af2-84e6-67cc44cb7ee9/",
     "Exile": "assets/maps/62027a19-d871-415a-a487-5a6b88820075/",
     "Arena / Stadium": "assets/maps/e4fddb2b-5119-4e39-add5-9ca0e37a7ba1/",
@@ -35,7 +36,6 @@
     "Dungeon 1": "assets/maps/60cb3c22-9f2d-4901-8a6b-885aed9c3cb8/",
     "Devias": "assets/maps/a780fd5b-16bd-4ac2-82c0-21ce07a50e7c/",
     "Noria": "assets/maps/fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b/",
-    "Lorencia": "assets/maps/bc1bd264-859d-4d51-9acc-18eac3e24bb1/",
     "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
   },
   "objects": {
@@ -92,7 +92,8 @@
     "Noria deep emerald forest ground with roots and \u2197 Noria bright green grassy woodland clearing with": "assets/tilesets/38095e6d-a232-42c6-b983-21fc6bec352d/",
     "Lorencia dark fantasy mossy green meadow \u2197 Lorencia medieval town weathered warm gray": "assets/tilesets/c07a2485-7d0f-4d5b-a03a-c133085699af/",
     "water \u2197 wood": "assets/tilesets/fcc53800-595a-46dd-82cf-1364b9ea6fea/",
-    "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/"
+    "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/",
+    "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/"
   },
   "ui": {},
   "rooms": {}
