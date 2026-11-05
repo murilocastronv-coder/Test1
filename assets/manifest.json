@@ -83,9 +83,9 @@
   "tilesets": {
     "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/",
     "Exile bleak charcoal cracked wasteland earth \u2197 Exile ashen gray ruined stone road with sickly": "assets/tilesets/4ab0f820-c094-4555-9ca5-1cb877255ed7/",
+    "Tarkan orange wind blown desert sand \u2197 Tarkan ancient ochre sandstone ruined pavement": "assets/tilesets/fc95330f-1404-40c1-9fbf-5f80c574ac50/",
     "Dungeon dark rough underground bedrock wall top \u2197 Dungeon ancient cracked gray flagstone floor in a": "assets/tilesets/5a696d44-9c41-4ec3-b2ff-95678c0c0023/",
     "Blood Castle deep crimson abyss below fortress \u2197 Blood Castle gothic silver gray fortress bridge": "assets/tilesets/a562e76a-1154-4995-86f9-e575809cf09f/",
-    "Icarus azure sky and soft white clouds \u2197 Icarus floating ivory stone celestial platform": "assets/tilesets/f8d740e4-de74-4a52-ab77-f02ab571af8a/",
     "Atlans deep turquoise ocean seabed \u2197 Atlans pale aquamarine submerged stone paths with": "assets/tilesets/13bfec11-6c2e-46ea-93d3-aabbfd397120/",
     "Arena stadium rough gray outer flagstones \u2197 Arena stadium red brown packed training sand with": "assets/tilesets/9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe/",
     "Lost Tower dark violet abyss \u2197 Lost Tower obsidian violet stone floor with": "assets/tilesets/a250c233-2c4c-45de-b660-ab35e0b042a1/",
@@ -94,7 +94,7 @@
     "Lorencia dark fantasy mossy green meadow \u2197 Lorencia medieval town weathered warm gray": "assets/tilesets/c07a2485-7d0f-4d5b-a03a-c133085699af/",
     "water \u2197 wood": "assets/tilesets/fcc53800-595a-46dd-82cf-1364b9ea6fea/",
     "water \u2197 grass": "assets/tilesets/ead821ba-c3a4-4480-86be-1d25cf344a4d/",
-    "Tarkan orange wind blown desert sand \u2197 Tarkan ancient ochre sandstone ruined pavement": "assets/tilesets/fc95330f-1404-40c1-9fbf-5f80c574ac50/"
+    "Icarus azure sky and soft white clouds \u2197 Icarus floating ivory stone celestial platform": "assets/tilesets/f8d740e4-de74-4a52-ab77-f02ab571af8a/"
   },
   "ui": {},
   "rooms": {}
