@@ -285,6 +285,26 @@
         "3a46a0b9-fba0-476d-9085-06ad60a89811"
       ],
       "sync_version": 16
+    },
+    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
+      "updated_at": "2026-11-05T15:53:34.248613+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Goblin Saqueador",
+      "member_ids": [
+        "765a1ab1-0538-4101-9520-bae405d3cbd4"
+      ],
+      "sync_version": 16
+    },
+    "886cef61-2e1b-4383-83c1-1336588c3261": {
+      "updated_at": "2026-11-05T15:53:33.555344+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Mestre das Asas",
+      "member_ids": [
+        "886cef61-2e1b-4383-83c1-1336588c3261"
+      ],
+      "sync_version": 16
     }
   },
   "images": {},
