@@ -286,13 +286,22 @@
       ],
       "sync_version": 16
     },
-    "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
-      "updated_at": "2026-11-05T15:54:10.141581+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Guerreiro Esqueleto",
+    "886cef61-2e1b-4383-83c1-1336588c3261": {
+      "updated_at": "2026-11-05T15:53:33.555344+00:00",
+      "animation_ids": [
+        "5f8c1fdc-e058-4565-9b4d-bb1ea1187f22",
+        "666bafb1-8df4-41a8-9e8a-c2177de027ea",
+        "6dcae7a0-b3c3-486e-b366-c10142c592de",
+        "8c552cec-4dc7-4e5e-b92b-98ccd6727263",
+        "933c36ff-2443-4167-a08f-c1e564a1c3a2",
+        "aa61dddd-69ea-4500-88f6-41068c4ae23a",
+        "d5bff73c-5807-49e1-baba-fb3c04e67c7d",
+        "f381a9f1-ccc2-4338-bdeb-0dcc460e5caf"
+      ],
+      "animation_fingerprint": "90db684380ab4c824c3c424c780dea9ec8f8cb2e2100a498bacf9f1d10285a50",
+      "name": "Mestre das Asas",
       "member_ids": [
-        "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
+        "886cef61-2e1b-4383-83c1-1336588c3261"
       ],
       "sync_version": 16
     },
@@ -316,22 +325,13 @@
       ],
       "sync_version": 16
     },
-    "886cef61-2e1b-4383-83c1-1336588c3261": {
-      "updated_at": "2026-11-05T15:53:33.555344+00:00",
-      "animation_ids": [
-        "5f8c1fdc-e058-4565-9b4d-bb1ea1187f22",
-        "666bafb1-8df4-41a8-9e8a-c2177de027ea",
-        "6dcae7a0-b3c3-486e-b366-c10142c592de",
-        "8c552cec-4dc7-4e5e-b92b-98ccd6727263",
-        "933c36ff-2443-4167-a08f-c1e564a1c3a2",
-        "aa61dddd-69ea-4500-88f6-41068c4ae23a",
-        "d5bff73c-5807-49e1-baba-fb3c04e67c7d",
-        "f381a9f1-ccc2-4338-bdeb-0dcc460e5caf"
-      ],
-      "animation_fingerprint": "90db684380ab4c824c3c424c780dea9ec8f8cb2e2100a498bacf9f1d10285a50",
-      "name": "Mestre das Asas",
+    "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
+      "updated_at": "2026-11-05T15:54:10.141581+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Guerreiro Esqueleto",
       "member_ids": [
-        "886cef61-2e1b-4383-83c1-1336588c3261"
+        "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
       ],
       "sync_version": 16
     }
@@ -430,228 +430,12 @@
       ],
       "sync_version": 3
     },
-    "aa6d7ac6-7445-472d-983f-457e56c5b3dc": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "aa6d7ac6-7445-472d-983f-457e56c5b3dc"
-      ],
-      "sync_version": 3
-    },
-    "90ccb4db-5c08-4a9b-a1ee-9f2616d59d7f": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "90ccb4db-5c08-4a9b-a1ee-9f2616d59d7f"
-      ],
-      "sync_version": 3
-    },
-    "b125fc05-548f-4006-8a80-3d22fe964fa8": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "b125fc05-548f-4006-8a80-3d22fe964fa8"
-      ],
-      "sync_version": 3
-    },
-    "e4dac244-ce82-43d6-8cb5-65ef46d0b763": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "e4dac244-ce82-43d6-8cb5-65ef46d0b763"
-      ],
-      "sync_version": 3
-    },
-    "a072fddd-5576-4f8f-83a7-ff32da5bd624": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "a072fddd-5576-4f8f-83a7-ff32da5bd624"
-      ],
-      "sync_version": 3
-    },
-    "34a836a4-d245-47e0-8979-ff3c6030cbad": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "34a836a4-d245-47e0-8979-ff3c6030cbad"
-      ],
-      "sync_version": 3
-    },
-    "916a5fac-9984-41ac-9cf9-ce458d4a16e9": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "916a5fac-9984-41ac-9cf9-ce458d4a16e9"
-      ],
-      "sync_version": 3
-    },
-    "e0a60502-7609-4e04-823d-51670fadb69f": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "e0a60502-7609-4e04-823d-51670fadb69f"
-      ],
-      "sync_version": 3
-    },
-    "d5d76595-749f-45ec-bdca-9757e385c483": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "d5d76595-749f-45ec-bdca-9757e385c483"
-      ],
-      "sync_version": 3
-    },
-    "9eb644ec-d086-48a2-befe-962d7282c3dc": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "9eb644ec-d086-48a2-befe-962d7282c3dc"
-      ],
-      "sync_version": 3
-    },
-    "3d2759e9-ecba-4c02-b169-d464af85b28e": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "3d2759e9-ecba-4c02-b169-d464af85b28e"
-      ],
-      "sync_version": 3
-    },
-    "c217f23d-a2b5-4b18-894c-40782e1dfca5": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "c217f23d-a2b5-4b18-894c-40782e1dfca5"
-      ],
-      "sync_version": 3
-    },
-    "a1437254-3c5e-4037-9e30-1cd36c453bdf": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "a1437254-3c5e-4037-9e30-1cd36c453bdf"
-      ],
-      "sync_version": 3
-    },
-    "c2ea9ec8-1718-4e7a-9c00-e096e32d34b1": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "c2ea9ec8-1718-4e7a-9c00-e096e32d34b1"
-      ],
-      "sync_version": 3
-    },
-    "8b398fbe-7a2f-45fd-b3f0-77b790905f9d": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "8b398fbe-7a2f-45fd-b3f0-77b790905f9d"
-      ],
-      "sync_version": 3
-    },
-    "aee40f41-3fce-45bc-9ee5-c1f023773f66": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "aee40f41-3fce-45bc-9ee5-c1f023773f66"
-      ],
-      "sync_version": 3
-    },
-    "88ed7c17-f63f-4d9f-a409-533b782cec76": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "88ed7c17-f63f-4d9f-a409-533b782cec76"
-      ],
-      "sync_version": 3
-    },
-    "81e8ac4e-eb25-4289-aa2a-14e2ef199272": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "81e8ac4e-eb25-4289-aa2a-14e2ef199272"
-      ],
-      "sync_version": 3
-    },
-    "c09812c4-60e1-4b5b-b303-499e7d2c6b7c": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "c09812c4-60e1-4b5b-b303-499e7d2c6b7c"
-      ],
-      "sync_version": 3
-    },
     "10c71833-716f-488d-b801-2840d0489f46": {
       "updated_at": "2026-11-05T15:54:37.255502+00:00",
       "animation_ids": [],
       "name": "base",
       "member_ids": [
         "10c71833-716f-488d-b801-2840d0489f46"
-      ],
-      "sync_version": 3
-    },
-    "5e468b5d-ec29-4e38-88dc-51bc8335ed80": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "5e468b5d-ec29-4e38-88dc-51bc8335ed80"
-      ],
-      "sync_version": 3
-    },
-    "c418a26f-0b60-4460-806a-1f9b8f8df53c": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "c418a26f-0b60-4460-806a-1f9b8f8df53c"
-      ],
-      "sync_version": 3
-    },
-    "e3b0c3dc-5cf9-47e5-896b-10de59556e53": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "e3b0c3dc-5cf9-47e5-896b-10de59556e53"
-      ],
-      "sync_version": 3
-    },
-    "db31cf54-3006-4ed2-a4ea-7b477711c200": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "db31cf54-3006-4ed2-a4ea-7b477711c200"
-      ],
-      "sync_version": 3
-    },
-    "9dc7aab1-341b-49b5-94c5-8b8de1ba0da2": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "9dc7aab1-341b-49b5-94c5-8b8de1ba0da2"
       ],
       "sync_version": 3
     },
@@ -664,6 +448,15 @@
       ],
       "sync_version": 3
     },
+    "34a836a4-d245-47e0-8979-ff3c6030cbad": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "34a836a4-d245-47e0-8979-ff3c6030cbad"
+      ],
+      "sync_version": 3
+    },
     "523801e7-93e6-4fa3-8ca0-884166d8ada2": {
       "updated_at": "2026-11-05T15:54:37.255502+00:00",
       "animation_ids": [],
@@ -673,12 +466,120 @@
       ],
       "sync_version": 3
     },
-    "cc87e56f-caa1-42e1-8360-9e0e52f877d9": {
+    "52712e2c-f2e1-49e0-aa40-40cf7933ee3f": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "52712e2c-f2e1-49e0-aa40-40cf7933ee3f"
+      ],
+      "sync_version": 3
+    },
+    "5e468b5d-ec29-4e38-88dc-51bc8335ed80": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "5e468b5d-ec29-4e38-88dc-51bc8335ed80"
+      ],
+      "sync_version": 3
+    },
+    "81e8ac4e-eb25-4289-aa2a-14e2ef199272": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "81e8ac4e-eb25-4289-aa2a-14e2ef199272"
+      ],
+      "sync_version": 3
+    },
+    "88ed7c17-f63f-4d9f-a409-533b782cec76": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "88ed7c17-f63f-4d9f-a409-533b782cec76"
+      ],
+      "sync_version": 3
+    },
+    "8b398fbe-7a2f-45fd-b3f0-77b790905f9d": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "8b398fbe-7a2f-45fd-b3f0-77b790905f9d"
+      ],
+      "sync_version": 3
+    },
+    "9eb644ec-d086-48a2-befe-962d7282c3dc": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "9eb644ec-d086-48a2-befe-962d7282c3dc"
+      ],
+      "sync_version": 3
+    },
+    "aa6d7ac6-7445-472d-983f-457e56c5b3dc": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "aa6d7ac6-7445-472d-983f-457e56c5b3dc"
+      ],
+      "sync_version": 3
+    },
+    "b125fc05-548f-4006-8a80-3d22fe964fa8": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "b125fc05-548f-4006-8a80-3d22fe964fa8"
+      ],
+      "sync_version": 3
+    },
+    "c09812c4-60e1-4b5b-b303-499e7d2c6b7c": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "c09812c4-60e1-4b5b-b303-499e7d2c6b7c"
+      ],
+      "sync_version": 3
+    },
+    "c2ea9ec8-1718-4e7a-9c00-e096e32d34b1": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "c2ea9ec8-1718-4e7a-9c00-e096e32d34b1"
+      ],
+      "sync_version": 3
+    },
+    "c418a26f-0b60-4460-806a-1f9b8f8df53c": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "c418a26f-0b60-4460-806a-1f9b8f8df53c"
+      ],
+      "sync_version": 3
+    },
+    "d5d76595-749f-45ec-bdca-9757e385c483": {
+      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "d5d76595-749f-45ec-bdca-9757e385c483"
+      ],
+      "sync_version": 3
+    },
+    "3d2759e9-ecba-4c02-b169-d464af85b28e": {
       "updated_at": "2026-11-05T15:54:40.701209+00:00",
       "animation_ids": [],
       "name": "base",
       "member_ids": [
-        "cc87e56f-caa1-42e1-8360-9e0e52f877d9"
+        "3d2759e9-ecba-4c02-b169-d464af85b28e"
       ],
       "sync_version": 3
     },
@@ -691,12 +592,111 @@
       ],
       "sync_version": 3
     },
-    "52712e2c-f2e1-49e0-aa40-40cf7933ee3f": {
-      "updated_at": "2026-11-05T15:54:37.255502+00:00",
+    "90ccb4db-5c08-4a9b-a1ee-9f2616d59d7f": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
       "animation_ids": [],
       "name": "base",
       "member_ids": [
-        "52712e2c-f2e1-49e0-aa40-40cf7933ee3f"
+        "90ccb4db-5c08-4a9b-a1ee-9f2616d59d7f"
+      ],
+      "sync_version": 3
+    },
+    "916a5fac-9984-41ac-9cf9-ce458d4a16e9": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "916a5fac-9984-41ac-9cf9-ce458d4a16e9"
+      ],
+      "sync_version": 3
+    },
+    "9dc7aab1-341b-49b5-94c5-8b8de1ba0da2": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "9dc7aab1-341b-49b5-94c5-8b8de1ba0da2"
+      ],
+      "sync_version": 3
+    },
+    "a072fddd-5576-4f8f-83a7-ff32da5bd624": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "a072fddd-5576-4f8f-83a7-ff32da5bd624"
+      ],
+      "sync_version": 3
+    },
+    "a1437254-3c5e-4037-9e30-1cd36c453bdf": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "a1437254-3c5e-4037-9e30-1cd36c453bdf"
+      ],
+      "sync_version": 3
+    },
+    "aee40f41-3fce-45bc-9ee5-c1f023773f66": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "aee40f41-3fce-45bc-9ee5-c1f023773f66"
+      ],
+      "sync_version": 3
+    },
+    "c217f23d-a2b5-4b18-894c-40782e1dfca5": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "c217f23d-a2b5-4b18-894c-40782e1dfca5"
+      ],
+      "sync_version": 3
+    },
+    "cc87e56f-caa1-42e1-8360-9e0e52f877d9": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "cc87e56f-caa1-42e1-8360-9e0e52f877d9"
+      ],
+      "sync_version": 3
+    },
+    "db31cf54-3006-4ed2-a4ea-7b477711c200": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "db31cf54-3006-4ed2-a4ea-7b477711c200"
+      ],
+      "sync_version": 3
+    },
+    "e0a60502-7609-4e04-823d-51670fadb69f": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "e0a60502-7609-4e04-823d-51670fadb69f"
+      ],
+      "sync_version": 3
+    },
+    "e3b0c3dc-5cf9-47e5-896b-10de59556e53": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "e3b0c3dc-5cf9-47e5-896b-10de59556e53"
+      ],
+      "sync_version": 3
+    },
+    "e4dac244-ce82-43d6-8cb5-65ef46d0b763": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "e4dac244-ce82-43d6-8cb5-65ef46d0b763"
       ],
       "sync_version": 3
     }
