@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "azure sky with soft white clouds drifting across an even atmospheric expanse",
+      "to": "floating ivory stone surface inlaid with gleaming gold leaf accents",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "f8d740e4-de74-4a52-ab77-f02ab571af8a",
+      "transitionSize": 0.25
+    }
+  ]
+}

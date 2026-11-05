@@ -437,6 +437,14 @@
   },
   "images": {},
   "maps": {
+    "84136bbf-af47-4fa4-bbca-c03e77b8b412": {
+      "updated_at": "2026-11-05T18:57:53.206757+00:00",
+      "name": "Icarus",
+      "export_version": 13,
+      "tilesets": {
+        "f8d740e4-de74-4a52-ab77-f02ab571af8a": "2026-11-05T18:56:49.311988+00:00"
+      }
+    },
     "ce58480f-29c4-4adc-9cd7-7534a08412a0": {
       "updated_at": "2026-11-05T18:57:51.714221+00:00",
       "name": "Tarkan",

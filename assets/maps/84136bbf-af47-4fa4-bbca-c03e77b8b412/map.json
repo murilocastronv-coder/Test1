@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Icarus",
+  "exportDate": "2026-11-05T18:57:53.566549Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "azure sky with soft white clouds drifting across an even atmospheric expanse",
+      "color": "#4a9eff",
+      "baseTileId": "cdbb6811-7cb8-41d6-b34e-aac632c71cdd",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "floating ivory stone surface inlaid with gleaming gold leaf accents",
+      "color": "#7dd87d",
+      "baseTileId": "6b2449b1-caa8-40ac-9add-3b9f7f1f883f",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "f8d740e4-de74-4a52-ab77-f02ab571af8a",
+      "filename": "azure sky with soft white clouds drifting across an even atmospheric expanse-floating ivory-2d3e1428.png",
+      "lowerTerrain": "azure sky with soft white clouds drifting across an even atmospheric expanse",
+      "upperTerrain": "floating ivory stone surface inlaid with gleaming gold leaf accents",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "thin white marble cliff edge with a clean cut profile and subtle golden veining",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "84136bbf-af47-4fa4-bbca-c03e77b8b412",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
