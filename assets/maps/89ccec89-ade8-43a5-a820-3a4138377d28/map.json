@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Dungeon 2",
+  "exportDate": "2026-11-05T18:57:37.341861Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "dark underground bedrock wall with massive rough stone blocks in flat solid charcoal tones, no gradients or shadows",
+      "color": "#4a9eff",
+      "baseTileId": "1eabed08-3663-4301-bbc3-7ede6da6c086",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "ancient cracked gray flagstone floor in a gothic crypt with heavy mortar lines in flat solid stone tones, no gradients or shadows",
+      "color": "#7dd87d",
+      "baseTileId": "4f3eeefb-0d93-4603-908a-29fe78518e91",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "5a696d44-9c41-4ec3-b2ff-95678c0c0023",
+      "filename": "dark underground bedrock wall with massive rough stone blocks in flat solid charcoal tones,-9d25ff72.png",
+      "lowerTerrain": "dark underground bedrock wall with massive rough stone blocks in flat solid charcoal tones, no gradients or shadows",
+      "upperTerrain": "ancient cracked gray flagstone floor in a gothic crypt with heavy mortar lines in flat solid stone tones, no gradients or shadows",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "chipped stone ledge forming a thin raised masonry border in flat solid gray tones, no gradients or shadows",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "89ccec89-ade8-43a5-a820-3a4138377d28",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
