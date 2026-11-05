@@ -151,33 +151,6 @@
       ],
       "sync_version": 16
     },
-    "a186e0b5-46cf-4259-b791-d06d5dece872": {
-      "updated_at": "2026-11-05T14:39:28.657218+00:00",
-      "animation_ids": [
-        "0215e294-5d6a-4cae-bd08-61510eb96ec5",
-        "034c377c-c821-4443-a534-2a799a49de49",
-        "20c1d490-4ede-426a-8993-6fe415888e0c",
-        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
-        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
-        "4055564f-613b-470f-9e76-571f0ac0cdf9",
-        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
-        "691a42bf-241b-4757-a8c6-4e06864e5977",
-        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
-        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
-        "85574696-09d5-465c-be53-8200cdca7b95",
-        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
-        "b3df27ea-f26e-4a80-8085-44925e56d45e",
-        "b4eeca88-1cc2-40cf-94ca-4c7920619cdb",
-        "c602ff9e-e9cb-4e72-aac1-42156ce62291",
-        "fa4e8ade-0116-4812-8402-a2262b6a8aba"
-      ],
-      "animation_fingerprint": "ec3bfd158c074459ffc01207b8c1bd8877fac30ba1e6689a5d86a5022d5a1b50",
-      "name": "Cavaleiro Carmesim",
-      "member_ids": [
-        "a186e0b5-46cf-4259-b791-d06d5dece872"
-      ],
-      "sync_version": 16
-    },
     "e15cb620-66b4-457e-af22-7357de16bbef": {
       "updated_at": "2026-11-05T14:39:55.879015+00:00",
       "animation_ids": [
@@ -283,6 +256,33 @@
       "name": "Lorde Sombrio",
       "member_ids": [
         "3a46a0b9-fba0-476d-9085-06ad60a89811"
+      ],
+      "sync_version": 16
+    },
+    "a186e0b5-46cf-4259-b791-d06d5dece872": {
+      "updated_at": "2026-11-05T14:39:28.657218+00:00",
+      "animation_ids": [
+        "0215e294-5d6a-4cae-bd08-61510eb96ec5",
+        "034c377c-c821-4443-a534-2a799a49de49",
+        "20c1d490-4ede-426a-8993-6fe415888e0c",
+        "2babf97b-a475-4c72-ba3e-ed0e2919e823",
+        "3b12ba8a-b21a-4f15-a189-086b9b040cdf",
+        "4055564f-613b-470f-9e76-571f0ac0cdf9",
+        "5f51285f-d7a3-43ff-bfb6-90a78d3003a0",
+        "691a42bf-241b-4757-a8c6-4e06864e5977",
+        "7362bb52-0df2-460f-acaf-512b6d4a99f4",
+        "776c8343-dac2-4f5e-b74a-e9bda3ef0edd",
+        "85574696-09d5-465c-be53-8200cdca7b95",
+        "8a47da61-1925-4e5e-9eb7-573cd26231e4",
+        "b3df27ea-f26e-4a80-8085-44925e56d45e",
+        "b4eeca88-1cc2-40cf-94ca-4c7920619cdb",
+        "c602ff9e-e9cb-4e72-aac1-42156ce62291",
+        "fa4e8ade-0116-4812-8402-a2262b6a8aba"
+      ],
+      "animation_fingerprint": "ec3bfd158c074459ffc01207b8c1bd8877fac30ba1e6689a5d86a5022d5a1b50",
+      "name": "Cavaleiro Carmesim",
+      "member_ids": [
+        "a186e0b5-46cf-4259-b791-d06d5dece872"
       ],
       "sync_version": 16
     }
