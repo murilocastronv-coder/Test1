@@ -41,6 +41,29 @@
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
       "animations": [
         {
+          "name": "custom-raise-the-sword-overhead-deli",
+          "id": "3ecccf37-157a-40e4-af28-d2a530bc95f9",
+          "source_name": "custom-Raise the sword overhead, deli",
+          "display_name": "Ataque de Espada",
+          "description": "Raise the sword overhead, deliver one heavy downward sword chop forward, follow through and return to the initial ready stance. Keep same identity and black and gold armor. Feet planted, no walking.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [],
+          "path_pattern": "idle/animations/custom-raise-the-sword-overhead-deli/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/custom-raise-the-sword-overhead-deli/{direction}/frame_{frame}"
+        },
+        {
           "name": "idle",
           "id": "d75e88ff-0383-4103-b776-f2e13ff5cb8b",
           "source_name": "breathing-idle",
