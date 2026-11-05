@@ -991,14 +991,14 @@
       "name": "Icarus azure sky and soft white clouds \u2197 Icarus floating ivory stone celestial platform",
       "sync_version": 2
     },
-    "13bfec11-6c2e-46ea-93d3-aabbfd397120": {
-      "updated_at": "2026-11-05T18:56:48.820737+00:00",
-      "name": "Atlans deep turquoise ocean seabed \u2197 Atlans pale aquamarine submerged stone paths with",
-      "sync_version": 2
-    },
     "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe": {
       "updated_at": "2026-11-05T18:56:48.153041+00:00",
       "name": "Arena stadium rough gray outer flagstones \u2197 Arena stadium red brown packed training sand with",
+      "sync_version": 2
+    },
+    "a250c233-2c4c-45de-b660-ab35e0b042a1": {
+      "updated_at": "2026-11-05T18:56:32.333835+00:00",
+      "name": "Lost Tower dark violet abyss \u2197 Lost Tower obsidian violet stone floor with",
       "sync_version": 2
     },
     "a0c4ddcc-6b68-452e-8649-2b9623127495": {
@@ -1026,9 +1026,9 @@
       "name": "water \u2197 grass",
       "sync_version": 2
     },
-    "a250c233-2c4c-45de-b660-ab35e0b042a1": {
-      "updated_at": "2026-11-05T18:56:32.333835+00:00",
-      "name": "Lost Tower dark violet abyss \u2197 Lost Tower obsidian violet stone floor with",
+    "13bfec11-6c2e-46ea-93d3-aabbfd397120": {
+      "updated_at": "2026-11-05T18:56:48.820737+00:00",
+      "name": "Atlans deep turquoise ocean seabed \u2197 Atlans pale aquamarine submerged stone paths with",
       "sync_version": 2
     }
   },
