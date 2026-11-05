@@ -286,35 +286,6 @@
       ],
       "sync_version": 16
     },
-    "886cef61-2e1b-4383-83c1-1336588c3261": {
-      "updated_at": "2026-11-05T15:53:33.555344+00:00",
-      "animation_ids": [
-        "5f8c1fdc-e058-4565-9b4d-bb1ea1187f22",
-        "666bafb1-8df4-41a8-9e8a-c2177de027ea",
-        "6dcae7a0-b3c3-486e-b366-c10142c592de",
-        "8c552cec-4dc7-4e5e-b92b-98ccd6727263",
-        "933c36ff-2443-4167-a08f-c1e564a1c3a2",
-        "aa61dddd-69ea-4500-88f6-41068c4ae23a",
-        "d5bff73c-5807-49e1-baba-fb3c04e67c7d",
-        "f381a9f1-ccc2-4338-bdeb-0dcc460e5caf"
-      ],
-      "animation_fingerprint": "90db684380ab4c824c3c424c780dea9ec8f8cb2e2100a498bacf9f1d10285a50",
-      "name": "Mestre das Asas",
-      "member_ids": [
-        "886cef61-2e1b-4383-83c1-1336588c3261"
-      ],
-      "sync_version": 16
-    },
-    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
-      "updated_at": "2026-11-05T15:53:51.275262+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Goblin Saqueador",
-      "member_ids": [
-        "765a1ab1-0538-4101-9520-bae405d3cbd4"
-      ],
-      "sync_version": 16
-    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [],
@@ -332,6 +303,60 @@
       "name": "Dem\u00f4nio das Brasas",
       "member_ids": [
         "6446a239-4e41-4526-89f2-763f6ea9c9a6"
+      ],
+      "sync_version": 16
+    },
+    "886cef61-2e1b-4383-83c1-1336588c3261": {
+      "updated_at": "2026-11-05T15:53:33.555344+00:00",
+      "animation_ids": [
+        "147ae877-35d0-40b6-bd26-5627987df51c",
+        "3bfca3db-7251-4425-9db1-60957bda6299",
+        "5f8c1fdc-e058-4565-9b4d-bb1ea1187f22",
+        "666bafb1-8df4-41a8-9e8a-c2177de027ea",
+        "6dcae7a0-b3c3-486e-b366-c10142c592de",
+        "8c552cec-4dc7-4e5e-b92b-98ccd6727263",
+        "919ff576-4982-4c87-91c7-879bf18ea02a",
+        "924a5e59-a62f-4e3d-8eba-9f6bb8c5d41e",
+        "933c36ff-2443-4167-a08f-c1e564a1c3a2",
+        "aa61dddd-69ea-4500-88f6-41068c4ae23a",
+        "cf93be0b-6c6a-4e5d-8bc7-038da2560f38",
+        "d5bff73c-5807-49e1-baba-fb3c04e67c7d",
+        "d8593b84-c4a8-45c3-8581-20b7ba6f8b42",
+        "f381a9f1-ccc2-4338-bdeb-0dcc460e5caf",
+        "f93f927a-586a-4b9c-827a-8153ab574166",
+        "fefe53d9-3a95-4010-bba1-bf1f02919993"
+      ],
+      "animation_fingerprint": "c3e9b529712b08c463f6c7578abd310687c4d366c8a69a5f7f474c3d8e38388b",
+      "name": "Mestre das Asas",
+      "member_ids": [
+        "886cef61-2e1b-4383-83c1-1336588c3261"
+      ],
+      "sync_version": 16
+    },
+    "765a1ab1-0538-4101-9520-bae405d3cbd4": {
+      "updated_at": "2026-11-05T15:53:51.275262+00:00",
+      "animation_ids": [
+        "1404b862-906e-43b6-9d77-7561da16236d",
+        "1634f34b-6d56-4192-ba3a-4950e3e135e1",
+        "16812a1a-f9c6-46e1-a740-e8b3616dc407",
+        "18ebb255-d1d3-46f7-ba8f-301a9ebbef4c",
+        "40f960a1-3e0a-4cbb-bd43-53f9ae88ef77",
+        "485dbf35-1270-42ea-98e2-546fbae61004",
+        "750e77ba-af11-4eed-853b-5a6b702fb53c",
+        "802544ee-d226-4aee-abc0-83de0ea39d3a",
+        "8d7088c6-a082-4ce7-ab8b-c15fb05ca1a3",
+        "98e5c257-0a3b-4745-a0e6-640f2ae9220e",
+        "b864447a-9ff2-4c7d-8fcf-daaf7e14be68",
+        "c2c94b47-c133-4fc9-9f4a-1cf3086bfd25",
+        "c498fee2-5d26-48ff-ac94-805117834f1e",
+        "c85c3802-ba6d-438d-8fec-3620cfc879e3",
+        "cb7847d7-682c-4202-843f-f9f3c946949b",
+        "faad6784-8fe9-4b21-88d6-d5054adbee99"
+      ],
+      "animation_fingerprint": "cbaff51cd05818f145a358b4ced2c15ae8859017b9c71f329846d620922e0b15",
+      "name": "Goblin Saqueador",
+      "member_ids": [
+        "765a1ab1-0538-4101-9520-bae405d3cbd4"
       ],
       "sync_version": 16
     }
@@ -637,6 +662,15 @@
       ],
       "sync_version": 3
     },
+    "aee40f41-3fce-45bc-9ee5-c1f023773f66": {
+      "updated_at": "2026-11-05T15:54:40.701209+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "aee40f41-3fce-45bc-9ee5-c1f023773f66"
+      ],
+      "sync_version": 3
+    },
     "c217f23d-a2b5-4b18-894c-40782e1dfca5": {
       "updated_at": "2026-11-05T15:54:40.701209+00:00",
       "animation_ids": [],
@@ -688,15 +722,6 @@
       "name": "base",
       "member_ids": [
         "e4dac244-ce82-43d6-8cb5-65ef46d0b763"
-      ],
-      "sync_version": 3
-    },
-    "aee40f41-3fce-45bc-9ee5-c1f023773f66": {
-      "updated_at": "2026-11-05T15:54:40.701209+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "aee40f41-3fce-45bc-9ee5-c1f023773f66"
       ],
       "sync_version": 3
     }
