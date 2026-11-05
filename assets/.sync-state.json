@@ -981,6 +981,11 @@
       "name": "Dungeon dark rough underground bedrock wall top \u2197 Dungeon ancient cracked gray flagstone floor in a",
       "sync_version": 2
     },
+    "a562e76a-1154-4995-86f9-e575809cf09f": {
+      "updated_at": "2026-11-05T18:56:52.103070+00:00",
+      "name": "Blood Castle deep crimson abyss below fortress \u2197 Blood Castle gothic silver gray fortress bridge",
+      "sync_version": 2
+    },
     "f8d740e4-de74-4a52-ab77-f02ab571af8a": {
       "updated_at": "2026-11-05T18:56:49.311988+00:00",
       "name": "Icarus azure sky and soft white clouds \u2197 Icarus floating ivory stone celestial platform",
@@ -1024,11 +1029,6 @@
     "ead821ba-c3a4-4480-86be-1d25cf344a4d": {
       "updated_at": "2026-11-05T14:26:29.129502+00:00",
       "name": "water \u2197 grass",
-      "sync_version": 2
-    },
-    "a562e76a-1154-4995-86f9-e575809cf09f": {
-      "updated_at": "2026-11-05T18:56:52.103070+00:00",
-      "name": "Blood Castle deep crimson abyss below fortress \u2197 Blood Castle gothic silver gray fortress bridge",
       "sync_version": 2
     }
   },
