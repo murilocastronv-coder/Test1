@@ -178,22 +178,30 @@
       ],
       "sync_version": 16
     },
-    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
-      "updated_at": "2026-11-05T14:39:24.966084+00:00",
+    "e15cb620-66b4-457e-af22-7357de16bbef": {
+      "updated_at": "2026-11-05T14:39:55.879015+00:00",
       "animation_ids": [
-        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
-        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
-        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
-        "4cdd895b-f5d1-410d-a687-832bf67143b5",
-        "53827715-1d46-4009-9205-a135964d1e57",
-        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
-        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
-        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7"
+        "06a81aa6-dd8b-44a3-9ed3-8570e51380c8",
+        "28544faa-5e03-427e-85d3-c3b4d722c39f",
+        "368ea794-10f3-43cd-806e-081fc4b1ba66",
+        "3ee7fdb1-86fc-4545-a112-baf8a40b3f40",
+        "478310c3-7b30-475e-a26f-2bcf8ee7df53",
+        "520ca3cb-5f8a-4618-b9f5-43707c6a3701",
+        "703e0de4-4433-4a50-878e-55e27b6a1574",
+        "a8396b4b-02da-4901-8fe3-5ff5c52aa260",
+        "c19c3484-bd0d-431f-9aa7-d18f61e3bd63",
+        "c3851fc5-e10f-415b-a899-af335d4976b2",
+        "cf0ba7f7-62a8-499f-b38e-8961f147a5d8",
+        "d518c485-0361-417a-8251-da9d46474b42",
+        "dea7039e-47f3-4744-97e2-84aa8ac885df",
+        "ecadde1a-c6ad-479d-ad7a-8944656e72cb",
+        "f6000b87-6ca1-4cdc-8a6b-323973efcb16",
+        "fb9532fc-8088-4b81-8724-b240bad6bb65"
       ],
-      "animation_fingerprint": "cb16ce71edd58c1203b98f890f94bab12fbcb57bfe53a3819ad0104cd060f86b",
-      "name": "Elfa Esmeralda",
+      "animation_fingerprint": "8637c015a920ae29421990b5703db9b389e7b1ed00914fda2f66c5aaab74e7a6",
+      "name": "Mago Arcano",
       "member_ids": [
-        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
+        "e15cb620-66b4-457e-af22-7357de16bbef"
       ],
       "sync_version": 16
     },
@@ -235,30 +243,30 @@
       ],
       "sync_version": 16
     },
-    "e15cb620-66b4-457e-af22-7357de16bbef": {
-      "updated_at": "2026-11-05T14:39:55.879015+00:00",
+    "d3c19f60-17ec-49ef-8b75-586ace0a2413": {
+      "updated_at": "2026-11-05T14:39:24.966084+00:00",
       "animation_ids": [
-        "06a81aa6-dd8b-44a3-9ed3-8570e51380c8",
-        "28544faa-5e03-427e-85d3-c3b4d722c39f",
-        "368ea794-10f3-43cd-806e-081fc4b1ba66",
-        "3ee7fdb1-86fc-4545-a112-baf8a40b3f40",
-        "478310c3-7b30-475e-a26f-2bcf8ee7df53",
-        "520ca3cb-5f8a-4618-b9f5-43707c6a3701",
-        "703e0de4-4433-4a50-878e-55e27b6a1574",
-        "a8396b4b-02da-4901-8fe3-5ff5c52aa260",
-        "c19c3484-bd0d-431f-9aa7-d18f61e3bd63",
-        "c3851fc5-e10f-415b-a899-af335d4976b2",
-        "cf0ba7f7-62a8-499f-b38e-8961f147a5d8",
-        "d518c485-0361-417a-8251-da9d46474b42",
-        "dea7039e-47f3-4744-97e2-84aa8ac885df",
-        "ecadde1a-c6ad-479d-ad7a-8944656e72cb",
-        "f6000b87-6ca1-4cdc-8a6b-323973efcb16",
-        "fb9532fc-8088-4b81-8724-b240bad6bb65"
+        "0b592aa6-2368-4a75-bb72-c28ef18f6f5f",
+        "0f1e90e6-691f-4750-a8a9-e1a89bafbc5a",
+        "39212fb2-c678-4d97-b7d7-f83fff1ed5a8",
+        "39791fbd-8e98-4fa5-bf39-07643f6e9c17",
+        "3c0a7e3e-d78c-48b1-84d7-336421c0cfea",
+        "4cdd895b-f5d1-410d-a687-832bf67143b5",
+        "53827715-1d46-4009-9205-a135964d1e57",
+        "57055e1f-88cf-4931-aeb3-aadfe6bef0a9",
+        "578cf394-77c6-4df8-bf09-c3e957096752",
+        "5867e25b-26b5-482a-9c1a-36cb283d74d6",
+        "82cff36e-2912-40e8-b78e-4a3b2babd5f9",
+        "9e007c49-767f-48d1-917f-ea4e962a0ed1",
+        "a41b7ca0-7ad0-4ee4-a830-080cfaad74b9",
+        "cc01e150-9afa-4ff6-8a6d-1b4c6c6530fd",
+        "dfe750ca-a76e-4cd9-b732-ba3695e7e9d7",
+        "e8bd8c0f-939c-4f23-81a3-5c41754210b5"
       ],
-      "animation_fingerprint": "8637c015a920ae29421990b5703db9b389e7b1ed00914fda2f66c5aaab74e7a6",
-      "name": "Mago Arcano",
+      "animation_fingerprint": "af7d70b5947ed8248ede830c2bd7e30c5ba0ac059731e63314446cd9b335e439",
+      "name": "Elfa Esmeralda",
       "member_ids": [
-        "e15cb620-66b4-457e-af22-7357de16bbef"
+        "d3c19f60-17ec-49ef-8b75-586ace0a2413"
       ],
       "sync_version": 16
     }

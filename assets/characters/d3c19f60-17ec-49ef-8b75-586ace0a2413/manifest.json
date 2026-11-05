@@ -41,6 +41,31 @@
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
       "animations": [
         {
+          "name": "idle",
+          "id": "f656cbf3-f10b-4d36-92de-30209a9f740d",
+          "source_name": "breathing-idle",
+          "display_name": "Parado",
+          "description": "breathing idle",
+          "generation_model": "template",
+          "frame_count": 4,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "path_pattern": "idle/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
+        },
+        {
           "name": "walk",
           "id": "cfe1c62c-fa78-4415-a71d-637afe751864",
           "source_name": "walking-6-frames",
