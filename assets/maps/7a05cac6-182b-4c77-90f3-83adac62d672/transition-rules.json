@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "deep turquoise ocean seabed with gentle ripples and soft sand grain, rendered in flat solid color with sparse subtle ripple marks",
+      "to": "pale aquamarine submerged stone paths embedded with scattered shells and weathered coral fragments, rendered in flat solid color with no gradients",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "13bfec11-6c2e-46ea-93d3-aabbfd397120",
+      "transitionSize": 0.25
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "name": "Atlans",
+  "exportDate": "2026-11-05T18:57:50.596078Z",
+  "engine": "pixellab-map-editor",
+  "mapConfig": {
+    "tileSize": 16,
+    "dimensions": {
+      "width": 1,
+      "height": 1,
+      "pixelWidth": 16,
+      "pixelHeight": 16
+    },
+    "boundingBox": {
+      "maxX": 0,
+      "maxY": 0,
+      "minX": 0,
+      "minY": 0
+    }
+  },
+  "terrains": [
+    {
+      "id": 1,
+      "name": "deep turquoise ocean seabed with gentle ripples and soft sand grain, rendered in flat solid color with sparse subtle ripple marks",
+      "color": "#4a9eff",
+      "baseTileId": "6fb20c67-1a32-4529-a53d-aac86808dad3",
+      "walkable": null
+    },
+    {
+      "id": 2,
+      "name": "pale aquamarine submerged stone paths embedded with scattered shells and weathered coral fragments, rendered in flat solid color with no gradients",
+      "color": "#7dd87d",
+      "baseTileId": "b4b5af91-e21d-45cc-a9c2-d2461ddde11d",
+      "walkable": null
+    }
+  ],
+  "tilesets": [
+    {
+      "id": "13bfec11-6c2e-46ea-93d3-aabbfd397120",
+      "filename": "deep turquoise ocean seabed with gentle ripples and soft sand grain, rendered in flat solid-12bc9cbc.png",
+      "lowerTerrain": "deep turquoise ocean seabed with gentle ripples and soft sand grain, rendered in flat solid color with sparse subtle ripple marks",
+      "upperTerrain": "pale aquamarine submerged stone paths embedded with scattered shells and weathered coral fragments, rendered in flat solid color with no gradients",
+      "lowerTerrainId": 1,
+      "upperTerrainId": 2,
+      "transitionSize": 0.25,
+      "transitionDescription": "narrow sandy underwater ledge forming a low thin lip of fine grains, rendered in flat solid color with simple grain texture",
+      "tileSize": 16,
+      "gridLayout": "4x4",
+      "wangIndexMapping": "standard",
+      "view": "high top-down"
+    }
+  ],
+  "overlays": [],
+  "background": null,
+  "mapId": "7a05cac6-182b-4c77-90f3-83adac62d672",
+  "gameplayAnnotations": {
+    "version": "1.0.0",
+    "file": "annotations.json"
+  }
+}
