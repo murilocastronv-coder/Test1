@@ -50,7 +50,13 @@
           "frame_count": 6,
           "directions": [
             "south",
-            "east"
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
           ],
           "loop": true,
           "aliases": [
