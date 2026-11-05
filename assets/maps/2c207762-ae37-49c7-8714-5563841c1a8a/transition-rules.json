@@ -1,0 +1,12 @@
+{
+  "transitions": [
+    {
+      "from": "deep dark violet abyss with flat solid void tone and sparse subtle rift marks",
+      "to": "dark obsidian violet stone floor with flat solid stone tones and sparse faint arcane runes",
+      "fromId": 1,
+      "toId": 2,
+      "tilesetId": "a250c233-2c4c-45de-b660-ab35e0b042a1",
+      "transitionSize": 0.25
+    }
+  ]
+}
