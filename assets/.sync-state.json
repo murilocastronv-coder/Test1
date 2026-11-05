@@ -313,16 +313,6 @@
       ],
       "sync_version": 16
     },
-    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
-      "updated_at": "2026-11-05T15:54:00.052382+00:00",
-      "animation_ids": [],
-      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-      "name": "Dem\u00f4nio das Brasas",
-      "member_ids": [
-        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
-      ],
-      "sync_version": 16
-    },
     "765a1ab1-0538-4101-9520-bae405d3cbd4": {
       "updated_at": "2026-11-05T15:53:51.275262+00:00",
       "animation_ids": [
@@ -350,19 +340,37 @@
       ],
       "sync_version": 16
     },
+    "6446a239-4e41-4526-89f2-763f6ea9c9a6": {
+      "updated_at": "2026-11-05T15:54:00.052382+00:00",
+      "animation_ids": [],
+      "animation_fingerprint": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "name": "Dem\u00f4nio das Brasas",
+      "member_ids": [
+        "6446a239-4e41-4526-89f2-763f6ea9c9a6"
+      ],
+      "sync_version": 16
+    },
     "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30": {
       "updated_at": "2026-11-05T15:54:10.141581+00:00",
       "animation_ids": [
+        "0b23f645-74b1-4da0-a346-e4c88f484034",
         "10696c1e-148d-469d-aef3-d2194cc6d1f1",
         "19bd3150-0f1f-4557-828e-e7697f5457ec",
+        "289558bc-e966-48f9-8382-f593d8ab75b5",
         "5bb30092-0c49-4bc4-a908-66f65966bd11",
+        "7ac40fa2-aaf7-4ec7-86d6-ed9cbd6d67e7",
         "7c748070-2e5a-42e4-a052-dbd9b4f77d21",
+        "81e180bc-64ad-4105-8b90-c1f2e740a7fc",
         "910b97b7-8b7e-4f75-a44f-d10603d38dd4",
         "960df0b8-35d5-4f12-89c3-6e0a11df2ef1",
         "98363076-e43e-49f7-a95a-41b92e8a04bd",
-        "ae8cd043-9aa1-4c13-a0fb-f0ca977fb907"
+        "ae8cd043-9aa1-4c13-a0fb-f0ca977fb907",
+        "b169ac86-4726-42c3-9847-f1735ffcbf9b",
+        "d3b07c2e-3611-4552-accf-5cb53159a74b",
+        "dce52e77-27b1-497b-9271-86a44bf3b927",
+        "de69dca2-53c4-43d3-9552-de6cd3eed7e4"
       ],
-      "animation_fingerprint": "9bb38d472d772a078b21011ce2e15a54665042e105e00dcef229c119a203faec",
+      "animation_fingerprint": "bd2e881ec8e3d3958e1819535d8eda912c268fa887dc2a7a42414622eaaf2554",
       "name": "Guerreiro Esqueleto",
       "member_ids": [
         "298c63d1-7fe8-4b3a-b9ec-dc7b3650aa30"
