@@ -5,6 +5,9 @@ import { preloadMapAssets } from "../pixellab/renderMap";
 import { PlayerController } from "../player/PlayerController";
 import { FireProjectileSystem } from "../gameplay/FireProjectileSystem";
 
+import { HeroWings } from "../gameplay/HeroWings";
+import { preloadHeroes } from "../gameplay/HeroRoster";
+
 export const MAP_DATA_REGISTRY_KEY = "pixellab-map-data";
 
 const BAR_WIDTH = 200;
@@ -71,6 +74,8 @@ export class BootScene extends Phaser.Scene {
 
     preloadMapAssets(this, mapData);
     PlayerController.preload(this);
+    preloadHeroes(this);
+    HeroWings.preload(this);
     FireProjectileSystem.preload(this);
     preloadNpcs(this);
 

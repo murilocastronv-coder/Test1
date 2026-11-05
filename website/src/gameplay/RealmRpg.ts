@@ -11,8 +11,9 @@ import { directionFromVector, vectorFromDirection } from "../shared/direction";
 import type { Direction } from "../shared/direction";
 import "./rpg.css";
 
-type HeroClass = "Cavaleiro" | "Feiticeiro" | "Arqueiro";
-interface Save { name: string; hero: HeroClass; level: number; xp: number; gold: number; kills: number; quest: number; weapon: number; armor: number; potions: number; points: number; strength: number; vitality: number; items: number; }
+import { HeroWings } from "./HeroWings";
+import { HEROES, heroPreview, type HeroClass } from "./HeroRoster";
+interface Save { wings: boolean; name: string; hero: HeroClass; level: number; xp: number; gold: number; kills: number; quest: number; weapon: number; armor: number; potions: number; points: number; strength: number; vitality: number; items: number; }
 interface Mob { agent: CharacterAgent; health: number; max: number; boss: boolean; home: Point; path: Point[]; repath: number; cooldown: number; dead: number; label: Phaser.GameObjects.Text; bar: Phaser.GameObjects.Graphics; hitRadius: number; sprite: Phaser.GameObjects.Sprite; hit: (x: number,y: number,strength: number) => boolean; }
 const COLLIDER = { width: 8, height: 4, footOffsetY: 15 };
 const SAVE_KEY = "aether-reborn-save-v1";
@@ -23,7 +24,7 @@ export class RealmRpg {
   private messages: string[] = [];
   private mobs: Mob[] = [];
   private home: Point;
-  private save: Save = { name: "Viajante", hero: "Cavaleiro", level: 1, xp: 0, gold: 0, kills: 0, quest: 0, weapon: 0, armor: 0, potions: 5, points: 0, strength: 0, vitality: 0, items: 0 };
+  private save: Save = { wings: false, name: "Viajante", hero: "Cavaleiro", level: 1, xp: 0, gold: 0, kills: 0, quest: 0, weapon: 0, armor: 0, potions: 5, points: 0, strength: 0, vitality: 0, items: 0 };
   private selected: HeroClass = "Cavaleiro";
   private running: boolean = false;
   private health: number = 120;
@@ -36,10 +37,12 @@ export class RealmRpg {
   private stored: boolean = false;
   private keyboard: Phaser.Input.Keyboard.KeyboardPlugin | null;
   private keys: Record<string, Phaser.Input.Keyboard.Key> = {};
+  private wings: HeroWings;
   private heroLabel: Phaser.GameObjects.Text;
   constructor(private scene: Phaser.Scene, private player: PlayerController, private map: LoadedMap) {
+    this.wings = new HeroWings(scene, player);
     this.home = { ...player.worldPosition };
-    try { const data = JSON.parse(localStorage.getItem(SAVE_KEY) || "null") as Save | null; if (data && Number.isFinite(data.level) && data.level >= 1 && ["Cavaleiro", "Feiticeiro", "Arqueiro"].includes(data.hero)) { this.save = { ...this.save, ...data }; this.selected = data.hero; this.stored = true; } } catch { /* a new adventure remains available */ }
+    try { const data = JSON.parse(localStorage.getItem(SAVE_KEY) || "null") as Save | null; if (data && Number.isFinite(data.level) && data.level >= 1 && HEROES.some(hero => hero.name === data.hero)) { this.save = { ...this.save, ...data }; this.selected = data.hero; this.stored = true; } } catch { /* a new adventure remains available */ }
     this.root = document.createElement("div"); this.root.className = "rpg-ui";
     this.panel = document.createElement("div"); this.modal = document.createElement("div"); this.root.append(this.panel, this.modal); document.getElementById("hud-root")!.append(this.root);
     this.keyboard = scene.input.keyboard;
@@ -47,7 +50,7 @@ export class RealmRpg {
     this.heroLabel = scene.add.text(player.sprite.x, player.sprite.y - 40, "", { fontFamily: "Arial", fontSize: "9px", color: "#ead398", stroke: "#11171c", strokeThickness: 3 }).setOrigin(.5).setDepth(200000);
     this.createMobs(); this.startScreen(); this.render();
     const hooks = window as unknown as Record<string, unknown>;
-    hooks.rpgState = () => ({ started: this.running, modal: !!this.modal.innerHTML, ...this.save, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
+    hooks.rpgState = () => ({ started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, boss:m.boss, dead:m.dead > 0 })) });
     hooks.rpgAction = (action: string) => this.action(action);
     hooks.rpgApproach = (id: number) => { const mob = this.mobs[id]; if (mob) { const p = nearestWalkable(this.map, {x:mob.sprite.x,y:mob.sprite.y+27}, {width:6,height:4,footOffsetY:10},8); if(p) this.player.teleportTo(p.x,p.y); } };
     this.root.addEventListener("click", (event) => { const target = (event.target as HTMLElement).closest<HTMLButtonElement>("button[data-action]"); if (target) { this.action(target.dataset.action!); target.blur(); this.scene.game.canvas.focus(); } });
@@ -98,6 +101,7 @@ export class RealmRpg {
       for(const key of ["I","C","B"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
       if(this.active) for(const key of ["Q","E","R"]) if(this.keys[key]&&Phaser.Input.Keyboard.JustDown(this.keys[key])) this.action(key);
     }
+    this.wings.update(this.save.wings, this.running);
     this.heroLabel.setPosition(this.player.sprite.x,this.player.sprite.y-40).setText(`${this.save.name} · Nv.${this.save.level}`);
     if (!this.active) return;
     this.elapsed+=delta; this.mana=Math.min(80,this.mana+delta*.004); this.health=Math.min(this.maxHealth,this.health+delta*.0007);
@@ -116,9 +120,11 @@ export class RealmRpg {
     this.renderMs+=delta; if(this.renderMs>250){this.renderMs=0;this.render();}
   }
   private action(action: string): void {
-    if(action.startsWith("class:")){this.selected=action.slice(6) as HeroClass;this.startScreen();return;}
-    if(action==="start") {const input=this.modal.querySelector<HTMLInputElement>("input");if(!this.stored){this.save.hero=this.selected;this.save.name=(input?.value.trim()||"Viajante").slice(0,18);}this.health=this.maxHealth;this.mana=80;this.running=true;this.modal.innerHTML="";this.log("Bem-vindo ao Vale das Cinzas. Elimine as feras próximas.");this.persist();this.render();return;}
+    if(action.startsWith("class:")){const hero=HEROES.find(h=>h.name===action.slice(6));if(hero){this.selected=hero.name;this.startScreen();}return;}
+    if(action==="start") {const input=this.modal.querySelector<HTMLInputElement>("input");this.save.hero=this.selected;if(!this.stored){this.save.name=(input?.value.trim()||"Viajante").slice(0,18);}this.player.setCharacter(HEROES.find(h=>h.name===this.save.hero)!.id);this.health=this.maxHealth;this.mana=80;this.running=true;this.modal.innerHTML="";this.log("Bem-vindo ao Vale das Cinzas. Elimine as feras próximas.");this.persist();this.render();return;}
+    if(action==="heroes"){this.startScreen();return;}
     if(!this.running) return;
+    if(action==="wings"){this.save.wings=!this.save.wings;this.persist();this.showWindow("I");return;}
     if(this.health<=0 && action!=="revive") return;
     if(action==="close"){this.modal.innerHTML="";return;}
     if(["I","C","B"].includes(action)){if(this.modal.dataset.view===action&&this.modal.innerHTML){this.modal.innerHTML="";return;}this.showWindow(action);return;}
@@ -136,10 +142,13 @@ export class RealmRpg {
     this.persist();this.render();
   }
   private defeat():void {this.health=0;this.modal.dataset.view="defeat";this.save.gold=Math.floor(this.save.gold*.95);this.persist();this.modal.innerHTML=`<div class="rpg-overlay"><div class="rpg-window"><div class="rpg-caption">A FENDA COBROU SEU PREÇO</div><h2>Você caiu em batalha</h2><p>Você perdeu 5% do ouro. Seu nível e seus equipamentos foram preservados.</p><button data-action="revive" class="rpg-primary">Renascer no refúgio</button></div></div>`;this.render();}
-  private startScreen():void {this.modal.dataset.view="start";this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><div class="rpg-caption">RPG ONLINE • FANTASIA SOMBRIA</div><h2>AETHER REBORN</h2><p>O selo se rompeu. As feras despertaram.<br>Forje seu herói e enfrente o Guardião da Fenda.</p>${this.stored?`<p>Continuar aventura salva neste navegador · Nível ${this.save.level} · ${this.save.hero}</p>`:`<div class="rpg-classes">${(["Cavaleiro","Feiticeiro","Arqueiro"] as HeroClass[]).map((hero,i)=>`<button class="rpg-class ${this.selected===hero?"selected":""}" data-action="class:${hero}"><span>0${i+1} / CLASSE</span><b>${hero}</b><span>${["Combate corpo a corpo. +30 vida e bônus de dano físico.","Domínio arcano. Bônus de dano com projéteis mágicos.","Exploração ágil. Recuperação adicional de mana."][i]}</span></button>`).join("")}</div><input aria-label="Nome do herói" maxlength="18" placeholder="Nome do herói" value="Viajante">`}<button data-action="start" class="rpg-primary">${this.stored?"Continuar jornada":"Entrar no mundo"} →</button><p style="font-size:10px;margin-bottom:0">WASD mover · J atacar · L magia · E devastação · Q poção<br>Progresso salvo neste navegador. Presença de jogadores online; combate individual.</p></section></div>`;}
+  private startScreen():void {
+    this.modal.dataset.view="start";
+    this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><div class="rpg-caption">CINCO HERÓIS • FANTASIA SOMBRIA</div><h2>AETHER REBORN</h2><p>Escolha seu personagem. ${this.stored?`Seu progresso de nível ${this.save.level} será preservado.`:"Forje seu herói e enfrente o Guardião da Fenda."}</p><div class="rpg-classes">${HEROES.map(hero=>`<button class="rpg-class ${this.selected===hero.name?"selected":""}" data-action="class:${hero.name}"><img class="rpg-hero-preview" src="${heroPreview(this.scene,hero)}" alt="${hero.name}"><b>${hero.name}</b><span>${hero.description}</span></button>`).join("")}</div>${this.stored?"":'<input aria-label="Nome do herói" maxlength="18" placeholder="Nome do herói" value="Viajante">'}<button data-action="start" class="rpg-primary">${this.stored?"Continuar jornada":"Entrar no mundo"} →</button><p style="font-size:10px;margin-bottom:0">WASD mover · J atacar · L magia · E devastação · Q poção<br>Asas douradas disponíveis na mochila [I]. Progresso salvo neste navegador.</p></section></div>`;
+  }
   private showWindow(view:string):void {this.modal.dataset.view=view;const s=this.save;const item=(name:string,desc:string,action:string,label:string)=>`<div class="rpg-item"><strong>${name}</strong><span>${desc}</span><br><button data-action="${action}">${label}</button></div>`;let body="";
-    if(view==="I")body=`<p>${s.gold} ouro · Equipamentos ativos abaixo</p><div class="rpg-items">${item(`Arma +${s.weapon}`,`${this.damage} dano efetivo`,"B","Aprimorar")}${item(`Armadura +${s.armor}`,`Reduz ${s.armor*3} dano`,"B","Aprimorar")}${item(`Poções ×${s.potions}`,"Recuperam 85 vida", "close","Voltar · Q para usar")}${item(`Fragmentos ×${s.items}`,"12 ouro por fragmento","sell","Vender todos")}</div>`;
-    if(view==="C")body=`<p>${s.hero} · Nível ${s.level} · ${s.xp}/${s.level*100} EXP<br>Vida máxima ${this.maxHealth} · Dano ${this.damage}<br><b>${s.points} pontos disponíveis</b></p><div class="rpg-items">${item(`Força ${s.strength}`,"+3 dano por ponto","strength","Adicionar +1")}${item(`Vitalidade ${s.vitality}`,"+12 vida por ponto","vitality","Adicionar +1")}</div>`;
+    if(view==="I")body=`<p>${s.gold} ouro · Equipamentos ativos abaixo</p><div class="rpg-items">${item(`Arma +${s.weapon}`,`${this.damage} dano efetivo`,"B","Aprimorar")}${item(`Armadura +${s.armor}`,`Reduz ${s.armor*3} dano`,"B","Aprimorar")}${item(`Poções ×${s.potions}`,"Recuperam 85 vida", "close","Voltar · Q para usar")}${item(`Fragmentos ×${s.items}`,"12 ouro por fragmento","sell","Vender todos")}${item("Asas Angelicais Douradas",s.wings?"Equipadas · aparência cosmética":"Disponíveis · aparência cosmética","wings",s.wings?"Retirar asas":"Equipar asas")}</div>`;
+    if(view==="C")body=`<p>${s.hero} · Nível ${s.level} · ${s.xp}/${s.level*100} EXP<br>Vida máxima ${this.maxHealth} · Dano ${this.damage}<br><b>${s.points} pontos disponíveis</b></p><div class="rpg-items">${item(`Força ${s.strength}`,"+3 dano por ponto","strength","Adicionar +1")}${item(`Vitalidade ${s.vitality}`,"+12 vida por ponto","vitality","Adicionar +1")}${item("Cinco heróis","Troque a aparência sem perder seu progresso","heroes","Escolher herói")}</div>`;
     if(view==="B")body=`<p>Ferreiro do refúgio · ${s.gold} ouro<br>A loja pode ser acessada de qualquer lugar nesta versão.</p><div class="rpg-items">${item(`Arma +${s.weapon} → +${s.weapon+1}`,"+9 dano. Sucesso garantido.","weapon",`${80+s.weapon*60} ouro`)}${item(`Armadura +${s.armor} → +${s.armor+1}`,"−3 dano recebido.","armor",`${80+s.armor*60} ouro`)}${item("3 poções","Recupere a vida durante a caçada.","buy","20 ouro")}</div>`;
     this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><button class="rpg-close" data-action="close">Fechar ×</button><div class="rpg-caption">AETHER REBORN</div><h2>${view==="I"?"Inventário":view==="C"?"Personagem":"Ferreiro"}</h2>${body}<p style="font-size:10px">O combate fica pausado enquanto este painel estiver aberto.</p></section></div>`;}
   private render():void {const s=this.save;this.panel.innerHTML=`<header class="rpg-brand"><h1>AETHER</h1><small>R E B O R N</small></header><div class="rpg-region"><strong>VALE DAS CINZAS</strong><div>Canal 01 · mundo compartilhado</div></div><nav class="rpg-menu"><button data-action="I">Mochila [I]</button><button data-action="C">Herói [C]</button><button data-action="B">Loja [B]</button></nav><div class="rpg-help">WASD · mover / Shift · correr<br>J · golpe / L · magia<br>R · retornar ao refúgio</div><aside class="rpg-quest"><div class="rpg-caption">CONTRATO ${s.quest+1}</div><strong>O despertar das feras</strong><p>Derrote criaturas corrompidas.<br>${Math.min(s.kills,(s.quest+1)*5)} / ${(s.quest+1)*5} eliminadas<br><span style="color:#d6b975">Recompensa: 100 ouro</span></p><button data-action="claim" ${s.kills<(s.quest+1)*5?"disabled":""}>Receber recompensa</button><p class="rpg-boss">Elite: Guardião da Fenda<br>Avance com equipamentos melhores.</p></aside><div class="rpg-feed">${this.messages.map(m=>`<div>${m}</div>`).join("")}</div><footer class="rpg-bottom"><div class="rpg-orb"><b>${Math.max(0,Math.ceil(this.health))}</b><span>VIDA / ${this.maxHealth}</span></div><div class="rpg-bars"><div class="rpg-character-line"><span>Nv.${s.level} · ${s.hero}</span><span>${s.gold} OURO</span></div><div class="rpg-xp"><i style="width:${s.xp/(s.level*100)*100}%"></i></div><div class="rpg-actions"><button data-action="attack"><em>J</em> Golpe</button><button data-action="E"><em>E</em> Devastação</button><button data-action="Q"><em>Q</em> Poção ×${s.potions}</button></div></div><div class="rpg-orb mana"><b>${Math.floor(this.mana)}</b><span>MANA / 80</span></div></footer>`;if(s.hero==="Arqueiro"&&this.active)this.mana=Math.min(80,this.mana+.5);}
@@ -147,5 +156,5 @@ export class RealmRpg {
   private banner(text:string):void {const el=document.createElement("div");el.className="rpg-toast";el.textContent=text;this.root.append(el);this.scene.time.delayedCall(2500,()=>el.remove());}
   private log(text:string):void {this.messages.unshift(text);this.messages=this.messages.slice(0,4);}
   private persist():void {try{localStorage.setItem(SAVE_KEY,JSON.stringify(this.save));}catch{/* Storage disabled by the browser. */}}
-  destroy():void {this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
+  destroy():void {this.wings.destroy();this.persist();this.root.remove();this.heroLabel.destroy();for(const m of this.mobs){m.agent.destroy();m.label.destroy();m.bar.destroy();}const hooks=window as unknown as Record<string,unknown>;delete hooks.rpgState;delete hooks.rpgAction;delete hooks.rpgApproach;}
 }

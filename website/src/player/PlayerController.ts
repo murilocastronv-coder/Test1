@@ -49,9 +49,9 @@ interface PlayerControllerCallbacks {
 
 export class PlayerController {
   private readonly keys: Record<string, Phaser.Input.Keyboard.Key>;
-  private readonly animator: SpriteAnimator;
-  private readonly animationResolver: CharacterAnimationResolver;
-  private readonly poseState: CharacterStateSelection;
+  private animator: SpriteAnimator;
+  private animationResolver: CharacterAnimationResolver;
+  private poseState: CharacterStateSelection;
   private readonly collider: Collider = {
     width: GAME_CONFIG.player.colliderWidth,
     height: GAME_CONFIG.player.colliderHeight,
@@ -123,6 +123,17 @@ export class PlayerController {
     this.playRole(["idle"]);
   }
 
+  setCharacter(characterId: string): void {
+    const manifest = characterManifest(this.sprite.scene, characterId);
+    const selected = selectCharacterState(manifest, { preferredClips: ["walk"] });
+    this.activeAction = null;
+    this.animationResolver = new CharacterAnimationResolver(manifest);
+    this.poseState = selected;
+    this.animator = new SpriteAnimator(this.sprite, characterAtlasKey(characterId), selected.animations, selected.stateFolder, this.stateDirections(selected));
+    this.sprite.clearTint();
+    this.playRole(["idle"]);
+  }
+
   setMapData(mapData: LoadedMap): void {
     this.mapData = mapData;
     this.stairAreas = stairAreasFor(mapData.annotations);
@@ -170,6 +181,7 @@ export class PlayerController {
   }
 
   update(deltaMs: number): void {
+    if (!this.activeAction) this.actionElapsedMs = Math.max(0, this.actionElapsedMs - deltaMs);
     const input = this.inputVector();
     const stair = this.stairForMovement(input, deltaMs);
     const movement = stair ? movementAlongStairs(input, stair) : input;
@@ -279,7 +291,14 @@ export class PlayerController {
 
   private startAction(actionName: PlayerActionName): boolean {
     const action = this.resolveAnimation([actionName]);
-    if (!action) return false;
+    if (!action) {
+      // These heroes have walking clips only: retain combat without inventing attack art.
+      if (this.actionElapsedMs > 0) return false;
+      this.actionElapsedMs = 500;
+      if (actionName === "spell") this.callbacks.onSpellCast?.(this.worldPosition, this.direction);
+      else this.callbacks.onSlashSwing?.(this.worldPosition, this.direction);
+      return false;
+    }
     const clip = action.animations[action.clipName];
     const fps = clip.fps ?? GAME_CONFIG.animation.fps;
     const effectFrame = actionName === "spell" ? SPELL_CAST_FRAME_DELAY : SLASH_SWING_FRAME_DELAY;
