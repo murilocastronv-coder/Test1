@@ -66,6 +66,32 @@
           "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
         },
         {
+          "name": "slash",
+          "id": "6188e28d-ffde-4eba-84da-b66b4d4f62b1",
+          "source_name": "custom-Raise the sword, wind up, perf",
+          "display_name": "Ataque de Espada",
+          "description": "Raise the sword, wind up, perform one strong forward sword slash, follow through and return to the initial ready stance. Keep the same identity and crimson armor. Feet planted, no walking.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "slash",
+            "attack"
+          ],
+          "path_pattern": "idle/animations/slash/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/slash/{direction}/frame_{frame}"
+        },
+        {
           "name": "walk",
           "id": "020cc00e-4028-458b-a8d9-9bd72ebbadbb",
           "source_name": "walking-6-frames",

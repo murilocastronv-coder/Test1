@@ -66,6 +66,26 @@
           "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
         },
         {
+          "name": "slash",
+          "id": "9d271637-cf46-4b09-b554-ccaa97356e1c",
+          "source_name": "custom-Wind up the sword, perform a b",
+          "display_name": "Ataque de Espada",
+          "description": "Wind up the sword, perform a broad horizontal sword slash forward, follow through and return to the initial ready stance. Keep same identity and heavy violet armor. Feet planted, no walking.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east"
+          ],
+          "loop": false,
+          "aliases": [
+            "slash",
+            "attack"
+          ],
+          "path_pattern": "idle/animations/slash/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/slash/{direction}/frame_{frame}"
+        },
+        {
           "name": "walk",
           "id": "b16c2352-0002-48bf-b30d-5eb21c7f3588",
           "source_name": "walking-6-frames",

@@ -66,6 +66,31 @@
           "atlas_frame_pattern": "idle/animations/idle/{direction}/frame_{frame}"
         },
         {
+          "name": "spell",
+          "id": "5825f64e-a092-42a5-88b6-8dc0c57deb21",
+          "source_name": "custom-Raise the staff, gather energy",
+          "display_name": "Ataque de Cajado",
+          "description": "Raise the staff, gather energy at its tip, point the staff forward to release a magic projectile, then return to the initial stance. Keep the same identity and blue robes. Feet planted, no walking.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "spell"
+          ],
+          "path_pattern": "idle/animations/spell/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/spell/{direction}/frame_{frame}"
+        },
+        {
           "name": "walk",
           "id": "6338d522-a4ab-42b6-815c-000b2d01f81d",
           "source_name": "walking-6-frames",

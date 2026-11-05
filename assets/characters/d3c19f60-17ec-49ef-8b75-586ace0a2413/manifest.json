@@ -41,6 +41,29 @@
       "idle_atlas_frame_pattern": "idle/rotations/{direction}",
       "animations": [
         {
+          "name": "custom-lift-the-bow-nock-one-arrow",
+          "id": "780ee7e3-6a17-4fed-a25b-d90e9b77384e",
+          "source_name": "custom-Lift the bow, nock one arrow, ",
+          "display_name": "Ataque de Arco",
+          "description": "Lift the bow, nock one arrow, pull the bowstring back to the cheek, aim forward and release the arrow, then return to the initial ready stance. Keep same identity and emerald armor. Feet planted, no walking.",
+          "generation_model": "v3",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "north-east",
+            "north-west",
+            "south-west"
+          ],
+          "loop": true,
+          "aliases": [],
+          "path_pattern": "idle/animations/custom-lift-the-bow-nock-one-arrow/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "idle/animations/custom-lift-the-bow-nock-one-arrow/{direction}/frame_{frame}"
+        },
+        {
           "name": "idle",
           "id": "f656cbf3-f10b-4d36-92de-30209a9f740d",
           "source_name": "breathing-idle",
