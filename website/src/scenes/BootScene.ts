@@ -7,6 +7,7 @@ import { FireProjectileSystem } from "../gameplay/FireProjectileSystem";
 
 import { HeroWings } from "../gameplay/HeroWings";
 import { preloadHeroes } from "../gameplay/HeroRoster";
+import { preloadWorldRoster } from "../gameplay/WorldRoster";
 
 export const MAP_DATA_REGISTRY_KEY = "pixellab-map-data";
 
@@ -75,6 +76,7 @@ export class BootScene extends Phaser.Scene {
     preloadMapAssets(this, mapData);
     PlayerController.preload(this);
     preloadHeroes(this);
+    preloadWorldRoster(this);
     HeroWings.preload(this);
     FireProjectileSystem.preload(this);
     preloadNpcs(this);
