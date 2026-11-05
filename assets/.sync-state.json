@@ -976,6 +976,11 @@
       "name": "Tarkan orange wind blown desert sand \u2197 Tarkan ancient ochre sandstone ruined pavement",
       "sync_version": 2
     },
+    "5a696d44-9c41-4ec3-b2ff-95678c0c0023": {
+      "updated_at": "2026-11-05T18:56:55.419808+00:00",
+      "name": "Dungeon dark rough underground bedrock wall top \u2197 Dungeon ancient cracked gray flagstone floor in a",
+      "sync_version": 2
+    },
     "a562e76a-1154-4995-86f9-e575809cf09f": {
       "updated_at": "2026-11-05T18:56:52.103070+00:00",
       "name": "Blood Castle deep crimson abyss below fortress \u2197 Blood Castle gothic silver gray fortress bridge",
@@ -994,11 +999,6 @@
     "9ca89266-e4d4-4fc2-8c15-7e8dffbeefbe": {
       "updated_at": "2026-11-05T18:56:48.153041+00:00",
       "name": "Arena stadium rough gray outer flagstones \u2197 Arena stadium red brown packed training sand with",
-      "sync_version": 2
-    },
-    "a250c233-2c4c-45de-b660-ab35e0b042a1": {
-      "updated_at": "2026-11-05T18:56:32.333835+00:00",
-      "name": "Lost Tower dark violet abyss \u2197 Lost Tower obsidian violet stone floor with",
       "sync_version": 2
     },
     "a0c4ddcc-6b68-452e-8649-2b9623127495": {
@@ -1026,9 +1026,9 @@
       "name": "water \u2197 grass",
       "sync_version": 2
     },
-    "5a696d44-9c41-4ec3-b2ff-95678c0c0023": {
-      "updated_at": "2026-11-05T18:56:55.419808+00:00",
-      "name": "Dungeon dark rough underground bedrock wall top \u2197 Dungeon ancient cracked gray flagstone floor in a",
+    "a250c233-2c4c-45de-b660-ab35e0b042a1": {
+      "updated_at": "2026-11-05T18:56:32.333835+00:00",
+      "name": "Lost Tower dark violet abyss \u2197 Lost Tower obsidian violet stone floor with",
       "sync_version": 2
     }
   },
