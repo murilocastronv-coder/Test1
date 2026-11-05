@@ -1,10 +1,8 @@
 import Phaser from "phaser";
 import type { PlayerController } from "../player/PlayerController";
 
-import { PLAYER_CHARACTER_ID } from "../pixellab/templateAssetPaths";
+import { ELF_CHARACTER_ID, PLAYER_CHARACTER_ID } from "../pixellab/templateAssetPaths";
 import { characterAssetUrl, characterManifest, preloadCharacterAtlas, selectCharacterState } from "../shared/animation";
-
-const ELF_CHARACTER_ID = "6ccddda9-6d64-45f5-95c1-855975586e53";
 
 /** Select a real character on the existing player, without a duplicate visual sprite. */
 export class CharacterSelection {
