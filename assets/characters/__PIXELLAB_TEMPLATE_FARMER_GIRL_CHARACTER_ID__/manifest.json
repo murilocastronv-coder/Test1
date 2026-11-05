@@ -1,0 +1,79 @@
+{
+  "id": "__PIXELLAB_TEMPLATE_FARMER_GIRL_CHARACTER_ID__",
+  "name": "blonde farmer with long hair and a dress",
+  "group_id": "c913644f-158e-4d67-98b6-91cc69ee3665",
+  "atlas_key": "char-__PIXELLAB_TEMPLATE_FARMER_GIRL_CHARACTER_ID__",
+  "states": [
+    {
+      "id": "__PIXELLAB_TEMPLATE_FARMER_GIRL_CHARACTER_ID__",
+      "name": "blonde farmer with long hair and a dress",
+      "folder": "default",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "rotation_path_pattern": "default/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "default/rotations/{direction}",
+      "animations": [
+        {
+          "id": "94845cb2-4eaa-4448-ad88-5dc1afab2032",
+          "name": "walk",
+          "source_name": "walk",
+          "display_name": "Walk",
+          "description": "Walking",
+          "generation_model": "skeleton-v3_template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/walk/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/walk/{direction}/frame_{frame}"
+        },
+        {
+          "id": "4e1efecf-d793-4d53-8aa0-a1f934bd473b",
+          "name": "idle",
+          "source_name": "idle",
+          "display_name": "Idle",
+          "description": "idle breathing",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/idle/{direction}/frame_{frame}"
+        }
+      ]
+    }
+  ]
+}

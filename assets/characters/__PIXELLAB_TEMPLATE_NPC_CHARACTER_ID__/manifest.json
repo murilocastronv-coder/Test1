@@ -1,0 +1,51 @@
+{
+  "id": "__PIXELLAB_TEMPLATE_NPC_CHARACTER_ID__",
+  "name": "Template NPC",
+  "group_id": null,
+  "atlas_key": "char-__PIXELLAB_TEMPLATE_NPC_CHARACTER_ID__",
+  "states": [
+    {
+      "id": "__PIXELLAB_TEMPLATE_NPC_CHARACTER_ID__",
+      "name": "Default",
+      "folder": "default",
+      "directions": [
+        "east",
+        "north",
+        "north-east",
+        "north-west",
+        "south",
+        "south-east",
+        "south-west",
+        "west"
+      ],
+      "rotation_path_pattern": "default/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "default/rotations/{direction}",
+      "animations": [
+        {
+          "name": "walk",
+          "id": "f786ca27-7a7b-441f-80f7-bfe862eaefb8",
+          "source_name": "walk",
+          "display_name": null,
+          "description": "The character walks forward with a steady, rhythmic gait, lifting and placing each foot alternately while their arms swing slightly at their sides. Their body sways gently from side to side in sync with their steps, and their head bobs subtly to emphasize the weight of their stride. The animation cycles seamlessly, with the character's posture and position resetting naturally to maintain a continuous, forward-moving loop.",
+          "generation_model": "v3",
+          "frame_count": 7,
+          "directions": [
+            "east",
+            "north",
+            "north-east",
+            "north-west",
+            "south",
+            "south-east",
+            "south-west",
+            "west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "fps": 10
+        }
+      ]
+    }
+  ]
+}

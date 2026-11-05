@@ -1,0 +1,221 @@
+{
+  "id": "__PIXELLAB_TEMPLATE_PLAYER_CHARACTER_ID__",
+  "name": "warrior woman with orange hair",
+  "group_id": "deb63009-910c-47a4-9d94-8f76c8c21107",
+  "atlas_key": "char-__PIXELLAB_TEMPLATE_PLAYER_CHARACTER_ID__",
+  "states": [
+    {
+      "id": "__PIXELLAB_TEMPLATE_PLAYER_CHARACTER_ID__",
+      "name": "warrior woman with orange hair",
+      "folder": "default",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "rotation_path_pattern": "default/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "default/rotations/{direction}",
+      "animations": [
+        {
+          "id": "0e9e062c-3fb8-4e1e-8ffa-27df6c55a38c",
+          "name": "walk",
+          "source_name": "walk",
+          "display_name": "Walk",
+          "description": "Walking",
+          "generation_model": "skeleton-v3_template",
+          "frame_count": 6,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "walk"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/walk/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/walk/{direction}/frame_{frame}"
+        },
+        {
+          "id": "80e9a326-7d59-484d-bc0d-cd4c130bcf15",
+          "name": "jump",
+          "source_name": "jump",
+          "display_name": "Jump",
+          "description": "Running Jump",
+          "generation_model": "skeleton-v3_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "jump"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/jump/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/jump/{direction}/frame_{frame}"
+        },
+        {
+          "id": "0ff8aba5-acec-4956-9744-98f198aea85b",
+          "name": "run",
+          "source_name": "run",
+          "display_name": "Run",
+          "description": "Running",
+          "generation_model": "skeleton-v3_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "run"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/run/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/run/{direction}/frame_{frame}"
+        },
+        {
+          "id": "f73c1bac-50d1-4021-a023-6a483fdc79e7",
+          "name": "idle",
+          "source_name": "idle",
+          "display_name": "Idle",
+          "description": "idle breathing",
+          "generation_model": "pixminimax_template",
+          "frame_count": 8,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": true,
+          "aliases": [
+            "idle"
+          ],
+          "fps": 10,
+          "path_pattern": "default/animations/idle/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "default/animations/idle/{direction}/frame_{frame}"
+        }
+      ]
+    },
+    {
+      "id": "16e81d27-5b74-4644-8411-bf504229532c",
+      "name": "hands extended about",
+      "folder": "spell",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "rotation_path_pattern": "spell/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "spell/rotations/{direction}",
+      "animations": [
+        {
+          "id": "18082f04-421e-4b62-a51a-daa52845bf08",
+          "name": "spell",
+          "source_name": "spell",
+          "display_name": "Spell",
+          "description": "The character stands firmly and raises both hands toward their chest, palms facing forward. As they hold this pose, a faint, shimmering magical aura pulses rhythmically between their hands, causing their dark cape to ripple slightly as if caught in a mystical breeze. After a moment of concentrated glow, the character slowly lowers their arms back to their sides, the magical light dissipating into small, fading embers before they return to their original, steady stance.",
+          "generation_model": "v3",
+          "frame_count": 7,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "spell"
+          ],
+          "fps": 10,
+          "path_pattern": "spell/animations/spell/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "spell/animations/spell/{direction}/frame_{frame}"
+        }
+      ]
+    },
+    {
+      "id": "4547f67a-efd8-4853-82c7-8a23d1204164",
+      "name": "about to slash, hold",
+      "folder": "slash",
+      "directions": [
+        "south",
+        "east",
+        "north",
+        "west",
+        "south-east",
+        "south-west",
+        "north-east",
+        "north-west"
+      ],
+      "rotation_path_pattern": "slash/rotations/{direction}.png",
+      "idle_atlas_frame_pattern": "slash/rotations/{direction}",
+      "animations": [
+        {
+          "id": "a6ca0592-836e-42ab-b9a5-089079fd71a7",
+          "name": "slash",
+          "source_name": "slash",
+          "display_name": "Slash",
+          "description": "Twisting dynamically across the torso, the arms slash the blade down and outward toward the lower right in a sharp cutting arc. The hips pivot rapidly, causing the blue cloak to trail behind the motion and whip diagonally across the frame. A bright, sharp pure white energy trail streaks across the strike path, dispersing glowing amber sparks on impact. The character absorbs the kinetic force and stabilizes cleanly into stance. Static camera, completely locked-off shot. Maintain the crisp 2D pixel art aesthetic, thick outlines, flat colors, and the strict original perspective throughout the entire fluid animation.",
+          "generation_model": "pixminimax",
+          "frame_count": 9,
+          "directions": [
+            "south",
+            "east",
+            "north",
+            "west",
+            "south-east",
+            "south-west",
+            "north-east",
+            "north-west"
+          ],
+          "loop": false,
+          "aliases": [
+            "slash"
+          ],
+          "fps": 10,
+          "path_pattern": "slash/animations/slash/{direction}/frame_{frame}.png",
+          "atlas_frame_pattern": "slash/animations/slash/{direction}/frame_{frame}"
+        }
+      ]
+    }
+  ]
+}
