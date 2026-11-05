@@ -35,6 +35,11 @@ export class FireProjectileSystem {
 
   constructor(private readonly scene: Phaser.Scene) {}
 
+  destroy(): void {
+    for (const projectile of this.projectiles) projectile.sprite.destroy();
+    this.projectiles.length = 0;
+  }
+
   static preload(scene: Phaser.Scene): void {
     for (const direction of DIRECTIONS) {
       scene.load.image(fireballKey(direction), assetUrl("projectiles", FIREBALL_FOLDER, `${direction}.png`));

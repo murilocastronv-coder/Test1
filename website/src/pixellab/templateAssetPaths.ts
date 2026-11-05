@@ -1,4 +1,4 @@
-export const MAP_FOLDER = "301615f8-9baa-40e8-98a5-f2e6467623bb";
+export const MAP_FOLDER = "bc1bd264-859d-4d51-9acc-18eac3e24bb1";
 export const PLAYER_CHARACTER_ID = "e60c571b-2e75-4810-bca9-eb8527b8b767";
 export const NPC_CHARACTER_ID = "fc0ed64f-09b6-4f0c-951c-c1e8202f6e8e";
 export const FARMER_GIRL_CHARACTER_ID = "076e6c4e-15ff-4c08-8172-cb49481ab5c8";

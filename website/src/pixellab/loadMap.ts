@@ -1,3 +1,4 @@
+import { WORLD_DESTINATIONS } from "../gameplay/WorldDestinations";
 import { assetUrl, MAP_FOLDER } from "./templateAssetPaths";
 import { collisionRectsFor, hasTerrainCollisionSourcesFor, objectBlockerRectsFor, walkableTerrainIdsFor } from "./collision";
 import { buildRectSpatialIndex } from "./spatialIndex";
@@ -50,7 +51,7 @@ export async function loadPixelLabMap(mapFolder = MAP_FOLDER): Promise<LoadedMap
     collisionRectIndex: buildRectSpatialIndex(collisionRects, spatialCellSize),
     objectBlockerRects,
     objectBlockerIndex: buildRectSpatialIndex(objectBlockerRects, spatialCellSize),
-    walkableTerrainIds: walkableTerrainIdsFor(map, annotations),
+    walkableTerrainIds: WORLD_DESTINATIONS.some(d=>d.id===mapFolder) ? new Set([2]) : walkableTerrainIdsFor(map, annotations),
     hasAllowCollisionRects: collisionRects.some((rect) => rect.mode === "allow"),
     hasTerrainCollisionSources: hasTerrainCollisionSourcesFor(annotations),
     tileLayers,
