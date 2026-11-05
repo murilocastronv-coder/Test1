@@ -150,6 +150,25 @@
         "deb24a9a-bcab-49e3-89b4-79187903b27a"
       ],
       "sync_version": 16
+    },
+    "6ccddda9-6d64-45f5-95c1-855975586e53": {
+      "updated_at": "2026-11-05T13:28:36.447234+00:00",
+      "animation_ids": [
+        "36491b82-29e6-4559-8a40-45867f8605fb",
+        "49f6ed6c-4cc6-43da-8f96-4196eff8b616",
+        "5872b21f-1055-4ced-9933-ea65661c181c",
+        "5a96bc8e-6e09-4520-9e13-582fcd384b3a",
+        "69af11bf-a555-4247-8ea9-341d648ec4d8",
+        "bb927140-a8b3-4864-96a7-c756bb3db783",
+        "f1fbead6-3d0b-4b4c-ba06-7e2cd5d4d47e",
+        "fc72cc6a-6168-4593-9875-f44fcf401cbd"
+      ],
+      "animation_fingerprint": "d23eb9619a53984e687985041a1e470eec028a6216bc7c3000e77ac3f70844a0",
+      "name": "Fairy Elf",
+      "member_ids": [
+        "6ccddda9-6d64-45f5-95c1-855975586e53"
+      ],
+      "sync_version": 16
     }
   },
   "images": {},
