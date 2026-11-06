@@ -1,19 +1,19 @@
 {
   "version": "1.0.0",
   "name": "Devias",
-  "exportDate": "2026-11-05T18:58:50.190340Z",
+  "exportDate": "2026-11-06T07:24:05.051102Z",
   "engine": "pixellab-map-editor",
   "mapConfig": {
     "tileSize": 16,
     "dimensions": {
-      "width": 56,
-      "height": 48,
-      "pixelWidth": 896,
-      "pixelHeight": 768
+      "width": 144,
+      "height": 128,
+      "pixelWidth": 2304,
+      "pixelHeight": 2048
     },
     "boundingBox": {
-      "maxX": 55,
-      "maxY": 47,
+      "maxX": 143,
+      "maxY": 127,
       "minX": 0,
       "minY": 0
     }
