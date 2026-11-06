@@ -8,10 +8,10 @@ export function townName(folder:string):string|undefined{return WORLD_DESTINATIO
 export function insideTown(point:TownPoint):boolean {let inside=false;for(let i=0,j=SAFE_POLYGON.length-1;i<SAFE_POLYGON.length;j=i++){const a=SAFE_POLYGON[i],b=SAFE_POLYGON[j];if((a.y>point.y)!==(b.y>point.y)&&point.x<(b.x-a.x)*(point.y-a.y)/(b.y-a.y)+a.x)inside=!inside;}return inside;}
 export function townProps(name:string):TownProp[]{
  const prefix=name==='Lorencia'?'lor':name==='Noria'?'nor':'dev';const out:TownProp[]=[];
- for(const y of [864,1192])for(const x of [872,1032,1272,1432])out.push({kind:prefix+'_casa',x,y});
+ for(const y of [1000,1240])for(const x of [872,1000,1304,1432])out.push({kind:prefix+'_casa',x,y});
  if(name==='Lorencia'){
   for(const x of [760,888,1016,1288,1416,1544])for(const y of [736,1352])out.push({kind:'lor_muralha',x,y});
-  out.push({kind:'lor_fonte',x:1152,y:924});
+  out.push({kind:'lor_fonte',x:1152,y:1000});
   for(const x of [808,1496])for(const y of [950,1120])out.push({kind:'lor_barris',x,y});
   for(const x of [1080,1224])for(const y of [816,1248])out.push({kind:'lor_poste',x,y});
  }
