@@ -1,3 +1,4 @@
+import { TownExplorer } from '../gameplay/TownExplorer';
 import Phaser from "phaser";
 import { GAME_CONFIG } from "../config";
 import { HudOverlay } from "../hud/HudOverlay";
@@ -25,6 +26,7 @@ export class GameScene extends Phaser.Scene {
   private fireProjectiles!: FireProjectileSystem;
   private rpg!: RealmRpg;
   private clickTravel!: ClickTravel;
+  private towns!: TownExplorer;
 
   constructor() {
     super("GameScene");
@@ -47,6 +49,7 @@ export class GameScene extends Phaser.Scene {
     this.hud = new HudOverlay();
     this.hud.setText([]);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+      this.towns.destroy();
       this.rpg.destroy();
       this.hud.destroy();
       this.multiplayer.destroy();
@@ -55,13 +58,14 @@ export class GameScene extends Phaser.Scene {
     // === NEW SYSTEMS (add new module instances here) ===
     this.rpg = new RealmRpg(this, this.player, this.mapData);
     this.clickTravel = new ClickTravel(this,this.player,this.mapData,()=>this.rpg.active);
+    this.towns = new TownExplorer(this,this.player,this.mapData,()=>this.rpg.active,id=>(window as unknown as {rpgAction:(a:string)=>void}).rpgAction(`travel:${id}`));
     this.rpg.setTravelHandler(async id => {
       const result=await switchPlayerToMap(this,id,this.player);
       this.mapData=result.mapData;
       this.registry.set(MAP_DATA_REGISTRY_KEY,this.mapData);
       for(const agent of this.agents)agent.destroy();this.agents=[];
       this.fireProjectiles.destroy();this.fireProjectiles=new FireProjectileSystem(this);
-      this.rpg.setMapData(this.mapData);this.clickTravel.setMap(this.mapData);
+      this.rpg.setMapData(this.mapData);this.clickTravel.setMap(this.mapData);this.towns.setMap(this.mapData);
       this.multiplayer.destroy();
       this.multiplayer=new MultiplayerSystem(this,()=>({...this.player.worldPosition}),this.mapData.map.name);
       this.startGameplayCamera();
@@ -116,6 +120,7 @@ export class GameScene extends Phaser.Scene {
       agent.update(deltaMs);
     }
     this.rpg.update(deltaMs);
+    this.towns.update();
     // === NEW UPDATES (add new update calls here) ===
     this.multiplayer.update(deltaMs);
   }

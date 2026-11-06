@@ -1,3 +1,4 @@
+import { applyTownCollision } from '../gameplay/TownScenery';
 import { WORLD_DESTINATIONS } from "../gameplay/WorldDestinations";
 import { assetUrl, MAP_FOLDER } from "./templateAssetPaths";
 import { collisionRectsFor, hasTerrainCollisionSourcesFor, objectBlockerRectsFor, walkableTerrainIdsFor } from "./collision";
@@ -57,8 +58,8 @@ export async function loadPixelLabMap(mapFolder = MAP_FOLDER): Promise<LoadedMap
     tileLayers,
     tileLayerWalkability: null,
   };
-  return {
+  return applyTownCollision({
     ...partialMap,
     tileLayerWalkability: tileLayerWalkabilityFor(partialMap),
-  };
+  });
 }

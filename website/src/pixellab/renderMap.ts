@@ -1,3 +1,4 @@
+import { preloadTownScenery, renderTownScenery } from '../gameplay/TownScenery';
 import Phaser from "phaser";
 import { assetUrl, publicAssetUrl } from "./templateAssetPaths";
 import { preloadTerrainTilesets, renderTerrainTiles } from "./terrainRenderer";
@@ -31,6 +32,7 @@ export function destroyRenderedMap(scene: Phaser.Scene, renderedMap?: RenderedMa
 }
 
 export function preloadMapAssets(scene: Phaser.Scene, mapData: LoadedMap): void {
+  preloadTownScenery(scene, mapData);
   preloadTerrainTilesets(scene, mapData);
   preloadTileLayers(scene, mapData);
 
@@ -73,6 +75,7 @@ export function renderMap(
   const worldOffsetY = (bounds.minY - 0.5) * tileSize;
   const gameObjects: Phaser.GameObjects.GameObject[] = [];
   const renderedObjects: RenderedMapObject[] = [];
+  gameObjects.push(...renderTownScenery(scene,mapData));
 
   const terrainStats = renderTerrainTiles(scene, mapData);
   // One object per tile: a spread overflows the call stack past ~120k tiles.

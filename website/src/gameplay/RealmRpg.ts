@@ -1,3 +1,4 @@
+import { insideTown, townName, monsterHomes, SAFE_POLYGON } from './TownLayout';
 import Phaser from "phaser";
 import type { LoadedMap } from "../pixellab/types";
 import type { PlayerController } from "../player/PlayerController";
@@ -34,6 +35,7 @@ export class RealmRpg {
   private save: Save = { wings: false, name: "Viajante", hero: "Cavaleiro", level: 1, xp: 0, gold: 0, kills: 0, quest: 0, weapon: 0, armor: 0, potions: 5, points: 0, strength: 0, vitality: 0, items: 0 };
   private selected: HeroClass = "Cavaleiro";
   private running: boolean = false;
+  private wasSafe: boolean = true;
   private health: number = 120;
   private mana: number = 80;
   private elapsed: number = 0;
@@ -68,7 +70,7 @@ export class RealmRpg {
     this.heroLabel = scene.add.text(player.sprite.x, player.sprite.y - 40, "", { fontFamily: "Arial", fontSize: "9px", color: "#ead398", stroke: "#11171c", strokeThickness: 3 }).setOrigin(.5).setDepth(200000);
     this.createMobs(); this.createWingMaster(); this.startScreen(); this.render();
     const hooks = window as unknown as Record<string, unknown>;
-    hooks.rpgState = () => ({ map: this.map.map.name, mapFolder: this.map.folder, destinations: WORLD_DESTINATIONS, attack: this.player.attackState, weaponProjectiles: {active:this.weaponShots.count,released:this.weaponShots.released,hits:this.weaponShots.hits}, powers: this.powers.state(this.save.hero,this.elapsed), started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, safeZone:this.inSafeZone(this.player.worldPosition), safeCenter:this.home, safeRadius:64, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, wingCount: WING_CATALOG.length, wingTexture: this.wings.texture, master: {x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y,near:this.nearMaster,frame:this.wingMaster.sprite.frame.name}, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, name:m.label.text, frame:m.sprite.frame.name, boss:m.boss, classic:!!m.classic, stats:m.classic, state:m.dead?"death":m.hurtMs>0?"hurt":m.attackMs>0?"attack":"move", attackMs:m.attackMs, strikeAt:m.strikeAt, struck:m.struck, respawnRemaining:m.dead, dead:m.dead > 0 })) });
+    hooks.rpgState = () => ({ map: this.map.map.name, mapFolder: this.map.folder, destinations: WORLD_DESTINATIONS, attack: this.player.attackState, weaponProjectiles: {active:this.weaponShots.count,released:this.weaponShots.released,hits:this.weaponShots.hits}, powers: this.powers.state(this.save.hero,this.elapsed), started: this.running, modal: !!this.modal.innerHTML, ...this.save, wingsVisible: this.wings.visible, characterId: HEROES.find(h=>h.name===this.save.hero)?.id, texture: this.player.sprite.texture.key, frame: this.player.sprite.frame.name, scale: this.player.sprite.scaleX, displayHeight: this.player.sprite.displayHeight, facing: this.player.facing, safeZone:this.inSafeZone(this.player.worldPosition), safeCenter:this.home, safeRadius:townName(this.map.folder)?null:64, safePolygon:townName(this.map.folder)?SAFE_POLYGON:null, health: Math.ceil(this.health), maxHealth: this.maxHealth, mana: Math.floor(this.mana), x: this.player.sprite.x, y: this.player.sprite.y, wingCount: WING_CATALOG.length, wingTexture: this.wings.texture, master: {x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y,near:this.nearMaster,frame:this.wingMaster.sprite.frame.name}, enemies: this.mobs.map((m,i) => ({ id:i, x:m.sprite.x, y:m.sprite.y, health:m.health, name:m.label.text, frame:m.sprite.frame.name, boss:m.boss, classic:!!m.classic, stats:m.classic, state:m.dead?"death":m.hurtMs>0?"hurt":m.attackMs>0?"attack":"move", attackMs:m.attackMs, strikeAt:m.strikeAt, struck:m.struck, respawnRemaining:m.dead, dead:m.dead > 0 })) });
     hooks.rpgReturnSafe=()=>{this.player.teleportTo(this.home.x,this.home.y);};
     hooks.rpgVisitMaster = () => { const p=nearestWalkable(this.map,{x:this.wingMaster.sprite.x,y:this.wingMaster.sprite.y+22},{width:6,height:4,footOffsetY:10},8);if(p)this.player.teleportTo(p.x,p.y); };
     hooks.rpgAction = (action: string) => this.action(action);
@@ -90,10 +92,10 @@ export class RealmRpg {
     this.modal.innerHTML=`<div class="rpg-overlay"><section class="rpg-window"><button class="rpg-close" data-action="close">Fechar ×</button><div class="rpg-caption">VIAGEM LIVRE · 20 DESTINOS</div><h2>Mapas</h2><p>Escolha seu destino. Blood Castle e Devil Square: visita livre, sem regras de evento.</p><div class="rpg-map-grid">${WORLD_DESTINATIONS.map(d=>`<button data-action="travel:${d.id}" ${d.id===this.map.folder?"disabled":""}><strong>${d.name}</strong><small>${d.theme}${d.id===this.map.folder?" · Você está aqui":""}</small></button>`).join("")}</div></section></div>`;
   }
   get active(): boolean { return this.running && !this.modal.innerHTML; }
-  get targets(): Mob[] { return this.active && !this.inSafeZone(this.player.worldPosition) ? this.mobs.filter(m => !m.dead) : []; }
+  get targets(): Mob[] { return this.active && !this.inSafeZone(this.player.worldPosition) ? this.mobs.filter(m => !m.dead&&!this.inSafeZone(m.sprite)) : []; }
   get maxHealth(): number { return 120 + (this.save.level-1)*18 + this.save.vitality*12 + (this.save.hero === "Cavaleiro" ? 30 : 0); }
   private get damage(): number { return 16 + this.save.level*3 + this.save.weapon*9 + this.save.strength*3 + (this.save.hero === "Cavaleiro" ? 6 : 0); }
-  private inSafeZone(point: Point): boolean { return Math.hypot(point.x-this.home.x,point.y-this.home.y)<=64; }
+  private inSafeZone(point: Point): boolean { return townName(this.map.folder) ? insideTown(point) : Math.hypot(point.x-this.home.x,point.y-this.home.y)<=64; }
   private receiveMonsterDamage(damage:number):void {
     if(!this.active||this.inSafeZone(this.player.worldPosition))return;
     const value=Math.max(2,damage-this.save.armor*3);this.health-=value;
@@ -102,6 +104,7 @@ export class RealmRpg {
     if(this.health<=0)this.defeat();
   }
   private updateClassicMob(m:Mob,delta:number):void {
+    if(this.inSafeZone(m.sprite)){m.sprite.setPosition(m.home.x,m.home.y);m.path=[];m.attackMs=0;}
     const kind=m.classic!;m.agent.update(delta);m.cooldown-=delta;m.repath-=delta;
     const safe=this.inSafeZone(this.player.worldPosition);
     const distance=Math.hypot(m.sprite.x-this.player.sprite.x,m.sprite.y-this.player.sprite.y);
@@ -145,10 +148,8 @@ export class RealmRpg {
     const mapName = WORLD_DESTINATIONS.find(d=>d.id===this.map.folder)?.name;
     const roster=CLASSIC_MONSTERS.filter(m=>m.map===mapName);
     if(roster.length) {
-      const offsets=[[108,32],[160,90],[80,160],[-100,90]];
-      roster.forEach((kind,i)=>{
-        const [dx,dy]=offsets[i];
-        const home=nearestWalkable(this.map,{x:this.home.x+dx,y:this.home.y+dy},COLLIDER,14);
+      roster.flatMap((kind,i)=>monsterHomes(i).map(home=>({kind,home}))).forEach(({kind,home:desired})=>{
+        const home=nearestWalkable(this.map,desired,COLLIDER,14);
         if(!home||this.inSafeZone(home)||!findPath(this.map,this.home,home,COLLIDER))return;
         const agent=new CharacterAgent(this.scene,this.map,{atlasKey:characterAtlasKey(kind.id),manifest:characterManifest(this.scene,kind.id),id:`classic-${kind.name}`,role:"monster",x:home.x,y:home.y,footOffsetY:10,roaming:false});
         agent.sprite.setScale(.5);
@@ -197,7 +198,7 @@ export class RealmRpg {
     this.render(); return true;
   }
   slash(origin: Point,direction: Direction): void {
-    if (!this.active) return;
+    if (!this.active || this.inSafeZone(origin)) return;
     if (this.weaponRanged(origin,direction)) return;
     const vec = vectorFromDirection(direction);
     this.spellHit=false;
@@ -205,11 +206,11 @@ export class RealmRpg {
   }
   weaponRanged(origin: Point,direction: Direction): boolean {
     if(this.save.hero!=="Arqueiro"&&this.save.hero!=="Feiticeiro")return false;
-    if(this.active)this.weaponShots.cast(origin,direction,this.save.hero==="Arqueiro"?"arrow":"magic");
+    if(this.active&&!this.inSafeZone(origin))this.weaponShots.cast(origin,direction,this.save.hero==="Arqueiro"?"arrow":"magic");
     return true;
   }
   allowSpell(): boolean {
-    if (!this.active || this.mana<9) { if(this.active) this.log("Mana insuficiente. Ela se regenera com o tempo."); return false; }
+    if (!this.active || this.inSafeZone(this.player.worldPosition) || this.mana<9) { if(this.active) this.log("Mana insuficiente. Ela se regenera com o tempo."); return false; }
     this.mana-=9; return true;
   }
   update(delta: number): void {
@@ -225,6 +226,7 @@ export class RealmRpg {
     if(this.active) this.wingMaster.update(delta);
     this.heroLabel.setPosition(this.player.sprite.x,this.player.sprite.y-24).setText(`${this.save.name} · Nv.${this.save.level}`);
     if (!this.active) return;
+    const safeNow=this.inSafeZone(this.player.worldPosition);if(safeNow!==this.wasSafe){this.wasSafe=safeNow;this.banner(safeNow?"Você entrou em uma zona segura.":"Você saiu da zona segura.");this.log(safeNow?"Você entrou em uma zona segura.":"Você saiu da zona segura.");}
     this.monsterCombat.update(delta,this.player.worldPosition,p=>this.inSafeZone(p),damage=>this.receiveMonsterDamage(damage));
     if(!this.active)return;
     this.elapsed+=delta; this.mana=Math.min(80,this.mana+delta*.004); this.health=Math.min(this.maxHealth,this.health+delta*.0007);
@@ -269,7 +271,7 @@ export class RealmRpg {
     if(action==="R"){if(this.targets.some(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<100)){this.log("Afaste-se dos monstros para retornar ao refúgio.");return;}this.player.teleportTo(this.home.x,this.home.y);this.health=this.maxHealth;this.mana=80;this.log("Refúgio: vida e mana recuperadas.");}
     if(action==="attack" && this.active){const range=this.save.hero==="Arqueiro"||this.save.hero==="Feiticeiro"?260:52;const near=this.targets.filter(m=>Phaser.Math.Distance.Between(m.sprite.x,m.sprite.y,this.player.sprite.x,this.player.sprite.y)<range).sort((a,b)=>Phaser.Math.Distance.Between(a.sprite.x,a.sprite.y,this.player.sprite.x,this.player.sprite.y)-Phaser.Math.Distance.Between(b.sprite.x,b.sprite.y,this.player.sprite.x,this.player.sprite.y))[0];this.player.performAttack(near?directionFromVector(near.sprite.x-this.player.sprite.x,near.sprite.y-this.player.sprite.y):this.player.facing);}
     if(action==="E") {if(this.nearMaster)this.action("master");else this.castPower(1);return;}
-    if(action.startsWith("power:")){const slot=Number(action.slice(6));if(Number.isInteger(slot)&&slot>=0&&slot<4)this.castPower(slot);return;}
+    if(action.startsWith("power:")){if(this.inSafeZone(this.player.worldPosition)){this.banner("Combate desativado na zona segura.");return;}const slot=Number(action.slice(6));if(Number.isInteger(slot)&&slot>=0&&slot<4)this.castPower(slot);return;}
     if(action==="claim"){const required=(this.save.quest+1)*5;if(this.save.kills>=required){this.save.gold+=100;this.save.quest++;this.log("Contrato concluído · +100 ouro");this.banner("Contrato concluído");}}
     if(action==="weapon"||action==="armor"){const cost=80+(action==="weapon"?this.save.weapon:this.save.armor)*60;if(this.save.gold>=cost){this.save.gold-=cost;this.save[action]++;this.log(`${action==="weapon"?"Arma":"Armadura"} aprimorada para +${this.save[action]}`);}else this.log(`Você precisa de ${cost} ouro.`);this.showWindow("B");}
     if(action==="buy"){if(this.save.gold>=20){this.save.gold-=20;this.save.potions+=3;this.log("Compradas 3 poções.");}else this.log("Você precisa de 20 ouro.");this.showWindow("B");}
@@ -278,7 +280,7 @@ export class RealmRpg {
     this.persist();this.render();
   }
   private castPower(slot: number): void {
-    if(!this.active)return;
+    if(!this.active||this.inSafeZone(this.player.worldPosition))return;
     const power=HERO_POWERS[this.save.hero][slot];
     if(!this.powers.ready(slot,this.elapsed)){this.log(`${power.name}: aguarde a recarga.`);return;}
     if(this.mana<power.cost){this.log(`${power.name}: precisa de ${power.cost} mana.`);return;}

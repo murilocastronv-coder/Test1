@@ -191,6 +191,12 @@ function characterIdUses() {
   // own name, so counting the declaration as a use would mark every role used
   // forever and make this whole check a no-op.
   const uses = new Map();
+  // A role a module defines for itself (`const ELF_CHARACTER_ID = "<id>"`) is
+  // as good as an export: it was refused for not being in templateAssetPaths.ts
+  // (agent_feedback 2026-11-05 13:30), a rule nothing documented. Names are
+  // module-scoped, so one name can hold a different id in each module: every
+  // id is kept and checked, never just the last one scanned.
+  const localLiterals = new Map();
 
   for (const path of reachableTypeScriptFiles()) {
     if (path === TEMPLATE_ASSET_PATHS) {
@@ -198,6 +204,14 @@ function characterIdUses() {
     }
     const code = withoutComments(readFileSync(path, "utf8"));
     const relativePath = relative(join(import.meta.dirname, ".."), path);
+    for (const [, name, id] of code.matchAll(
+      /\bconst ([A-Z0-9_]*_CHARACTER_ID)\s*=\s*["']([0-9a-fA-F-]{36})["']/g,
+    )) {
+      if (!localLiterals.has(name)) {
+        localLiterals.set(name, new Set());
+      }
+      localLiterals.get(name).add(id);
+    }
     for (const [, name] of code.matchAll(/\b([A-Z0-9_]*_CHARACTER_ID)\b/g)) {
       if (!uses.has(name)) {
         uses.set(name, []);
@@ -208,7 +222,7 @@ function characterIdUses() {
     }
   }
 
-  return uses;
+  return { uses, localLiterals };
 }
 
 function readTemplateCharacterIds(warnings) {
@@ -228,13 +242,14 @@ function readTemplateCharacterIds(warnings) {
   // nothing, so validation fails loudly instead of quietly checking zero
   // characters. A role the agent adds later gets the same treatment for free.
   const { literals, aliases } = characterIdExports();
-  const uses = characterIdUses();
+  const { uses, localLiterals } = characterIdUses();
 
   const ids = [];
   const unresolved = [];
   for (const [name, files] of uses) {
-    const id = literals.get(name) ?? literals.get(aliases.get(name));
-    if (id === undefined) {
+    const exported = literals.get(name) ?? literals.get(aliases.get(name));
+    const local = [...(localLiterals.get(name) ?? [])];
+    if (exported === undefined && local.length === 0) {
       unresolved.push(
         `${name} is used by ${files.join(", ")} but has no id in ` +
           "website/src/pixellab/templateAssetPaths.ts" +
@@ -244,13 +259,14 @@ function readTemplateCharacterIds(warnings) {
       );
       continue;
     }
-    ids.push(id);
+    ids.push(...(exported === undefined ? [] : [exported]), ...local);
   }
 
   if (unresolved.length > 0) {
     throw new Error(
-      `${unresolved.join("; ")}. Either stop using the role, or export it: ` +
-        'export const <ROLE>_CHARACTER_ID = "<character id>";',
+      `${unresolved.join("; ")}. Either stop using the role, or give it an id: ` +
+        'export const <ROLE>_CHARACTER_ID = "<character id>"; in templateAssetPaths.ts, ' +
+        "or the same const in the module that uses it.",
     );
   }
 
@@ -259,7 +275,9 @@ function readTemplateCharacterIds(warnings) {
   for (const name of [...literals.keys(), ...aliases.keys()]) {
     if (name.endsWith("_CHARACTER_ID") && !uses.has(name)) {
       warnings.push(
-        `${name} is exported but nothing main.ts imports uses it, so its character assets ` +
+        // "no .ts file uses it" stays word for word: projects keep the test that
+        // matches it while this file is reinstalled under them every session.
+        `${name} is exported but no .ts file uses it that main.ts imports, so its character assets ` +
           "were not checked",
       );
     }
