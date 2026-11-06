@@ -1747,6 +1747,15 @@
         "5aa579aa-4b3a-4250-8a7a-f8fd306ee230"
       ],
       "sync_version": 3
+    },
+    "7e1e1931-ab70-4305-bcae-9a02bb1a39d7": {
+      "updated_at": "2026-11-06T07:24:47.728848+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "7e1e1931-ab70-4305-bcae-9a02bb1a39d7"
+      ],
+      "sync_version": 3
     }
   },
   "tilesets": {
