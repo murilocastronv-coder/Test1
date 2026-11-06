@@ -14,7 +14,7 @@ export function applyTownCollision(map:LoadedMap):LoadedMap {
  const name=townName(map.folder);if(!name)return map;
  const blocks=townProps(name).flatMap(p=>{const b=propBlock(p);return b?[b]:[];});
  const objectBlockerRects=[...map.objectBlockerRects,...blocks];
- return {...map,walkableTerrainIds:new Set(map.map.terrains.map(t=>t.id)),objectBlockerRects,objectBlockerIndex:buildRectSpatialIndex(objectBlockerRects,64)};
+ return {...map,walkableTerrainIds:new Set((map.map.terrains ?? []).map(t=>t.id)),objectBlockerRects,objectBlockerIndex:buildRectSpatialIndex(objectBlockerRects,64)};
 }
 export function preloadTownScenery(scene:Phaser.Scene,map:LoadedMap):void {
  const name=townName(map.folder);if(!name)return;
