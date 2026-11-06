@@ -1640,15 +1640,6 @@
       ],
       "sync_version": 3
     },
-    "3a762cc5-ffe9-4714-91ba-58e137dd8d04": {
-      "updated_at": "2026-11-06T07:23:36.329295+00:00",
-      "animation_ids": [],
-      "name": "base",
-      "member_ids": [
-        "3a762cc5-ffe9-4714-91ba-58e137dd8d04"
-      ],
-      "sync_version": 3
-    },
     "509f0444-d448-46cb-ac5c-a884df5b5153": {
       "updated_at": "2026-11-06T07:23:36.895368+00:00",
       "animation_ids": [],
@@ -1727,6 +1718,15 @@
       "name": "base",
       "member_ids": [
         "97ae9e9e-6d14-4e30-ac27-765adce84833"
+      ],
+      "sync_version": 3
+    },
+    "3a762cc5-ffe9-4714-91ba-58e137dd8d04": {
+      "updated_at": "2026-11-06T07:23:36.329295+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "3a762cc5-ffe9-4714-91ba-58e137dd8d04"
       ],
       "sync_version": 3
     }

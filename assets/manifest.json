@@ -90,7 +90,6 @@
     "base#e0a60502": "assets/objects/e0a60502-7609-4e04-823d-51670fadb69f/",
     "base#e3b0c3dc": "assets/objects/e3b0c3dc-5cf9-47e5-896b-10de59556e53/",
     "base#e4dac244": "assets/objects/e4dac244-ce82-43d6-8cb5-65ef46d0b763/",
-    "base#3a762cc5": "assets/objects/3a762cc5-ffe9-4714-91ba-58e137dd8d04/",
     "base#509f0444": "assets/objects/509f0444-d448-46cb-ac5c-a884df5b5153/",
     "base#4152c5d3": "assets/objects/4152c5d3-34c0-45a3-9cbd-1cc5add949a1/",
     "base#6ad63400": "assets/objects/6ad63400-e453-420c-bbda-ab84c5ad4ee1/",
@@ -99,7 +98,8 @@
     "base#9d674cdc": "assets/objects/9d674cdc-a93f-493e-a18d-1478a6109a5c/",
     "base#a15caf94": "assets/objects/a15caf94-0f54-4d7c-ba31-faa16f765562/",
     "base#ab8b4789": "assets/objects/ab8b4789-747b-4b97-b582-22269b246062/",
-    "base#97ae9e9e": "assets/objects/97ae9e9e-6d14-4e30-ac27-765adce84833/"
+    "base#97ae9e9e": "assets/objects/97ae9e9e-6d14-4e30-ac27-765adce84833/",
+    "base#3a762cc5": "assets/objects/3a762cc5-ffe9-4714-91ba-58e137dd8d04/"
   },
   "tilesets": {
     "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/",
