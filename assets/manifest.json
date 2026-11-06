@@ -28,6 +28,7 @@
   },
   "images": {},
   "maps": {
+    "Noria": "assets/maps/fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b/",
     "Lorencia": "assets/maps/bc1bd264-859d-4d51-9acc-18eac3e24bb1/",
     "Devil Square": "assets/maps/0fb385a9-0c29-4ee4-a200-4897daf9cd19/",
     "Blood Castle": "assets/maps/6d22bddf-a846-4af2-84e6-67cc44cb7ee9/",
@@ -47,7 +48,6 @@
     "Dungeon 2": "assets/maps/89ccec89-ade8-43a5-a820-3a4138377d28/",
     "Dungeon 1": "assets/maps/60cb3c22-9f2d-4901-8a6b-885aed9c3cb8/",
     "Devias": "assets/maps/a780fd5b-16bd-4ac2-82c0-21ce07a50e7c/",
-    "Noria": "assets/maps/fc2a2feb-517a-4666-9c9e-ddcb0bb1f69b/",
     "Island Map": "assets/maps/301615f8-9baa-40e8-98a5-f2e6467623bb/"
   },
   "objects": {
@@ -90,16 +90,16 @@
     "base#e0a60502": "assets/objects/e0a60502-7609-4e04-823d-51670fadb69f/",
     "base#e3b0c3dc": "assets/objects/e3b0c3dc-5cf9-47e5-896b-10de59556e53/",
     "base#e4dac244": "assets/objects/e4dac244-ce82-43d6-8cb5-65ef46d0b763/",
+    "base#3a762cc5": "assets/objects/3a762cc5-ffe9-4714-91ba-58e137dd8d04/",
+    "base#509f0444": "assets/objects/509f0444-d448-46cb-ac5c-a884df5b5153/",
     "base#4152c5d3": "assets/objects/4152c5d3-34c0-45a3-9cbd-1cc5add949a1/",
     "base#6ad63400": "assets/objects/6ad63400-e453-420c-bbda-ab84c5ad4ee1/",
-    "base#ab8b4789": "assets/objects/ab8b4789-747b-4b97-b582-22269b246062/",
-    "base#3a762cc5": "assets/objects/3a762cc5-ffe9-4714-91ba-58e137dd8d04/",
-    "base#a15caf94": "assets/objects/a15caf94-0f54-4d7c-ba31-faa16f765562/",
-    "base#509f0444": "assets/objects/509f0444-d448-46cb-ac5c-a884df5b5153/",
-    "base#97ae9e9e": "assets/objects/97ae9e9e-6d14-4e30-ac27-765adce84833/",
-    "base#9d674cdc": "assets/objects/9d674cdc-a93f-493e-a18d-1478a6109a5c/",
     "base#d0720586": "assets/objects/d0720586-8746-4402-9962-e7c5601d3f10/",
-    "base#b02aa97a": "assets/objects/b02aa97a-db21-4fa2-b9f8-fbb19fa1c265/"
+    "base#b02aa97a": "assets/objects/b02aa97a-db21-4fa2-b9f8-fbb19fa1c265/",
+    "base#9d674cdc": "assets/objects/9d674cdc-a93f-493e-a18d-1478a6109a5c/",
+    "base#a15caf94": "assets/objects/a15caf94-0f54-4d7c-ba31-faa16f765562/",
+    "base#ab8b4789": "assets/objects/ab8b4789-747b-4b97-b582-22269b246062/",
+    "base#97ae9e9e": "assets/objects/97ae9e9e-6d14-4e30-ac27-765adce84833/"
   },
   "tilesets": {
     "Devil Square black volcanic crust with red ember \u2197 Devil Square dark blood red demonic plaza floor": "assets/tilesets/7e9e881f-edb1-4ddf-8a14-17dcfd38ae4d/",
