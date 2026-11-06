@@ -1729,6 +1729,24 @@
         "97ae9e9e-6d14-4e30-ac27-765adce84833"
       ],
       "sync_version": 3
+    },
+    "fa52c761-ad87-40e8-830c-9e1a8d2e87d4": {
+      "updated_at": "2026-11-06T07:24:25.809903+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "fa52c761-ad87-40e8-830c-9e1a8d2e87d4"
+      ],
+      "sync_version": 3
+    },
+    "5aa579aa-4b3a-4250-8a7a-f8fd306ee230": {
+      "updated_at": "2026-11-06T07:24:26.843476+00:00",
+      "animation_ids": [],
+      "name": "base",
+      "member_ids": [
+        "5aa579aa-4b3a-4250-8a7a-f8fd306ee230"
+      ],
+      "sync_version": 3
     }
   },
   "tilesets": {
